@@ -1,0 +1,57 @@
+.cart-popup
+  position: fixed
+  top: 6rem
+  right: 19rem
+  background-color: $light
+  display: none
+  padding: 43px 29px 20px 34px
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)
+  &::before
+    content: ''
+    border-style: solid
+    border-width: 10px 15px 10px 0
+    border-color: transparent $light transparent transparent
+    position: absolute
+    top: -17px
+    right: 15px
+    transform: rotate(90deg)
+.cart-item
+  display: flex
+  &-title
+    font-size: 15px
+    font-weight: 700
+    line-height: 22px
+    text-transform: uppercase
+  &-price, &-quantity
+    font-size: 12px
+    font-weight: 500
+    line-height: 28px
+    text-transform: uppercase
+.cart-summary
+  font-size: 16px
+  font-weight: 700
+  line-height: 28px
+  text-align: center
+  text-transform: uppercase
+  letter-spacing: 1.6px
+  border-top: 1px solid #e6e6e6
+  border-bottom: 1px solid #e6e6e6
+  padding-top: 12px
+  padding-bottom: 12px
+.cart-button-container
+  display: flex
+  justify-content: space-between
+  align-items: center
+.cart-button
+  font-size: 14px
+  font-weight: 700
+  line-height: 28px
+  text-transform: uppercase
+  padding: 17px 27px
+  color: $light
+  border: none
+  outline: none
+  &--button-primary
+    background-color: $button-primary
+  &--secondary
+    background-color: $secondary

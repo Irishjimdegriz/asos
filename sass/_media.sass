@@ -10,8 +10,6 @@
     font-size: 50px
   .title
     font-size: 120px
-  .hero__swiper-slide  
-    height: 40rem
   .scroll-down
     font-size: 16px
     padding: 19px 47px
@@ -22,19 +20,29 @@
       margin-right: 1rem
 
 @media screen and ( max-width: 992px)
-  .header__menu
-    display: none
+  .header
+    &>.container
+      display: flex
+      justify-content: space-between
+    &__menu
+      display: none
   .subtitle
     font-size: 35px
   .title
     font-size: 90px
   .price-from
     font-size: 48px
-  .hero__swiper-slide  
-    height: 30rem
   .scroll-down
     font-size: 14px
     padding: 17px 44px
+  .bottom-container
+    justify-content: space-around
+  .hero
+    &__swiper
+      &-button
+        &-prev, &-next
+          width: 6.5rem
+          height: 6.5rem
 
 @media screen and ( max-width: 780px)
   .subtitle
@@ -43,11 +51,15 @@
     font-size: 70px
   .price-from
     font-size: 40px
-  .hero__swiper-slide  
-    height: 25rem
   .scroll-down
     font-size: 12px
     padding: 15px 39px
+  .hero
+    &__swiper
+      &-button
+        &-prev, &-next
+          width: 5.5rem
+          height: 5.5rem
 
 @media screen and ( max-width: 630px)
   .subtitle
@@ -59,6 +71,12 @@
   .scroll-down
     font-size: 11px
     padding: 13px 35px
+  .hero
+    &__swiper
+      &-button
+        &-prev, &-next
+          width: 5rem
+          height: 5rem
 
 @media screen and ( max-width: 550px)
   .subtitle
@@ -70,6 +88,12 @@
   .scroll-down
     font-size: 10px
     padding: 12px 33px
+  .hero
+    &__swiper
+      &-button
+        &-prev, &-next
+          width: 4.5rem
+          height: 4.5rem    
 
 @media screen and ( max-width: 460px)
   .subtitle
@@ -81,3 +105,22 @@
   .scroll-down
     font-size: 9px
     padding: 9px 29px
+  .hero
+    &__swiper
+      &-button
+        &-prev, &-next
+          width: 4rem
+          height: 4rem
+
+@media screen and ( max-width: 370px)
+  .price-from
+    font-size: 15px
+  .scroll-down
+    font-size: 7px
+    padding: 9px 21px
+  .hero
+    &__swiper
+      &-button
+        &-prev, &-next
+          width: 3.5rem
+          height: 3.5rem

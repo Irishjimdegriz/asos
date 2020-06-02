@@ -22,9 +22,8 @@ $(document).ready(function () {
   })
 
   var popularSwiper = new Swiper('.popular__swiper', {
-    loop: true,
     slidesPerView: 4,
-    spaceBetween: 30,
+    spaceBetween: 60,
     navigation: {
       nextEl: '.popular__swiper-button-next',
       prevEl: '.popular__swiper-button-prev',

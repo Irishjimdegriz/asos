@@ -1,0 +1,33 @@
+.popular
+  &__image-wrap
+    width: 18.714rem
+    height: 24.429rem
+    background-color: rgb(243, 244, 248)
+    text-align: center
+  &__swiper
+    &-slide
+      width: 18.714rem !important
+      margin-left: 5rem
+      margin-right: 3rem
+    &-button
+      &-prev, &-next
+        width: 2.714rem
+        height: 2.714rem
+        outline: none
+        border: 1px solid black
+        top: 37%
+        &::after
+          display: none
+      &-prev
+        background: url('../img/arrow-left.svg') no-repeat center  
+        left: 0
+      &-next
+        background: url('../img/arrow-right.svg') no-repeat center
+        right: 0
+  &__title
+    text-align: center
+  &__description
+    text-align: center
+  &__price
+    text-align: center
+    margin-top: 2rem

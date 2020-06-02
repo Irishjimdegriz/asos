@@ -1,6 +1,6 @@
 .hero
   position: relative
-  height: 100vh
+  height: 85.4vh
   background: $primary
   color: $light
   &__swiper
@@ -11,10 +11,7 @@
       //filter: brightness(50%)
       text-align: center
       font-size: 18px
-      display: flex
-      justify-content: center
-      align-items: center
-      flex-direction: column
+      padding-right: 5rem
       &::before
         content: ''
         position: absolute
@@ -26,35 +23,38 @@
         background: $primary
     &-button
       &-prev, &-next
-        background-size: 42px
-        width: 42px
-        height: 42px
+        width: 7.143rem
+        height: 7.143rem
         outline: none
+        top: 47%
         &::after
           display: none
       &-prev
-        background: url('../img/swiper-arrow-left.svg') no-repeat center  
+        background: rgba(0, 0, 0, 0.1) url('../img/swiper-arrow-left.svg') no-repeat center  
+        left: 0
       &-next
-        background: url('../img/swiper-arrow-right.svg') no-repeat center
+        background: rgba(0, 0, 0, 0.1) url('../img/swiper-arrow-right.svg') no-repeat center
+        right: 0
 .header
   width: 100%
-  padding-top: 3.57rem
+  padding-top: 3.27rem
   position: absolute
   display: flex
   justify-content: space-between
   z-index: 20
   &__logo-link
-    margin-right: 20rem
+    margin-right: 21.45rem
   &__menu
     display: inline-block
     vertical-align: bottom
+    margin-right: 1.5rem
   &__interface-buttons
     display: inline-flex
 .link-item
   text-decoration: none
   color: $light
-  margin-right: 2.5rem
-  padding-bottom: 1.071rem
+  margin-right: 2.47rem
+  //padding-bottom: 1.071rem
   font-size: 1.071rem
   font-weight: 700
   line-height: 2rem
@@ -71,7 +71,7 @@
       margin-right: 0
 .title-description
   position: relative
-  padding-top: 21rem
+  padding-top: 19.1rem
   font-size: 20px
   font-weight: 400
   line-height: 2rem
@@ -85,6 +85,7 @@
   text-align: center
   letter-spacing: 8.58px
   font-family: "Museo", sans-serif
+  margin-top: 5rem
 .title
   position: relative
   font-size: 159px
@@ -93,6 +94,8 @@
   text-transform: uppercase
   text-align: center
   font-family: "MuseoBold", sans-serif
+  margin-top: 7.4rem
+  margin-bottom: 4.4rem
 .bottom-container
   margin: auto
   display: flex
@@ -100,7 +103,7 @@
   justify-content: space-between
   max-width: 40rem
   position: relative
-  margin-bottom: 20rem
+  margin-bottom: 27rem
 .scroll-down
   font-size: 18px
   font-weight: 400
@@ -108,7 +111,7 @@
   text-transform: uppercase
   letter-spacing: 0.36px
   font-family: "Gotham Pro Black"
-  padding: 21px 51px
+  padding: 14px 50px
   background-color: $button-primary
   color: $light
   margin-right: 5rem
@@ -120,8 +123,10 @@
   font-weight: 400
   line-height: 28px
   text-transform: uppercase
+  margin-top: 3.9rem
 .sup-price-tag
   font-size: 15px
-  top: -2.5rem
+  top: -2.3rem
 .sub-ruble
-  font-size: 34px
+  font-size: 2rem
+  bottom: -0.15rem

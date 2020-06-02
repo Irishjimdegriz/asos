@@ -14,7 +14,7 @@
     font-size: 16px
     padding: 19px 47px
 
-@media screen and ( max-width: 1100px)
+@media screen and ( max-width: 1140px)
   .header
     &__logo-link
       margin-right: 1rem
@@ -43,6 +43,22 @@
         &-prev, &-next
           width: 6.5rem
           height: 6.5rem
+  .subscribe
+    &-input
+      width: 30rem
+    &-button
+      padding: 1.357rem 2.5rem
+      font-size: 1.2rem
+  .news
+    &-items-container
+      flex-direction: column
+    &-item
+      margin-left: 0
+      &:first-of-type
+        border-bottom: 1px solid $gray
+        border-right: none
+        padding-right: 0
+        padding-bottom: 2rem
 
 @media screen and ( max-width: 780px)
   .subtitle
@@ -60,6 +76,12 @@
         &-prev, &-next
           width: 5.5rem
           height: 5.5rem
+  .subscribe
+    &-input
+      width: 27rem
+    &-button
+      padding: 1.357rem 2.2rem    
+      font-size: 1.1rem  
 
 @media screen and ( max-width: 630px)
   .subtitle
@@ -77,10 +99,14 @@
         &-prev, &-next
           width: 5rem
           height: 5rem
+  .subscribe
+    &-input
+      width: 24rem
+    &-button
+      padding: 1.357rem 1.9rem     
+      font-size: 1rem 
 
 @media screen and ( max-width: 550px)
-  .subtitle
-    font-size: 15px
   .title
     font-size: 50px
   .price-from
@@ -94,10 +120,18 @@
         &-prev, &-next
           width: 4.5rem
           height: 4.5rem    
+  .subscribe
+    &-input
+      width: 21rem
+    &-button
+      padding: 1.357rem 1.6rem        
+      font-size: 0.9rem 
+  .footer
+    display: none
 
 @media screen and ( max-width: 460px)
   .subtitle
-    font-size: 10px
+    font-size: 15px
   .title
     font-size: 40px
   .price-from
@@ -111,6 +145,12 @@
         &-prev, &-next
           width: 4rem
           height: 4rem
+  .subscribe
+    &-input
+      width: 18rem    
+    &-button
+      padding: 1.357rem 1.3rem 
+      font-size: 0.8rem              
 
 @media screen and ( max-width: 370px)
   .price-from
@@ -124,3 +164,9 @@
         &-prev, &-next
           width: 3.5rem
           height: 3.5rem
+  .subscribe
+    &-input
+      width: 15rem         
+    &-button
+      padding: 1.357rem 1rem   
+      font-size: 0.7rem       

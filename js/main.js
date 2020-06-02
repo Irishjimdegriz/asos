@@ -1,3 +1,39 @@
+$(document).ready(function () {
+  const modal = $('.modal'),
+        closeBtn = $('.modal__close'),
+        openSearchBtn = $('.search-open-button');
+
+  const switchModal = () => {
+    modal.toggleClass('modal--visible');
+  }
+
+  closeBtn.on('click', switchModal);
+  openSearchBtn.on('click', switchModal);
+
+  let heroSwiper = new Swiper ('.hero__swiper', {
+    loop: true,
+    navigation: {
+      nextEl: '.hero__swiper-button-next',
+      prevEl: '.hero__swiper-button-prev',
+    },
+    swiping: {
+      noSwiping: true
+    }
+  })
+
+  var popularSwiper = new Swiper('.popular__swiper', {
+    loop: true,
+    slidesPerView: 4,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.popular__swiper-button-next',
+      prevEl: '.popular__swiper-button-prev',
+    },
+    swiping: {
+      noSwiping: true
+    }
+  });
+});
 // const swiperLabels = ['Выезд на замер <br>помещения', 'Составление<br> сметы', 'Разработка<br>  дизайн проекта', 'Закупка расходных<br> материалов', 'Ремонтно-отделочные<br> работы', 'Приемка-сдача <br>работ'];
 
 // $(document).ready(function () {

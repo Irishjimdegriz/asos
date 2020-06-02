@@ -3,25 +3,53 @@
   height: 100vh
   background: $primary
   color: $light
-  // &::before
-  //   content: ''
-  //   position: absolute
-  //   left: 0
-  //   bottom: 0
-  //   width: 100%
-  //   height: 100vh
-  //   background: url('../img/hero-bg.png') center no-repeat
-  //   opacity: 0.4
-  &__header
-    padding-top: 3.57rem
-    margin-bottom: 204px
-  &__content
-    margin-bottom: 64px
+  &__swiper
+    &-slide
+      position: relative
+      background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/hero-bg.png') center no-repeat
+      background-size: auto 100%
+      //filter: brightness(50%)
+      text-align: center
+      font-size: 18px
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      &::before
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 100vh
+        opacity: 0.5
+        background: $primary
+    &-button
+      &-prev, &-next
+        background-size: 42px
+        width: 42px
+        height: 42px
+        outline: none
+        &::after
+          display: none
+      &-prev
+        background: url('../img/swiper-arrow-left.svg') no-repeat center  
+      &-next
+        background: url('../img/swiper-arrow-right.svg') no-repeat center
 .header
+  width: 100%
+  padding-top: 3.57rem
+  position: absolute
   display: flex
   justify-content: space-between
-.header__logo-link
-  margin-right: 20rem
+  z-index: 20
+  &__logo-link
+    margin-right: 20rem
+  &__menu
+    display: inline-block
+    vertical-align: bottom
+  &__interface-buttons
+    display: inline-flex
 .link-item
   text-decoration: none
   color: $light
@@ -42,11 +70,14 @@
     &:last-of-type
       margin-right: 0
 .title-description
+  position: relative
+  padding-top: 21rem
   font-size: 20px
   font-weight: 400
   line-height: 2rem
   text-align: center
 .subtitle
+  position: relative
   font-size: 78px
   font-weight: 500
   line-height: 2rem
@@ -55,6 +86,7 @@
   letter-spacing: 8.58px
   font-family: "Museo", sans-serif
 .title
+  position: relative
   font-size: 159px
   font-weight: 750
   line-height: 2rem
@@ -67,6 +99,8 @@
   align-items: center
   justify-content: space-between
   max-width: 40rem
+  position: relative
+  margin-bottom: 20rem
 .scroll-down
   font-size: 18px
   font-weight: 400
@@ -77,6 +111,9 @@
   padding: 21px 51px
   background-color: $button-primary
   color: $light
+  margin-right: 5rem
+  outline: none
+  border: none
 .price-from
   font-family: "Gotham Pro Black"
   font-size: 58px

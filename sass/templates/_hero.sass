@@ -11,7 +11,7 @@
       //filter: brightness(50%)
       text-align: center
       font-size: 18px
-      padding-right: 5rem
+      //padding-right: 5rem
       &::before
         content: ''
         position: absolute
@@ -30,15 +30,21 @@
         &::after
           display: none
       &-prev
-        background: rgba(0, 0, 0, 0.1) url('../img/swiper-arrow-left.svg') no-repeat center  
+        background: rgba(0, 0, 0, 0.3) url('../img/swiper-arrow-left.svg') no-repeat center  
         left: 0
       &-next
-        background: rgba(0, 0, 0, 0.1) url('../img/swiper-arrow-right.svg') no-repeat center
+        background: rgba(0, 0, 0, 0.3) url('../img/swiper-arrow-right.svg') no-repeat center
         right: 0
 .header
+  //width: 100%
+  //padding-top: 3.27rem
+  position: fixed
+  left: 0
+  top: 0
   width: 100%
-  padding-top: 3.27rem
-  position: absolute
+  z-index: 99
+  background-color: transparent
+  padding: 3.27rem 0 1rem 0
   display: flex
   justify-content: space-between
   z-index: 20
@@ -47,14 +53,16 @@
   &__menu
     display: inline-block
     vertical-align: bottom
-    margin-right: 1.5rem
+    margin-right: 3rem
   &__interface-buttons
     display: inline-flex
+.burger-dropdown
+  display: none
 .link-item
   text-decoration: none
   color: $light
   margin-right: 2.47rem
-  //padding-bottom: 1.071rem
+  padding-bottom: 1.071rem
   font-size: 1.071rem
   font-weight: 700
   line-height: 2rem
@@ -67,8 +75,8 @@
 .interface-buttons
   &__interface-button
     margin-right: 1.5rem
-    &:last-of-type
-      margin-right: 0
+.search-open-button
+  margin: 0
 .title-description
   position: relative
   padding-top: 19.1rem
@@ -78,7 +86,7 @@
   text-align: center
 .subtitle
   position: relative
-  font-size: 78px
+  font-size: 5rem
   font-weight: 500
   line-height: 2rem
   text-transform: uppercase
@@ -88,7 +96,7 @@
   margin-top: 5rem
 .title
   position: relative
-  font-size: 159px
+  font-size: 8.5rem
   font-weight: 750
   line-height: 2rem
   text-transform: uppercase
@@ -132,3 +140,24 @@
 .sub-ruble
   font-size: 2rem
   bottom: -0.15rem
+.interface-button
+  cursor: pointer
+// .dropdown
+//   cursor: default
+.thanks-hero
+  position: relative
+  height: 100vh
+  background: #433D7B
+  color: $light
+  display: flex
+  justify-content: center
+  align-items: center
+  //font-family: "Museo", sans-serif
+  &__title
+    text-align: center
+    font-size: 3.6rem
+    font-family: "Museo", sans-serif
+  &__text
+    text-align: center
+    font-size: 2.3rem
+    font-family: "Museo", sans-serif

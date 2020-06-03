@@ -1,7 +1,13 @@
 $(document).ready(function () {
   const modal = $('.modal'),
         closeBtn = $('.modal__close'),
-        openSearchBtn = $('.search-open-button');
+        openSearchBtn = $('.search-open-button'),
+        header = $('.header'),
+        readMoreFirst = $('.read-more-first'),
+        newsItemFirst = $('.news-item__text--first'),
+        readMoreSecond = $('.read-more-second'),
+        newsItemSecond = $('.news-item__text--second'),
+        scrollUp = $('.scroll-up-container');
 
   const switchModal = () => {
     modal.toggleClass('modal--visible');
@@ -9,6 +15,15 @@ $(document).ready(function () {
 
   closeBtn.on('click', switchModal);
   openSearchBtn.on('click', switchModal);
+
+  readMoreFirst.on('click', () => {
+     newsItemFirst.css({overflow: 'visible'});
+     readMoreFirst.css('visibility', 'hidden');
+});
+  readMoreSecond.on('click', () => { 
+    newsItemSecond.css({overflow: 'visible'});
+    readMoreSecond.css('visibility', 'hidden');
+});
 
   let heroSwiper = new Swiper ('.hero__swiper', {
     loop: true,
@@ -30,16 +45,30 @@ $(document).ready(function () {
     },
     swiping: {
       noSwiping: true
+    },
+    breakpoints: {
+      // when window width is <= 480px
+      580: {
+        slidesPerView: 1,
+        spaceBetweenSlides: 20
+      },
+      // when window width is <= 640px
+      992: {
+        slidesPerView: 2,
+        spaceBetweenSlides: 30
+      }
     }
   });
-
-      function scrollFunction() {
+    
+    function scrollFunction() {
       let scrollTop = $(window).scrollTop();
 
       if (scrollTop > 20) {
         scrollUp.css('display', "block");
+        header.css('background-color', '#433D7B');
       } else {
         scrollUp.css('display', "none");
+        header.css('background-color', 'transparent');
       }
     }
     
@@ -66,6 +95,43 @@ $(document).ready(function () {
           window.location.hash = hash;
         });
       } // End if
+    });
+
+    $('.subscribe-form').validate({
+      errorClass: 'invalid',
+      errorElement: "div",
+      errorPlacement: function(error, element) {
+        element.after(error);
+      },
+      rules: {
+        subscribe: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        subscribe: {
+            required: "Заполните поле",
+            email: "Введите корректный email"
+        },
+      },
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function (response) {
+            window.location = "./thanks.html";
+            console.log("Ajax сработал. Ответ сервера: " + response);
+            //alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+            $(form)[0].reset();
+            // modal.removeClass('modal--visible');
+            // modalAccept.addClass('modal--visible');
+            //ym(64345651,'reachGoal','request');
+            return true;
+          }
+        });
+      }
     });
 });
 // const swiperLabels = ['Выезд на замер <br>помещения', 'Составление<br> сметы', 'Разработка<br>  дизайн проекта', 'Закупка расходных<br> материалов', 'Ремонтно-отделочные<br> работы', 'Приемка-сдача <br>работ'];

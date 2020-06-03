@@ -7,7 +7,7 @@
   &__link-block
     display: flex
     flex-direction: column
-  &-link, &__address, &__phone, &__email, &__skype
+  &-link, &__address, &__phone, &__email, &__skype, &__postscriptum
     color: #999999
     font-family: "Gotham Pro"
     font-size: 0.929rem
@@ -29,14 +29,34 @@
   &__logo-link
     margin-bottom: 3.071rem
   &__address
-    max-width: 16rem
     margin-bottom: 2.857rem
+    display: flex
+    & .footer__icon-owner
+      max-width: 15rem
   &__phone
     margin-bottom: 2.643rem
+    display: flex
   &__email
     margin-bottom: 2.643rem
+    display: flex
+  &__skype
+    display: flex
   &-link
     margin-bottom: 1.3rem
   &__logo
     filter: invert(67%) sepia(6%) saturate(24%) hue-rotate(316deg) brightness(88%) contrast(91%)
+  &__icon
+    &-wrap
+      display: inline-block
+      margin-right: 1rem
+    &-owner
+      display: inline-block
+  &__postscriptum
+    //margin: 0
+    margin: auto
+    text-align: center
+    margin-top: 2rem
+    padding-bottom: 5rem
+    &:hover
+      color: #999999
   

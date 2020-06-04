@@ -1,6 +1,8 @@
 $(document).ready(function () {
   const modal = $('.modal'),
         closeBtn = $('.modal__close'),
+        modalSearch = $('.modal__search'),
+        zoomWrap = $('.zoom-wrap'),
         zoomModal = $('.zoom-modal'),
         iconZoom = $('.icon-wrap-zoom'),
         zoomCloseBtn = $('.zoom-modal__close'),
@@ -14,6 +16,7 @@ $(document).ready(function () {
         hamburger = $('.hamburger'),
         hamburgerMenu = $('.hamburger__menu'),
         scrollUp = $('.scroll-up-container'),
+        interfaceButtonImage = $('.interface-button-image'),
         map = $('#map');
 
   const switchModal = () => {
@@ -38,6 +41,24 @@ $(document).ready(function () {
 
   closeBtn.on('click', switchModal);
   openSearchBtn.on('click', switchModal);
+
+  $(document).on('keydown', function(e) {
+    if (e.code === "Escape") {
+      modal.removeClass('modal--visible');
+      zoomModal.removeClass('modal--visible');
+    }
+  }); 
+
+  $(document).on('click', function(event) {
+    let target = $(event.target);
+
+    if (!target.is(interfaceButtonImage) && !target.is(iconZoom) && (modal.hasClass('modal--visible') || zoomModal.hasClass('modal--visible')) && !target.closest(modalSearch).length && !target.closest(zoomWrap).length){
+      modal.removeClass('modal--visible');
+      zoomModal.removeClass('modal--visible');
+    }
+  });  
+
+  //  && !target.closest(modalSearch).length && !target.closest(zoomWrap).length
 
   readMoreFirst.on('click', () => {
      newsItemFirst.css({overflow: 'visible'});

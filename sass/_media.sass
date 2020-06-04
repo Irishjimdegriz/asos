@@ -8,8 +8,36 @@
     &-next:hover
       background: rgba(0, 0, 0, 0.3) url('../img/hero-arrow-right-hovered.jpg') no-repeat center  
       background-size: contain
-      width: 14.286rem      
-  
+      width: 14.286rem  
+  .link-item 
+    &:hover
+      cursor: pointer
+      text-decoration: none
+      border-bottom: 2px solid $light    
+    &--black      
+      &:hover
+        cursor: pointer
+        text-decoration: none
+        border-bottom: 2px solid $black
+  .news-item__read-more
+    &:hover
+      color: $primary
+  .popular__image-wrap:hover .icon-container      
+    display: flex      
+  .popular__swiper-button
+    &-prev, &-next
+      &:hover
+        background-color: rgba($button-primary, 0.1)  
+  .catalog__more-items-button:hover
+    background-color: $black
+    color: white
+  .dropdown    
+    &:hover .cart-popup
+      display: block
+  .questions__button:hover
+    background-color: $secondary
+
+
 @media screen and ( max-width: 1500px)
   .news-item__text
     max-width: 30rem

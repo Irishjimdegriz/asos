@@ -308,6 +308,10 @@ div.invalid {
   position: absolute;
   margin-top: 4.8rem;
   color: red; }
+  div.invalid#questions-user-name-error, div.invalid#questions-user-email-error, div.invalid#questions-user-phone-error, div.invalid#questions-user-topic-error {
+    margin-top: 7.3rem; }
+  div.invalid#questions-user-question-error {
+    margin-top: 15rem; }
 
 .container {
   width: 85%;

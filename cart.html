@@ -80,7 +80,7 @@
         <!-- /.link-item menu__link-item -->
         <a href="#promo" class="hamburger__link-item">Партнерам</a>
         <!-- /.link-item menu__link-item -->
-        <a href="./contacts.html" class="hamburger__link-item">Контакты</a>
+        <a href="./cart.html" class="hamburger__link-item">Контакты</a>
         <!-- /.link-item menu__link-item -->
       </div>
     </div>
@@ -105,6 +105,94 @@
   </div>
 </section>
 <!-- /.section secondary-hero -->
+<section class="section shopping-cart">
+  <div class="container">
+    <div class="cart-row shopping-cart__cart-row cart-row--legend">
+      <div class="photo-col cart-row--title">Фото товара</div>
+      <div class="name-col cart-row--title">Название товара</div>
+      <div class="price-col col--center cart-row--title">Цена</div>
+      <div class="quantity-col col--center cart-row--title">Количество</div>
+      <div class="total-col col--center cart-row--title">Итого</div>
+      <div class="delete-button-col"></div>
+    </div>
+    <div class="cart-row shopping-cart__cart-row">
+      <div class="photo-col"><div class="photo-col__image-wrap"><img src="img/hero-popular/popular-item-1.png" alt="" class="photo-col__image"></div></div>
+      <div class="name-col">Жилет, A.Karina<span class="name-col__description">Цвет: серый</span></div>
+      <div class="price-col col--center"><sup class="price-tag__sup">₽</sup> 6 490</div>
+      <div class="quantity-col col--center"><select>
+        <option selected="selected">1</option>
+        <option>2</option>
+        <option>3</option>
+      </select></div>
+      <div class="total-col col--center"><sup class="price-tag__sup">₽</sup> 6 490</div>
+      <div class="delete-button-col"><div class="delete-col__image-wrap"><img src="img/delete-button.png" alt=""></div></div>
+    </div>
+    <div class="cart-row shopping-cart__cart-row">
+      <div class="photo-col"><div class="photo-col__image-wrap"><img src="img/hero-popular/popular-item-2.png" alt="" class="photo-col__image"></div></div>
+      <div class="name-col">Юбка, Oodji<span class="name-col__description">Цвет: синий</span></div>
+      <div class="price-col col--center"><sup class="price-tag__sup">₽</sup> 799</div>
+      <div class="quantity-col col--center"><select>
+        <option>1</option>
+        <option selected="selected">2</option>
+        <option>3</option>
+      </select></div>
+      <div class="total-col col--center"><sup class="price-tag__sup">₽</sup> 1 598</div>
+      <div class="delete-button-col"><div class="delete-col__image-wrap"><img src="img/delete-button.png" alt=""></div></div>
+    </div>
+    <div class="cart-row shopping-cart__cart-row">
+      <div class="photo-col"><div class="photo-col__image-wrap"><img src="img/hero-popular/popular-item-3.png" alt="" class="photo-col__image"></div></div>
+      <div class="name-col">Брюки, ТВОЕ<span class="name-col__description">Цвет: темно-синий</span></div>
+      <div class="price-col col--center"><sup class="price-tag__sup">₽</sup> 599</div>
+      <div class="quantity-col col--center"><select>
+        <option selected="selected">1</option>
+        <option>2</option>
+        <option>3</option>
+      </select></div>
+      <div class="total-col col--center"><sup class="price-tag__sup">₽</sup> 599</div>
+      <div class="delete-button-col"><div class="delete-col__image-wrap"><img src="img/delete-button.png" alt=""></div></div>
+    </div>
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /.section shopping-cart -->
+<section class="section total">
+  <div class="container">
+    <div class="discount-block total__discount-block">
+      <h2 class="total__title">Купон на скидку</h2>
+      <form action="" class="discount-block__form">
+        <input type="text" class="discount-input" placeholder="Введите номер купона на скидку" name="discount">
+        <button class="coupon-button" type="submit">применить код</button>
+      </form>
+      <div class="discount-block__button-container">
+        <button class="discount-block__button continue-button" type="submit">продолжить покупки</button>
+        <button class="discount-block__button recalculate-button" type="submit">обновить корзину</button>
+      </div>
+    </div>
+    <div class="money-block total__money-block">
+      <h2 class="total__title">Сумма итого</h2>
+      <div class="table-total money__table-total">
+        <div class="short-cart-item money__short-cart-item">
+          <p class="short-cart-item-name">Жилет, A.Karina</p>
+          <p class="short-cart-item-price">₽ 6490</p>
+        </div>
+        <div class="short-cart-item money__short-cart-item">
+          <p class="short-cart-item-name">Юбка, Oodji</p>
+          <p class="short-cart-item-price">₽ 1598</p>
+        </div>
+        <div class="short-cart-item money__short-cart-item">
+          <p class="short-cart-item-name">Брюки, ТВОЕ</p>
+          <p class="short-cart-item-price">₽ 599</p>
+        </div>
+        <div class="short-cart-item money__short-cart-item short-cart-item--total">
+          <p class="short-cart-item-name">Итого</p>
+          <p class="short-cart-item-price">₽ 7687</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /.section total -->
   <section class="section about">
     <h2 class="section-title about__section-title">Магазин ASOS</h2>
     <p class="section-subtitle about__section-subtitle">Преимущества интернет магазина - доступные цены, широкий, регулярно обновляемый ассортимент.<br class="desktop-visible"> У нас можно купить одежду любой известной марки - представлена продукция ведущих зарубежных, отечественных брендов.</p>

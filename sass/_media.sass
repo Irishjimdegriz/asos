@@ -9,6 +9,11 @@
   .link-item
     margin-right: 1.5rem
 
+@media screen and ( max-width: 1300px)
+  .contacts-block
+    &__address, &__phone, &__email, &__skype, &__postscriptum
+      font-size: 0.779rem  
+
 @media screen and ( max-width: 1260px)
   .header
     &__menu
@@ -22,6 +27,8 @@
     padding: 19px 47px
   .news-item__text
     max-width: 25rem
+  .catalog__cards-container
+    max-height: 148.5rem
 
 @media screen and ( max-width: 1140px)
   .header
@@ -30,6 +37,9 @@
   .news-item
     &__title
       font-size: 1.25rem
+  .contacts-block
+    &__address, &__phone, &__email, &__skype, &__postscriptum
+      max-width: 12rem      
 
 @media screen and ( max-width: 1040px)      
   .news-item__text
@@ -152,6 +162,22 @@
         width: 0.8rem
       &__link
         font-size: 0.729rem
+  .visible-quantity-container, .filter-container
+    margin-right: 0.65rem
+  .visible-quantity-caption, .filter-caption    
+    margin-right: 0.5rem
+  .display-settings__image-wrap
+    margin-right: 0.5rem
+  .questions
+    &__container     
+      flex-direction: column
+    &__contacts-block
+      margin-top: 10rem
+
+
+@media screen and ( max-width: 941px)
+  .catalog__cards-container
+    max-height: 222.5rem
 
 @media screen and ( max-width: 780px)
   .subtitle
@@ -194,6 +220,11 @@
     width: 30rem
   .modal__close
     right: -6rem        
+
+@media screen and ( max-width: 634px)
+  .catalog__cards-container
+    max-height: 457.5rem
+    justify-content: center
 
 @media screen and ( max-width: 630px)
   .subtitle
@@ -328,6 +359,10 @@
 @media screen and ( max-width: 400px)
   .section-subtitle
     max-width: 22rem
+  .visible-quantity-container, .filter-container
+    display: none
+  .catalog__items-shown
+    margin-top: 0.4rem   
 
 @media screen and ( max-width: 370px)
   .price-from

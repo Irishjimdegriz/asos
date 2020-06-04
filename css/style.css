@@ -1323,7 +1323,13 @@ img {
     line-height: 2rem;
     letter-spacing: -0.3px;
     margin: 0;
-    margin-top: 1.8rem; }
+    margin-top: 1.2rem; }
+  .catalog__image-wrap {
+    position: relative;
+    width: 18.714rem;
+    height: 24.429rem;
+    background-color: #f3f4f8;
+    text-align: center; }
 
 .display-settings {
   display: flex;
@@ -1366,6 +1372,35 @@ img {
 
 .filter-container {
   margin-right: 3rem; }
+
+.old-price {
+  color: #2d3a4b;
+  margin-left: 3rem; }
+
+.discount-block {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ef50a2;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .discount-block__percent {
+    font-size: 1.271rem;
+    font-weight: 700;
+    letter-spacing: -0.36px;
+    margin: 0; }
+  .discount-block__caption {
+    font-size: 0.786rem;
+    font-weight: 500;
+    letter-spacing: -0.22px;
+    margin: 0;
+    color: #ffffff;
+    z-index: 1000; }
 
 .shopping-cart > .container {
   padding-top: 7.286rem; }
@@ -1506,6 +1541,14 @@ select {
   font-size: 1.071rem;
   line-height: 2rem; }
 
+.questions > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: auto;
+  max-width: 100rem;
+  margin-top: 7.071rem; }
+
 .questions__section-title {
   margin-bottom: 3.857rem;
   color: #2d3a4b;
@@ -1599,14 +1642,6 @@ textarea {
     margin-left: 2rem;
     max-width: 19rem; }
 
-.extra-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin: auto;
-  max-width: 100rem;
-  margin-top: 7.071rem; }
-
 .user-data-container {
   display: flex;
   flex-wrap: wrap;
@@ -1681,6 +1716,10 @@ textarea {
   .link-item {
     margin-right: 1.5rem; } }
 
+@media screen and (max-width: 1300px) {
+  .contacts-block__address, .contacts-block__phone, .contacts-block__email, .contacts-block__skype, .contacts-block__postscriptum {
+    font-size: 0.779rem; } }
+
 @media screen and (max-width: 1260px) {
   .header__menu {
     margin-right: 1.7rem; }
@@ -1692,13 +1731,17 @@ textarea {
     font-size: 16px;
     padding: 19px 47px; }
   .news-item__text {
-    max-width: 25rem; } }
+    max-width: 25rem; }
+  .catalog__cards-container {
+    max-height: 148.5rem; } }
 
 @media screen and (max-width: 1140px) {
   .header__logo-link {
     margin-right: 1rem; }
   .news-item__title {
-    font-size: 1.25rem; } }
+    font-size: 1.25rem; }
+  .contacts-block__address, .contacts-block__phone, .contacts-block__email, .contacts-block__skype, .contacts-block__postscriptum {
+    max-width: 12rem; } }
 
 @media screen and (max-width: 1040px) {
   .news-item__text {
@@ -1807,7 +1850,21 @@ textarea {
     .secondary-nav__image-wrap {
       width: 0.8rem; }
     .secondary-nav__link {
-      font-size: 0.729rem; } }
+      font-size: 0.729rem; }
+  .visible-quantity-container, .filter-container {
+    margin-right: 0.65rem; }
+  .visible-quantity-caption, .filter-caption {
+    margin-right: 0.5rem; }
+  .display-settings__image-wrap {
+    margin-right: 0.5rem; }
+  .questions__container {
+    flex-direction: column; }
+  .questions__contacts-block {
+    margin-top: 10rem; } }
+
+@media screen and (max-width: 941px) {
+  .catalog__cards-container {
+    max-height: 222.5rem; } }
 
 @media screen and (max-width: 780px) {
   .subtitle {
@@ -1845,6 +1902,11 @@ textarea {
     width: 30rem; }
   .modal__close {
     right: -6rem; } }
+
+@media screen and (max-width: 634px) {
+  .catalog__cards-container {
+    max-height: 457.5rem;
+    justify-content: center; } }
 
 @media screen and (max-width: 630px) {
   .subtitle {
@@ -1956,7 +2018,11 @@ textarea {
 
 @media screen and (max-width: 400px) {
   .section-subtitle {
-    max-width: 22rem; } }
+    max-width: 22rem; }
+  .visible-quantity-container, .filter-container {
+    display: none; }
+  .catalog__items-shown {
+    margin-top: 0.4rem; } }
 
 @media screen and (max-width: 370px) {
   .price-from {

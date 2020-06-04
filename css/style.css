@@ -428,9 +428,12 @@ img {
   .scroll-up:before {
     content: '';
     background: url("../img/scroll-up-arrow.png") no-repeat center;
-    width: 1.3rem;
+    width: 30px;
     height: 30px;
     border: 1px #838385 solid; }
+  .scroll-up:hover::before {
+    border: 1px #2d3a4b solid;
+    background: white url("../img/scroll-up-arrow-hovered.png") center no-repeat; }
 
 .filter--black {
   -webkit-filter: invert(72%);
@@ -502,6 +505,7 @@ img {
 .hero {
   position: relative;
   height: 100vh;
+  min-height: 67.642rem;
   background: #5a52a5;
   color: #fff; }
   .hero__swiper-slide {
@@ -516,7 +520,7 @@ img {
       left: 0;
       bottom: 0;
       width: 100%;
-      height: 100vh;
+      height: 100%;
       opacity: 0.5;
       background: #5a52a5; }
   .hero__swiper-button-prev, .hero__swiper-button-next {
@@ -574,7 +578,7 @@ img {
     position: absolute;
     top: 3.3rem;
     right: -0.2rem;
-    width: 15rem; }
+    width: 18rem; }
     .hamburger__menu--visible {
       display: block; }
     .hamburger__menu::before {
@@ -1249,6 +1253,10 @@ img {
   max-width: 37rem;
   margin: auto;
   margin-bottom: 4rem; }
+  .secondary-description--contacts {
+    max-width: 40rem; }
+  .secondary-description--item {
+    max-width: 42rem; }
 
 .secondary-nav {
   background-color: #ef50a2;
@@ -1269,6 +1277,91 @@ img {
     margin-right: 0.5rem; }
   .secondary-nav__image-wrap {
     margin-right: 0.5rem; }
+
+.catalog {
+  padding-top: 8.214rem;
+  border-bottom: 1px solid #999999; }
+  .catalog__cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 112.5rem;
+    overflow: hidden;
+    margin-bottom: 5rem; }
+  .catalog__item-card {
+    flex-basis: 20%;
+    margin-bottom: 4.289rem; }
+  .catalog__more-items-button {
+    background-color: #eeeeee;
+    padding: 1.214rem 2.214rem;
+    color: #2d3a4b;
+    font-family: "Gotham Pro";
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 2rem;
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 0.84px;
+    margin: auto;
+    margin-bottom: 8.214rem;
+    border: none;
+    outline: none;
+    cursor: pointer; }
+    .catalog__more-items-button:hover {
+      background-color: #2d3a4b;
+      color: white; }
+  .catalog__items-shown {
+    color: #cccccc;
+    font-family: "Gotham Pro";
+    font-size: 1.071rem;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: -0.3px;
+    margin: 0;
+    margin-top: 1.8rem; }
+
+.display-settings {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4.714rem; }
+  .display-settings__container {
+    display: flex;
+    justify-content: space-between; }
+  .display-settings__icon-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .display-settings__image-wrap {
+    margin-right: 2rem;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer; }
+    .display-settings__image-wrap:last-of-type {
+      margin-right: 0; }
+
+.visible-quantity-caption, .filter-caption {
+  color: #2d3a4b;
+  font-family: "Gotham Pro";
+  font-size: 1.214rem;
+  font-weight: 700;
+  line-height: 2rem;
+  letter-spacing: -0.34px;
+  margin-right: 1rem; }
+
+.visible-quantity-container, .filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2rem;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer; }
+
+.filter-container {
+  margin-right: 3rem; }
 
 @media screen and (max-width: 1500px) {
   .news-item__text {
@@ -1390,8 +1483,12 @@ img {
   .secondary-title {
     font-size: 1.357rem; }
   .secondary-description {
-    font-size: 0.61rem;
+    font-size: 0.6rem;
     max-width: 19rem; }
+    .secondary-description--contacts {
+      max-width: 16.5rem; }
+    .secondary-description--cart {
+      max-width: 21.7rem; }
   .secondary-nav {
     padding: 0.171rem 0.6rem; }
     .secondary-nav__image-wrap {

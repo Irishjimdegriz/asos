@@ -99,9 +99,12 @@ img
     &:before
       content: ''
       background: url('../img/scroll-up-arrow.png') no-repeat center
-      width: 1.3rem
+      width: 30px
       height: 30px
       border: 1px #838385 solid
+    &:hover::before
+      border: 1px $black solid
+      background: white url('../img/scroll-up-arrow-hovered.png') center no-repeat
 .filter--black
   filter: invert(72%)
 // .swiper

@@ -13,7 +13,8 @@ $(document).ready(function () {
         newsItemSecond = $('.news-item__text--second'),
         hamburger = $('.hamburger'),
         hamburgerMenu = $('.hamburger__menu'),
-        scrollUp = $('.scroll-up-container');
+        scrollUp = $('.scroll-up-container'),
+        map = $('#map');
 
   const switchModal = () => {
     modal.toggleClass('modal--visible');
@@ -81,6 +82,16 @@ $(document).ready(function () {
       }
     }
   });
+
+      if ($(window).scrollTop() > 20) {
+        scrollUp.css('display', "block");
+        headerPrimary.css('background-color', '#433D7B');
+        headerWhite.css('background-color', '#ffffff');
+      } else {
+        scrollUp.css('display', "none");
+        headerPrimary.css('background-color', 'transparent');
+        headerWhite.css('background-color', 'transparent');
+      }
     
     function scrollFunction() {
       let scrollTop = $(window).scrollTop();
@@ -157,6 +168,224 @@ $(document).ready(function () {
         });
       }
     });
+
+    $('.questions__form').validate({
+      errorClass: 'invalid',
+      errorElement: "div",
+      errorPlacement: function(error, element) {
+        element.after(error);
+      },
+      rules: {
+        userName: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        },
+        // simple rule, converted to {required:true}
+        userPhone: {
+          required: true,
+          minlength: 17
+        },
+        // compound rule
+        userEmail: {
+          required: true,
+          email: true
+        },
+        userTopic: {
+          required: true,
+          minlength: 2,
+          maxlength: 20
+        },
+        userQuestion: {
+          required: true
+        }
+      },
+      messages: {
+        userName: {
+          required: "Заполните поле",
+          minlength: "Имя слишком короткое",
+          maxlength: "Имя слишком длинное"
+        },
+        userPhone: {
+          required: "Заполните поле",
+          minlength: "Телефон слишком короткий"
+        },
+        userEmail: {
+            required: "Заполните поле",
+            email: "Введите корректный email"
+        },
+        userTopic: {
+          required: "Заполните поле",
+          minlength: "Тема слишком короткая",
+        },
+        userQuestion: {
+          required: "Заполните поле"
+        }
+      },
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "sendQuestion.php",
+          data: $(form).serialize(),
+          success: function (response) {
+            window.location = "./thanks.html";
+            console.log("Ajax сработал. Ответ сервера: " + response);
+            //alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+            $(form)[0].reset();
+            // modal.removeClass('modal--visible');
+            // modalAccept.addClass('modal--visible');
+            //ym(64345651,'reachGoal','request');
+            return true;
+          }
+        });
+      }
+    });
+
+    map.on('click', () => {
+      map.removeClass('shade');
+    });
+
+    //Переменная для включения/отключения индикатора загрузки
+var spinner = $('.footer__api-map').children('.loader');
+//Переменная для определения была ли хоть раз загружена Яндекс.Карта (чтобы избежать повторной загрузки при наведении)
+var check_if_load = false;
+//Необходимые переменные для того, чтобы задать координаты на Яндекс.Карте
+var myMapTemp, myPlacemarkTemp;
+ 
+//Функция создания карты сайта и затем вставки ее в блок с идентификатором &#34;map-yandex&#34;
+function init () {
+  var myMapTemp = new ymaps.Map("map", {
+    center: [55.730138, 37.594238], // координаты центра на карте
+    zoom: 7, // коэффициент приближения карты
+    controls: ['zoomControl', 'fullscreenControl'] // выбираем только те функции, которые необходимы при использовании
+  });
+  var myPlacemarkTemp = new ymaps.Placemark([55.730138, 37.594238], {
+      balloonContent: "Здесь может быть ваш адрес",
+  }, {
+      // Опции.
+      // Необходимо указать данный тип макета.
+      iconLayout: 'default#imageWithContent',
+      // Своё изображение иконки метки.
+      iconImageHref: 'img/yandex-map-mark.png',
+      // Размеры метки.
+      iconImageSize: [50, 50],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      iconImageOffset: [-25, -50],
+  });
+  myMapTemp.behaviors.disable('scrollZoom');
+  myMapTemp.geoObjects.add(myPlacemarkTemp); // помещаем флажок на карту
+ 
+  // Получаем первый экземпляр коллекции слоев, потом первый слой коллекции
+  var layer = myMapTemp.layers.get(0).get(0);
+ 
+  // Решение по callback-у для определения полной загрузки карты
+  waitForTilesLoad(layer).then(function() {
+    // Скрываем индикатор загрузки после полной загрузки карты
+    spinner.removeClass('is-active');
+          if (window.innerWidth > 1080) {
+            myMapTemp.container.getElement().style.height = '465px';
+          }
+          else {
+            myMapTemp.container.getElement().style.height = '255px';
+          }
+
+          // Инициируем пересчет размеров.
+          myMapTemp.container.fitToViewport();
+
+          myMapTemp.container.events.add('sizechange', () => {
+            if (window.innerWidth > 1080)
+              myMapTemp.container.getElement().style.height = '465px';
+            else
+              myMapTemp.container.getElement().style.height = '255px';
+          });
+
+
+  });
+}
+ 
+// Функция для определения полной загрузки карты (на самом деле проверяется загрузка тайлов) 
+function waitForTilesLoad(layer) {
+  return new ymaps.vow.Promise(function (resolve, reject) {
+    var tc = getTileContainer(layer), readyAll = true;
+    tc.tiles.each(function (tile, number) {
+      if (!tile.isReady()) {
+        readyAll = false;
+      }
+    });
+    if (readyAll) {
+      resolve();
+    } else {
+      tc.events.once("ready", function() {
+        resolve();
+      });
+    }
+  });
+}
+ 
+function getTileContainer(layer) {
+  for (var k in layer) {
+    if (layer.hasOwnProperty(k)) {
+      if (
+        layer[k] instanceof ymaps.layer.tileContainer.CanvasContainer
+        || layer[k] instanceof ymaps.layer.tileContainer.DomContainer
+      ) {
+        return layer[k];
+      }
+    }
+  }
+  return null;
+}
+ 
+// Функция загрузки API Яндекс.Карт по требованию (в нашем случае при наведении)
+function loadScript(url, callback){
+  var script = document.createElement("script");
+ 
+  if (script.readyState){  // IE
+    script.onreadystatechange = function(){
+      if (script.readyState == "loaded" ||
+              script.readyState == "complete"){
+        script.onreadystatechange = null;
+        callback();
+      }
+    };
+  } else {  // Другие браузеры
+    script.onload = function(){
+      callback();
+    };
+  }
+ 
+  script.src = url;
+  document.getElementsByTagName("head")[0].appendChild(script);
+}
+ 
+// Основная функция, которая проверяет когда мы навели на блок с классом &#34;ymap-container&#34;
+var ymap = function() {
+  $('.footer__api-map').mouseenter(function(){
+      if (!check_if_load) { // проверяем первый ли раз загружается Яндекс.Карта, если да, то загружаем
+ 
+	  	// Чтобы не было повторной загрузки карты, мы изменяем значение переменной
+        check_if_load = true; 
+ 
+		// Показываем индикатор загрузки до тех пор, пока карта не загрузится
+        spinner.addClass('is-active');
+ 
+		// Загружаем API Яндекс.Карт
+        loadScript("https://api-maps.yandex.ru/2.1/?apikey=6fdbd675-9305-4e9b-8942-d69cd6eef340&lang=ru_RU", function(){
+           // Как только API Яндекс.Карт загрузились, сразу формируем карту и помещаем в блок с идентификатором &#34;map-yandex&#34;
+           ymaps.load(init);
+        });                
+      }
+    }
+  );  
+}
+ 
+$(function() {
+ 
+  //Запускаем основную функцию
+  ymap();
+ 
+});
 });
 // const swiperLabels = ['Выезд на замер <br>помещения', 'Составление<br> сметы', 'Разработка<br>  дизайн проекта', 'Закупка расходных<br> материалов', 'Ремонтно-отделочные<br> работы', 'Приемка-сдача <br>работ'];
 

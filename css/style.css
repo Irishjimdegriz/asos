@@ -1363,6 +1363,171 @@ img {
 .filter-container {
   margin-right: 3rem; }
 
+.questions__section-title {
+  margin-bottom: 3.857rem;
+  color: #2d3a4b;
+  font-size: 1.571rem;
+  font-weight: 700;
+  line-height: 1.571rem;
+  text-transform: uppercase;
+  letter-spacing: 2.64px; }
+
+.questions__container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 11rem; }
+
+.questions__form {
+  flex-basis: 60%;
+  position: relative; }
+
+.questions__contacts-block {
+  flex-basis: 35%;
+  border: 3px solid #ef50a2;
+  padding-top: 3.143rem;
+  padding-left: 3.143rem; }
+
+.questions__input-group {
+  display: flex;
+  flex-direction: column;
+  position: relative; }
+
+.questions__label {
+  color: #252525;
+  font-size: 0.857rem;
+  font-weight: 500;
+  line-height: 1.571rem;
+  text-transform: uppercase;
+  letter-spacing: 0.48px;
+  margin-bottom: 1.357rem; }
+
+.questions__input {
+  color: #252525;
+  font-size: 1.071rem;
+  line-height: 2rem;
+  padding: 1.071rem 0 1.071rem 1.429rem;
+  border: 1px solid #2d3a4b;
+  margin-bottom: 1.929rem;
+  outline: none; }
+
+.questions__button {
+  position: absolute;
+  margin-top: 3rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.28px;
+  background-color: #2d3a4b;
+  padding: 1.143rem 1.929rem;
+  border: none;
+  outline: none; }
+  .questions__button:hover {
+    background-color: #ef50a2; }
+
+textarea {
+  resize: none;
+  margin-bottom: 0 !important;
+  height: 12rem; }
+
+.contacts-block {
+  display: flex;
+  flex-direction: column; }
+  .contacts-block__title {
+    color: #333333;
+    font-size: 0.857rem;
+    font-weight: 500;
+    line-height: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.72px;
+    margin-bottom: 2.571rem; }
+  .contacts-block__address, .contacts-block__phone, .contacts-block__email, .contacts-block__skype, .contacts-block__postscriptum {
+    color: #333333;
+    font-size: 0.929rem;
+    line-height: 1.857rem;
+    text-decoration: none;
+    margin-bottom: 2.571rem;
+    display: flex; }
+  .contacts-block__icon-wrap {
+    display: inline-block;
+    margin-right: 1rem; }
+  .contacts-block__postscriptum {
+    margin-left: 2rem;
+    max-width: 19rem; }
+
+.extra-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: auto;
+  max-width: 100rem;
+  margin-top: 7.071rem; }
+
+.user-data-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .user-data-container .questions__input-group {
+    flex-basis: 48%; }
+
+.api-map {
+  margin-bottom: 4rem;
+  width: 100%;
+  height: 33.12rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: url("../img/yandex-before-load-marker-bw.png") #ffffff no-repeat;
+  background-position: center center;
+  background-size: cover; }
+
+.loader {
+  position: absolute;
+  z-index: 15;
+  top: -100%;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #000000;
+  transition: opacity .7s ease;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.55); }
+  .loader:after, .loader:before {
+    box-sizing: border-box; }
+  .loader.is-active {
+    top: 0;
+    opacity: 1; }
+  .loader-default:after {
+    position: absolute;
+    top: calc(50% - 24px);
+    left: calc(50% - 24px);
+    width: 48px;
+    height: 48px;
+    content: '';
+    -webkit-animation: rotation 1s linear infinite;
+    animation: rotation 1s linear infinite;
+    border: solid 8px #ffffff;
+    border-left-color: transparent;
+    border-radius: 50%; }
+
+#map {
+  position: relative;
+  z-index: 7;
+  width: 100%;
+  height: 465px !important;
+  cursor: pointer;
+  background-color: transparent; }
+  #map:hover {
+    -webkit-filter: none !important;
+    filter: none !important; }
+
+.shade {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  -webkit-filter: grayscale(100%); }
+
 @media screen and (max-width: 1500px) {
   .news-item__text {
     max-width: 30rem; } }
@@ -1395,7 +1560,12 @@ img {
 @media screen and (max-width: 1040px) {
   .news-item__text {
     max-width: 23rem;
-    font-size: 0.829rem; } }
+    font-size: 0.829rem; }
+  .api-map {
+    height: 257px; }
+  #map {
+    width: 360px;
+    height: 295px !important; } }
 
 @media screen and (max-width: 992px) {
   .header > .container {

@@ -257,11 +257,11 @@ var myMapTemp, myPlacemarkTemp;
 //Функция создания карты сайта и затем вставки ее в блок с идентификатором &#34;map-yandex&#34;
 function init () {
   var myMapTemp = new ymaps.Map("map", {
-    center: [55.730138, 37.594238], // координаты центра на карте
-    zoom: 7, // коэффициент приближения карты
+    center: [55.756, 37.612], // координаты центра на карте
+    zoom: 17, // коэффициент приближения карты
     controls: ['zoomControl', 'fullscreenControl'] // выбираем только те функции, которые необходимы при использовании
   });
-  var myPlacemarkTemp = new ymaps.Placemark([55.730138, 37.594238], {
+  var myPlacemarkTemp = new ymaps.Placemark([55.756959, 37.608634], {
       balloonContent: "Здесь может быть ваш адрес",
   }, {
       // Опции.
@@ -270,7 +270,7 @@ function init () {
       // Своё изображение иконки метки.
       iconImageHref: 'img/yandex-map-mark.png',
       // Размеры метки.
-      iconImageSize: [50, 50],
+      iconImageSize: [150, 150],
       // Смещение левого верхнего угла иконки относительно
       // её "ножки" (точки привязки).
       iconImageOffset: [-25, -50],

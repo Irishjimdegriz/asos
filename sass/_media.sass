@@ -172,7 +172,16 @@
     &__container     
       flex-direction: column
     &__contacts-block
-      margin-top: 10rem
+      margin-top: 5rem
+    &__form
+      display: flex
+      flex-direction: column
+    &__button
+      position: static
+  .contacts-block
+    &__address, &__phone, &__email, &__skype, &__postscriptum
+      max-width: 20rem
+      font-size: 0.929rem    
 
 
 @media screen and ( max-width: 941px)
@@ -326,6 +335,12 @@
       height: 31rem
     &-modal__close
       right: -3.6rem
+  .questions__input-group      
+    flex-basis: 100% !important
+  .contacts-block
+    &__address, &__phone, &__email, &__skype, &__postscriptum
+      max-width: 12rem
+      font-size: 0.729rem      
 
 @media screen and ( max-width: 460px)
   .subtitle

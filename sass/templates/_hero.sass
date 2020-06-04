@@ -68,9 +68,10 @@
   outline: none
   padding: 0
   &-inner
-    background-color: white !important
-    &::before, &::after
+    &--white
       background-color: white !important
+      &::before, &::after
+        background-color: white !important
   &__menu
     display: none
     position: absolute
@@ -115,6 +116,12 @@
     cursor: pointer
     text-decoration: none
     border-bottom: 2px solid $light
+  &--black
+    color: $black
+    &:hover
+      cursor: pointer
+      text-decoration: none
+      border-bottom: 2px solid $black
 .interface-buttons
   &__interface-button
     margin-right: 1.5rem

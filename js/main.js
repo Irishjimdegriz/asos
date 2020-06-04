@@ -5,7 +5,8 @@ $(document).ready(function () {
         iconZoom = $('.icon-wrap-zoom'),
         zoomCloseBtn = $('.zoom-modal__close'),
         openSearchBtn = $('.search-open-button'),
-        header = $('.header'),
+        headerPrimary = $('.header--primary'),
+        headerWhite = $('.header--white'),
         readMoreFirst = $('.read-more-first'),
         newsItemFirst = $('.news-item__text--first'),
         readMoreSecond = $('.read-more-second'),
@@ -86,10 +87,12 @@ $(document).ready(function () {
 
       if (scrollTop > 20) {
         scrollUp.css('display', "block");
-        header.css('background-color', '#433D7B');
+        headerPrimary.css('background-color', '#433D7B');
+        headerWhite.css('background-color', '#ffffff');
       } else {
         scrollUp.css('display', "none");
-        header.css('background-color', 'transparent');
+        headerPrimary.css('background-color', 'transparent');
+        headerWhite.css('background-color', 'transparent');
       }
     }
     

@@ -1,5 +1,6 @@
 .popular
   &__image-wrap
+    position: relative
     width: 18.714rem
     height: 24.429rem
     background-color: rgb(243, 244, 248)
@@ -32,3 +33,69 @@
   &__price
     text-align: center
     margin-top: 2rem
+.icon-container
+  display: none
+  position: absolute
+  top: 0
+  width: 100%
+  height: 100%
+  background-color: rgba($primary, 0.6)
+  //display: flex
+  justify-content: center
+  align-items: center
+.popular__image-wrap:hover .icon-container      
+  display: flex
+.icon-wrap
+  width: 2rem
+  height: 2rem
+  margin-right: 1.5rem
+  &:last-of-type
+    margin-right: 0
+  &-zoom
+    background: url(../img/zoom.png) no-repeat center
+    &:hover
+      background: url(../img/zoom-hovered.png) no-repeat center
+  &-cart
+    background: url(../img/cart.png) no-repeat center
+    &:hover
+      background: url(../img/cart-hovered.png) no-repeat center
+  &-like
+    background: url(../img/like-small.png) no-repeat center
+    &:hover
+      background: url(../img/like-small-hovered.png) no-repeat center
+.zoom
+  &-modal
+    visibility: hidden
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    z-index: 199
+    width: 100%
+    height: 100%
+    background-color: rgba($gray, 0.4)
+    display: flex
+    justify-content: center
+    align-items: center
+    &__close
+      position: absolute
+      right: -5rem
+      top: -0.9rem
+      width: 2.5rem
+      height: 2.5rem
+      background: transparent url('../img/close.png') no-repeat center
+      border: none
+      margin: 12px
+      cursor: pointer
+      outline: none
+  &-wrap
+    position: relative
+    width: 26.36rem
+    height: 50.45rem
+    background-color: white
+    text-align: center
+  &-image
+    padding: 1rem 0
+    max-width: 100%
+    max-height: 100%

@@ -1,17 +1,38 @@
 $(document).ready(function () {
   const modal = $('.modal'),
         closeBtn = $('.modal__close'),
+        zoomModal = $('.zoom-modal'),
+        iconZoom = $('.icon-wrap-zoom'),
+        zoomCloseBtn = $('.zoom-modal__close'),
         openSearchBtn = $('.search-open-button'),
         header = $('.header'),
         readMoreFirst = $('.read-more-first'),
         newsItemFirst = $('.news-item__text--first'),
         readMoreSecond = $('.read-more-second'),
         newsItemSecond = $('.news-item__text--second'),
+        hamburger = $('.hamburger'),
+        hamburgerMenu = $('.hamburger__menu'),
         scrollUp = $('.scroll-up-container');
 
   const switchModal = () => {
     modal.toggleClass('modal--visible');
   }
+
+  const switchZoomModal = () => {
+    zoomModal.toggleClass('modal--visible');
+  }
+
+  const switchBurgerMenu = () => {
+    hamburgerMenu.toggleClass('hamburger__menu--visible');
+  }
+
+  hamburger.on('click', () => {
+    hamburger.toggleClass('is-active');
+    switchBurgerMenu();
+  });
+
+  zoomCloseBtn.on('click', switchZoomModal);
+  iconZoom.on('click', switchZoomModal);
 
   closeBtn.on('click', switchModal);
   openSearchBtn.on('click', switchModal);

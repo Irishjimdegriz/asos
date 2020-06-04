@@ -1,3 +1,7 @@
+@media screen and ( max-width: 1500px)
+  .news-item__text
+    max-width: 30rem
+
 @media screen and ( max-width: 1430px)
   .header
     &__logo-link
@@ -8,7 +12,7 @@
 @media screen and ( max-width: 1260px)
   .header
     &__menu
-      margin-right: 2rem
+      margin-right: 1.7rem
   .subtitle
     font-size: 4.5rem
   .title
@@ -16,6 +20,8 @@
   .scroll-down
     font-size: 16px
     padding: 19px 47px
+  .news-item__text
+    max-width: 25rem
 
 @media screen and ( max-width: 1140px)
   .header
@@ -25,6 +31,11 @@
     &__title
       font-size: 1.25rem
 
+@media screen and ( max-width: 1040px)      
+  .news-item__text
+    max-width: 23rem
+    font-size: 0.829rem
+
 @media screen and ( max-width: 992px)
   .header
     &>.container
@@ -32,6 +43,10 @@
       justify-content: space-between
     &__menu
       display: none
+    &__interface-buttons
+      display: none
+  .hamburger
+      display: block
   .hero
     &__swiper
       &-slide   
@@ -112,6 +127,10 @@
       font-size: 0.81rem
   .link-block-desktop
     display: none
+  .search-input
+    width: 35rem
+  .modal__close
+    right: -8rem
 
 @media screen and ( max-width: 780px)
   .subtitle
@@ -150,6 +169,10 @@
         font-size: 0.8rem
       &__text
         font-size: 0.65rem
+  .search-input
+    width: 30rem
+  .modal__close
+    right: -6rem        
 
 @media screen and ( max-width: 630px)
   .subtitle
@@ -189,6 +212,10 @@
   .footer
     &__postscriptum
       max-width: 25rem
+
+@media screen and ( max-width: 580px)
+  .search-input
+    width: 25rem
 
 @media screen and ( max-width: 550px)
   .title
@@ -241,6 +268,12 @@
       font-size: 0.8rem
   .footer-link-block-title
     font-size: 0.9rem      
+  .zoom
+    &-wrap
+      width: 16rem
+      height: 31rem
+    &-modal__close
+      right: -3.6rem
 
 @media screen and ( max-width: 460px)
   .subtitle
@@ -265,7 +298,11 @@
       margin: 0  
     &-button
       padding: 0.6rem 1rem     
-      font-size: 0.8rem              
+      font-size: 0.8rem     
+  .search-input
+    width: 15rem   
+  .modal__close
+    right: -4rem                   
 
 @media screen and ( max-width: 400px)
   .section-subtitle

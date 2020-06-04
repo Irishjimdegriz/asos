@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Магазин одежды ASOS</title>
+  <link rel="stylesheet" href="css/hamburgers.min.css" >
   <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="header">
     <div class="container">
-      <a href="./" class="logo-link header__logo-link"><img src="img/logo-white.png" alt="logo" class="logo header__logo"></a>
-      <!-- /.logo-link header__logo-link -->
-      <div class="burger-dropdown"></div>
+        <a href="./" class="logo-link header__logo-link"><img src="img/logo-white.png" alt="logo" class="logo header__logo"></a>
+        <!-- /.logo-link header__logo-link -->
       <div class="menu header__menu">
         <a href="#hero" class="link-item menu__link-item">Домой</a>
         <!-- /.link-item menu__link-item -->
@@ -62,6 +62,25 @@
           </div>
         </div> <!-- /.interface-button interface-buttons__interface-button -->
         <div class="interface-button interface-buttons__interface-button search-open-button"><img src="img/search.png" alt="search" class="interface-button-image"></div> <!-- /.interface-button interface-buttons__interface-button -->
+      </div>
+      <div class="burger-container">
+        <button class="hamburger hamburger--spin" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <div class="hamburger__menu">
+          <a href="#hero" class="hamburger__link-item">Домой</a>
+          <!-- /.link-item menu__link-item -->
+          <a href="#" class="hamburger__link-item">каталог</a>
+          <!-- /.link-item menu__link-item -->
+          <a href="#" class="hamburger__link-item">О нас</a>
+          <!-- /.link-item menu__link-item -->
+          <a href="#" class="hamburger__link-item">Партнерам</a>
+          <!-- /.link-item menu__link-item -->
+          <a href="#" class="hamburger__link-item">Контакты</a>
+          <!-- /.link-item menu__link-item -->
+        </div>
       </div>
     </div>
     <!-- /.container -->
@@ -184,7 +203,12 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide popular__swiper-slide">
           <div class="popular__image-wrap">
-            <img src="img/hero-popular/popular-item-1.png" alt="popular-item-1">
+            <img class="popular-image" src="img/hero-popular/popular-item-1.png" alt="popular-item-1">
+            <div class="icon-container">
+              <a class="icon-wrap icon-wrap-zoom"></a>
+              <a class="icon-wrap icon-wrap-cart"></a>
+              <a class="icon-wrap icon-wrap-like"></a>
+            </div>
           </div>
           <p class="popular__title item-name">Жилет, A.Karina</p>
           <p class="popular__description item-description">Цвет: серый</p>
@@ -192,7 +216,12 @@
         </div>
         <div class="swiper-slide popular__swiper-slide">
           <div class="popular__image-wrap">
-            <img src="img/hero-popular/popular-item-2.png" alt="popular-item-2">
+            <img class="popular-image" src="img/hero-popular/popular-item-2.png" alt="popular-item-2">
+            <div class="icon-container">
+              <a class="icon-wrap icon-wrap-zoom"></a>
+              <a class="icon-wrap icon-wrap-cart"></a>
+              <a class="icon-wrap icon-wrap-like"></a>
+            </div>
           </div>
           <p class="popular__title item-name">Юбка, Oodji</p>
           <p class="popular__description item-description">Цвет: синий</p>
@@ -200,7 +229,12 @@
         </div>
         <div class="swiper-slide popular__swiper-slide">
           <div class="popular__image-wrap">
-            <img src="img/hero-popular/popular-item-3.png" alt="popular-item-3">
+            <img class="popular-image" src="img/hero-popular/popular-item-3.png" alt="popular-item-3">
+            <div class="icon-container">
+              <a class="icon-wrap icon-wrap-zoom"></a>
+              <a class="icon-wrap icon-wrap-cart"></a>
+              <a class="icon-wrap icon-wrap-like"></a>
+            </div>
           </div>
           <p class="popular__title item-name">Брюки, ТВОЕ</p>
           <p class="popular__description item-description">Цвет: темно-синий</p>
@@ -208,7 +242,12 @@
         </div>
         <div class="swiper-slide popular__swiper-slide">
           <div class="popular__image-wrap">
-            <img src="img/hero-popular/popular-item-4.png" alt="popular-item-4">
+            <img class="popular-image" src="img/hero-popular/popular-item-4.png" alt="popular-item-4">
+            <div class="icon-container">
+              <a class="icon-wrap icon-wrap-zoom"></a>
+              <a class="icon-wrap icon-wrap-cart"></a>
+              <a class="icon-wrap icon-wrap-like"></a>
+            </div>
           </div>
           <p class="popular__title item-name">Пижама FORLIFE</p>
           <p class="popular__description item-description">Цвет: коралловый, белый</p>
@@ -216,7 +255,12 @@
         </div>
         <div class="swiper-slide popular__swiper-slide">
           <div class="popular__image-wrap">
-            <img src="img/hero-popular/popular-item-1.png" alt="popular-item-1">
+            <img class="popular-image" src="img/hero-popular/popular-item-1.png" alt="popular-item-1">
+            <div class="icon-container">
+              <a class="icon-wrap icon-wrap-zoom"></a>
+              <a class="icon-wrap icon-wrap-cart"></a>
+              <a class="icon-wrap icon-wrap-like"></a>
+            </div>
           </div>
           <p class="popular__title item-name">Жилет, A.Karina</p>
           <p class="popular__description item-description">Цвет: серый</p>
@@ -224,7 +268,12 @@
         </div>
         <div class="swiper-slide popular__swiper-slide">
           <div class="popular__image-wrap">
-            <img src="img/hero-popular/popular-item-2.png" alt="popular-item-2">
+            <img class="popular-image" src="img/hero-popular/popular-item-2.png" alt="popular-item-2">
+            <div class="icon-container">
+              <a class="icon-wrap icon-wrap-zoom"></a>
+              <a class="icon-wrap icon-wrap-cart"></a>
+              <a class="icon-wrap icon-wrap-like"></a>
+            </div>
           </div>
           <p class="popular__title item-name">Юбка, Oodji</p>
           <p class="popular__description item-description">Цвет: синий</p>
@@ -232,7 +281,12 @@
         </div>
         <div class="swiper-slide popular__swiper-slide">
           <div class="popular__image-wrap">
-            <img src="img/hero-popular/popular-item-3.png" alt="popular-item-3">
+            <img class="popular-image" src="img/hero-popular/popular-item-3.png" alt="popular-item-3">
+            <div class="icon-container">
+              <a class="icon-wrap icon-wrap-zoom"></a>
+              <a class="icon-wrap icon-wrap-cart"></a>
+              <a class="icon-wrap icon-wrap-like"></a>
+            </div>
           </div>
           <p class="popular__title item-name">Брюки, ТВОЕ</p>
           <p class="popular__description item-description">Цвет: темно-синий</p>
@@ -240,7 +294,12 @@
         </div>
         <div class="swiper-slide popular__swiper-slide">
           <div class="popular__image-wrap">
-            <img src="img/hero-popular/popular-item-4.png" alt="popular-item-4">
+            <img class="popular-image" src="img/hero-popular/popular-item-4.png" alt="popular-item-4">
+            <div class="icon-container">
+              <a class="icon-wrap icon-wrap-zoom"></a>
+              <a class="icon-wrap icon-wrap-cart"></a>
+              <a class="icon-wrap icon-wrap-like"></a>
+            </div>
           </div>
           <p class="popular__title">Пижама FORLIFE</p>
           <p class="popular__description">Цвет: коралловый, белый</p>
@@ -285,7 +344,7 @@
   <section class="section about">
     <h2 class="section-title about__section-title">Магазин ASOS</h2>
     <p class="section-subtitle about__section-subtitle">Преимущества интернет магазина - доступные цены, широкий, регулярно обновляемый ассортимент.<br class="desktop-visible"> У нас можно купить одежду любой известной марки - представлена продукция ведущих зарубежных, отечественных брендов.</p>
-    <div class="icon-container about__icon-container">
+    <div class="social-icon-container about__social-icon-container">
       <a href="https://vk.com" target="_blank" class="image-wrap about__image-wrap"><img src="img/VK-hovered.png" alt="VK"></a>
       <a href="https://facebook.com" target="_blank" class="image-wrap about__image-wrap"><img src="img/facebook-hovered.svg" alt="facebook"></a>
       <a href="https://twitter.com" target="_blank" class="image-wrap about__image-wrap"><img src="img/twitter-hovered.svg" alt="twitter"></a>
@@ -350,6 +409,12 @@
         <input type="text" class="search-input" placeholder="Поисковой запрос" name="search">
         <button class="search-button" type="submit"></button>
       </form>
+    </div>
+  </div>
+  <div class="zoom-modal">
+    <div class="zoom-wrap">
+      <button class="zoom-modal__close"></button>
+      <img class="zoom-image" src="img/hero-popular/popular-item-3-scaled.png" alt="zoom-item">
     </div>
   </div>
   <div class="scroll-up-container">

@@ -36,6 +36,11 @@
       display: block
   .questions__button:hover
     background-color: $secondary
+  .coupon-button:hover
+    background-color: $secondary
+  .discount-coupon-block__button:hover
+    background-color: $black
+    color: white
 
 
 @media screen and ( max-width: 1500px)
@@ -223,7 +228,14 @@
   .contacts-block
     &__address, &__phone, &__email, &__skype, &__postscriptum
       max-width: 20rem
-      font-size: 0.929rem    
+      font-size: 0.929rem  
+  .zoom
+    &-modal
+      &__close      
+        display: none
+  .modal
+    &__close
+      display: none          
 
 
 @media screen and ( max-width: 941px)
@@ -352,8 +364,8 @@
     &-title
       font-size: 16px
     &-subtitle
-      max-width: 28rem
-      font-size: 0.65rem
+      max-width: 23rem
+      //font-size: 0.65rem
   .promo
     &__section-subtitle
       margin-bottom: 3rem
@@ -427,7 +439,12 @@
   .visible-quantity-container, .filter-container
     display: none
   .catalog__items-shown
-    margin-top: 0.4rem   
+    margin-top: 0.4rem  
+  .popular
+    &__image-wrap
+      width: 12rem
+    &__slide-container
+      width: 12rem !important     
 
 @media screen and ( max-width: 370px)
   .price-from

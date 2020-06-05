@@ -20,7 +20,7 @@
   &:last-of-type
     margin-bottom: 3.714rem
 .photo-col
-  flex-basis: 15%
+  flex-basis: 16.6%
   &__image
     width: auto
     height: 100%
@@ -34,14 +34,14 @@
       margin-top: 2.5rem
       margin-bottom: 2.5rem
 .name-col
-  flex-basis: 23%
+  flex-basis: 29%
   color: $black
   font-size: 1.571rem
   font-weight: 700
   line-height: 1.571rem
   text-transform: uppercase
   letter-spacing: 2.64px
-  margin-top: 7.143rem
+  margin-top: 6.543rem
   margin-bottom: 1rem
   &__description
     display: block
@@ -50,23 +50,25 @@
     line-height: 1.857rem
     text-transform: none
     letter-spacing: 0
+    margin-top: 0.8rem
 .price-col, .total-col
   flex-basis: 10%
-  margin-top: 7.143rem
+  margin-top: 6.543rem
   color: $secondary
   font-size: 1.286rem
   font-weight: bold
   line-height: 2rem
   text-transform: uppercase
 .quantity-col
-  flex-basis: 10%
-  margin-top: 7.143rem  
+  flex-basis: 16%
+  margin-top: 6.543rem  
 // .total-col
 //   flex-basis: 10%
 //   margin-top: 7.143rem  
 .delete-button-col
   flex-basis: 5%
-  margin-top: 7.143rem  
+  margin-top: 6.543rem 
+  margin-left: 8.4rem 
   cursor: pointer
 .col--center
   text-align: center
@@ -79,6 +81,7 @@ select
   padding-top: 7.428rem
   &>.container
     display: flex
+    width: 89%
   &__title
     color: $black
     font-size: 1.571rem
@@ -96,10 +99,12 @@ select
       position: absolute
       left: 0
       bottom: -0.786rem
-  &__discount-block
-    flex-basis: 60%
+  &__discount-coupon-block
+    //flex-basis: 60%
+    margin-left: 1.8rem
   &__money-block
-    flex-basis: 35%
+    flex-basis: 36.5%
+    margin-left: -2.3rem
 .short-cart-item
   font-size: 0.857rem
   font-weight: 500
@@ -107,25 +112,61 @@ select
   text-transform: uppercase
   letter-spacing: 0.72px
   border-bottom: 1px solid $gray
-  padding-bottom: 1rem
+  padding-bottom: 0.6rem
   display: flex
   justify-content: space-between
   &-name, &-price
     color: $black
+    margin-bottom: 0
   &:last-of-type
     border: none
+    padding-bottom: 1.4rem
 .table-total
   border: 3px solid $secondary
   padding: 2.571rem
+  padding-top: 0.6rem  
   padding-bottom: 0
   margin-bottom: 7rem
-.discount
+.discount-coupon
   &-block
+    flex-basis: 60%
     &__form
       padding: 3.571rem
+      padding-top: 3.2rem
       background-color: #eee
-      display: inline-block
+      display: inline-flex
+      margin-bottom: 2.5rem
     &-input
       color: #909090
       font-size: 1.071rem
-      line-height: 2rem     
+      line-height: 2rem    
+      width: 27.571rem  
+      padding: 0.4rem 1rem
+      padding-left: 1.4rem
+    &__button
+      padding: 1.214rem 2.214rem
+      color: $black
+      font-size: 1rem
+      font-weight: 700
+      text-transform: uppercase
+      letter-spacing: 0.84px
+      border: none
+      outline: none
+      background-color: #eeeeee
+      cursor: pointer
+      &:first-of-type
+        margin-right: 1.714rem    
+.coupon-button
+  width: 13.286rem      
+  color: #ffffff
+  font-size: 1rem
+  font-weight: 700
+  text-transform: uppercase
+  letter-spacing: 0.28px
+  background-color: $black
+  outline: none
+  border: none
+  cursor: pointer
+.continue-button
+  text-decoration: none  
+.total

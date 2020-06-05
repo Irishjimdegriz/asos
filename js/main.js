@@ -81,8 +81,11 @@ $(document).ready(function () {
   })
 
   var popularSwiper = new Swiper('.popular__swiper', {
+    loop: true,
     slidesPerView: 4,
-    spaceBetween: 60,
+    loopedSlides: 4,
+    spaceBetween: 20,
+    setWrapperSize: true,
     navigation: {
       nextEl: '.popular__swiper-button-next',
       prevEl: '.popular__swiper-button-prev',
@@ -91,18 +94,26 @@ $(document).ready(function () {
       noSwiping: true
     },
     breakpoints: {
-      // when window width is <= 480px
-      580: {
+      200: {
         slidesPerView: 1,
+        spaceBetweenSlides: 20
+      },      
+      760: {
+        slidesPerView: 2,
         spaceBetweenSlides: 20
       },
       // when window width is <= 640px
-      992: {
-        slidesPerView: 2,
-        spaceBetweenSlides: 30
+      1130: {
+        slidesPerView: 3,
+        spaceBetweenSlides: 20
+      },
+      1500: {
+        slidesPerView: 4,
+        spaceBetweenSlides: 20
       }
     }
   });
+  //popularSwiper.updateSize();
 
       if ($(window).scrollTop() > 20) {
         scrollUp.css('display', "block");

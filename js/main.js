@@ -404,7 +404,7 @@ function init () {
       // Своё изображение иконки метки.
       iconImageHref: 'img/yandex-map-mark.png',
       // Размеры метки.
-      iconImageSize: [150, 150],
+      iconImageSize: [102, 87],
       // Смещение левого верхнего угла иконки относительно
       // её "ножки" (точки привязки).
       iconImageOffset: [-25, -50],
@@ -421,6 +421,7 @@ function init () {
     spinner.removeClass('is-active');
           if (window.innerWidth > 1080) {
             myMapTemp.container.getElement().style.height = '465px';
+            myMapTemp.container.getElement().style.width= '100%';
           }
           else {
             myMapTemp.container.getElement().style.height = '255px';
@@ -430,8 +431,10 @@ function init () {
           myMapTemp.container.fitToViewport();
 
           myMapTemp.container.events.add('sizechange', () => {
-            if (window.innerWidth > 1080)
+            if (window.innerWidth > 1080) {
               myMapTemp.container.getElement().style.height = '465px';
+              myMapTemp.container.getElement().style.width= '100%';
+            }
             else
               myMapTemp.container.getElement().style.height = '255px';
           });

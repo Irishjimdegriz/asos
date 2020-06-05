@@ -200,7 +200,6 @@
   .api-map
     height: 257px    
   #map
-    width: 360px
     height: 295px !important  
   .photo-col__image-wrap
     width: 9rem
@@ -305,10 +304,10 @@
     &-title
       font-size: 1.357rem
     &-description
-      font-size: 0.6rem
-      max-width: 19rem
-      &--contacts
-        max-width: 16.5rem
+      font-size: 0.9rem
+      // max-width: 19rem
+      // &--contacts
+      //   max-width: 16.5rem
       &--cart
         max-width: 21.7rem
     &-nav
@@ -530,6 +529,10 @@
   .footer
     &__postscriptum
       max-width: 25rem
+  .secondary
+    &-description
+      font-size: 0.75rem      
+      max-width: 19.5rem
 
 @media screen and ( max-width: 580px)
   .search-input
@@ -594,12 +597,28 @@
       height: 31rem
     &-modal__close
       right: -3.6rem
-  .questions__input-group      
-    flex-basis: 100% !important
+  .questions
+    &__input-group      
+      flex-basis: 100% !important
+    &__section-title, &__container
+      margin-left: 0
+    &__button
+      font-size: 0.9rem
+    &__section-title  
+      font-size: 1.171rem
+    &__contacts-block      
+      padding-left: 0//2.243rem
   .contacts-block
     &__address, &__phone, &__email, &__skype, &__postscriptum
-      max-width: 12rem
-      font-size: 0.729rem   
+      max-width: 17rem
+      font-size: 1.029rem   
+      text-align: center
+      padding-left: 2.243rem
+    &__postscriptum
+      margin-left: 0
+      text-align: center
+    &__title
+      text-align: center
   .discount-coupon-block         
     &-input
       width: 100%

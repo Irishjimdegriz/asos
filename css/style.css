@@ -856,6 +856,8 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  .popular > .container {
+    max-width: 1400px; }
   .popular__image-wrap {
     position: relative;
     width: 18.714rem;
@@ -2257,7 +2259,6 @@ textarea {
   .api-map {
     height: 257px; }
   #map {
-    width: 360px;
     height: 295px !important; }
   .photo-col__image-wrap {
     width: 9rem;
@@ -2349,10 +2350,7 @@ textarea {
   .secondary-title {
     font-size: 1.357rem; }
   .secondary-description {
-    font-size: 0.6rem;
-    max-width: 19rem; }
-    .secondary-description--contacts {
-      max-width: 16.5rem; }
+    font-size: 0.9rem; }
     .secondary-description--cart {
       max-width: 21.7rem; }
   .secondary-nav {
@@ -2548,7 +2546,10 @@ textarea {
       padding: 1.357rem 1rem;
       font-size: 1rem; }
   .footer__postscriptum {
-    max-width: 25rem; } }
+    max-width: 25rem; }
+  .secondary-description {
+    font-size: 0.75rem;
+    max-width: 19.5rem; } }
 
 @media screen and (max-width: 580px) {
   .search-input {
@@ -2602,9 +2603,24 @@ textarea {
     right: -3.6rem; }
   .questions__input-group {
     flex-basis: 100% !important; }
+  .questions__section-title, .questions__container {
+    margin-left: 0; }
+  .questions__button {
+    font-size: 0.9rem; }
+  .questions__section-title {
+    font-size: 1.171rem; }
+  .questions__contacts-block {
+    padding-left: 0; }
   .contacts-block__address, .contacts-block__phone, .contacts-block__email, .contacts-block__skype, .contacts-block__postscriptum {
-    max-width: 12rem;
-    font-size: 0.729rem; }
+    max-width: 17rem;
+    font-size: 1.029rem;
+    text-align: center;
+    padding-left: 2.243rem; }
+  .contacts-block__postscriptum {
+    margin-left: 0;
+    text-align: center; }
+  .contacts-block__title {
+    text-align: center; }
   .discount-coupon-block-input {
     width: 100%;
     font-size: 0.871rem; }

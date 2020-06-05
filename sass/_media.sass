@@ -24,7 +24,7 @@
       color: $primary
   .popular__image-wrap:hover .icon-container      
     display: flex      
-  .popular__swiper-button
+  .popular__swiper-button, .youmaylike__swiperbutton
     &-prev, &-next
       &:hover
         background-color: rgba($button-primary, 0.1)  
@@ -65,10 +65,18 @@
   .coupon-button
     width: 11rem        
 
-@media screen and ( max-width: 1300px)
+@media screen and ( max-width: 1320px)
   .contacts-block
     &__address, &__phone, &__email, &__skype, &__postscriptum
       font-size: 0.779rem  
+  .photo-col__image-wrap
+    width: 11.143rem
+    height: 11.143rem
+  .name-col
+    font-size: 1.371rem     
+  .delete-button-col
+    margin-top: 6.943rem
+    margin-left: 5.1rem    
 
 @media screen and ( max-width: 1260px)
   .header
@@ -98,6 +106,11 @@
   .coupon-button
     width: 10rem   
     font-size: 0.9rem
+
+@media screen and ( max-width: 1160px)
+  .photo-col__image-wrap
+    width: 10rem
+    height: 10rem
 
 @media screen and ( max-width: 1140px)
   .header
@@ -133,7 +146,10 @@
     height: 257px    
   #map
     width: 360px
-    height: 295px !important    
+    height: 295px !important  
+  .photo-col__image-wrap
+    width: 9rem
+    height: 9rem     
 
 @media screen and ( max-width: 992px)
   .header
@@ -326,7 +342,45 @@
     padding-bottom: 1rem    
   .table-total
     width: 100%  
-
+  .cart
+    &-desktop-container
+      flex-wrap: wrap
+    //   flex-direction: column
+    //   align-items: flex-start
+    //   justify-content: center
+    &-row
+      align-items: center
+      &--legend
+        display: none
+  .photo-col
+    flex-basis: 40%
+    // &__image-wrap
+    //   width: 14rem
+    //   height: 14rem
+  .name-col
+    flex-basis: 100%
+    margin-top: 2.543rem    
+  .price-col, .quantity-col, .total-col, .delete-button-col
+    margin-top: 1rem
+  .col--center
+    text-align: left
+  .quantity-col
+    flex-basis: 20%
+    text-align: center
+  .price-col
+    flex-basis: 35%
+  .total-col
+    text-align: right !important
+    flex-basis: 35%
+  .delete-button-col
+    margin-top: 1.3rem
+    margin-left: 0
+    flex-basis: 10%
+    text-align: right
+    margin-bottom: 1.5rem
+  select
+    width: 3.5rem
+    background-position-x: 23px
 
 @media screen and ( max-width: 941px)
   .catalog__cards-container
@@ -514,9 +568,25 @@
       margin-bottom: 1rem
   .coupon-button
     width: 100%
-    margin-top: 1rem
+    margin-top: 2rem
     padding-top: 1rem
-    padding-bottom: 1rem     
+    padding-bottom: 1rem 
+  div
+    &.invalid        
+      &#discount-error
+        margin-top: -0.3rem
+        margin-left: -10.4rem
+
+@media screen and ( max-width: 510px)
+  .cart-row
+    flex-direction: column
+  .photo-col
+    &__image-wrap
+      width: 15rem
+      height: 15rem
+      margin-bottom: 0
+  .name-col
+    text-align: center
 
 @media screen and ( max-width: 460px)
   .subtitle
@@ -561,6 +631,8 @@
       width: 12rem
     &__slide-container
       width: 12rem !important     
+    &__section-subtitle
+      font-size: 0.88rem
 
 @media screen and ( max-width: 370px)
   .price-from

@@ -58,8 +58,8 @@
             <p class="cart-summary">Итого: 7 489 ₽</p>
             <!-- /.cart-summary -->
             <div class="cart-button-container">
-              <a href="#" class="cart-button cart-button--button-primary">Корзина</a> <!-- /.cart-button cart-button--button-primary -->
-              <a href="#" class="cart-button cart-button--secondary">оформить</a> <!-- /.cart-button cart-button--button-primary -->
+              <a href="./cart.html" class="cart-button cart-button--button-primary">Корзина</a> <!-- /.cart-button cart-button--button-primary -->
+              <a href="./cart.html" class="cart-button cart-button--secondary">оформить</a> <!-- /.cart-button cart-button--button-primary -->
             </div>
         </div>
       </div> <!-- /.interface-button interface-buttons__interface-button -->
@@ -88,7 +88,7 @@
     <!-- /.container -->
   </header>
   <!-- /.header hero__header -->
-<section class="section secondary-hero">
+<section class="section secondary-hero" id="hero">
   <div class="secondary-hero__content">
     <h1 class="secondary-title">Юбка, Oodji</h1>
     <!-- /.secondary-title -->
@@ -105,6 +105,142 @@
   </div>
 </section>
 <!-- /.section secondary-hero -->
+<section class="section item-card-full">
+  <div class="container">
+    <div class="photos item-card-full__photos">
+      <!-- Slider main container -->
+      <div class="swiper-container photos__swiper swiper-no-swiping">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">      <!-- Slides -->
+            <div class="swiper-slide photos__swiper-slide"><div class="photos__slide-image-wrapper slide-image-wrapper"><img src="img/item-card/photo-1.png" class="photos__swiper-photo" alt="swiper photo"></div></div>
+            <div class="swiper-slide photos__swiper-slide"><div class="photos__slide-image-wrapper slide-image-wrapper"><img src="img/item-card/photo-2.png" class="photos__swiper-photo" alt="swiper photo"></div></div>
+            <div class="swiper-slide photos__swiper-slide"><div class="photos__slide-image-wrapper slide-image-wrapper"><img src="img/item-card/photo-3.png" class="photos__swiper-photo" alt="swiper photo"></div></div>
+            ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination photos__swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev photos__swiper-button-prev"></div>
+        <div class="swiper-button-next photos__swiper-button-next"></div>
+      </div>
+    </div>
+    <!-- /.photos item-card-full__photos -->
+    <div class="info item-card-full__info">
+      <p class="info__title item-name">Пижама FORLIFE</p>
+      <p class="info__price item-price-tag"><sup class="price-tag__sup">₽</sup>1 290</p>
+      <p class="stats info__stats"><span class="stat-type">Вид застежки:</span> Молния</p>
+      <p class="stats info__stats"><span class="stat-type">Длина изделия:</span> по спинке: 75 см</p>
+      <p class="stats info__stats"><span class="stat-type">Длина юбки:</span> Миди</p>
+      <p class="stats info__stats"><span class="stat-type">Сезон:</span> круглогодичный</p>
+      <p class="stats info__stats"><span class="stat-type">Страна бренда:</span> Россия</p>
+      <p class="stats info__stats"><span class="stat-type">Страна производитель:</span> Россия</p>
+      <p class="info__description">
+        Ведущие дизайнеры мира рекомендуют дамам отказаться от брюк и выбрать юбки: этот невероятно женственный наряд поможет придать образу загадочность, нежность, сексуальность.
+      </p>
+      <div class="color-picker info__color-picker">
+        <span class="color-picker-title">Выберите цвет:</span>
+        <div class="color-variant color-variant--pink"></div>
+        <div class="color-variant color-variant--yellow"></div>
+        <div class="color-variant color-variant--red"></div>
+        <div class="color-variant color-variant--violet"></div>
+        <div class="color-variant color-variant--blue"></div>
+        <div class="color-variant color-variant--sand"></div>
+      </div>
+      <a href="#" class="size-table info__size-table">Открыть таблицу размеров</a>
+      <div class="size-picker info__size-picker">
+        <p class="size-variant">xxs</p>
+        <p class="size-variant">xs</p>
+        <p class="size-variant">s</p>
+        <p class="size-variant">m</p>
+        <p class="size-variant">l</p>
+        <p class="size-variant">xl</p>
+        <p class="size-variant size-variant--inactive">xxl</p>
+      </div>
+      <div class="info__button-container">
+        <button class="add-button info__add-button"></button>
+        <div class="info__like"></div>
+      </div>
+      <div class="social info__social">
+        <p class="social__title logo-container-title">Поделиться товаром в соцсетях</p>
+        <div class="social-icon-container about__social-icon-container">
+          <a href="https://vk.com" target="_blank" class="image-wrap about__image-wrap"><img src="img/VK-hovered.png" alt="VK"></a>
+          <a href="https://facebook.com" target="_blank" class="image-wrap about__image-wrap"><img src="img/facebook-hovered.svg" alt="facebook"></a>
+          <a href="https://twitter.com" target="_blank" class="image-wrap about__image-wrap"><img src="img/twitter-hovered.svg" alt="twitter"></a>
+          <a href="https://ok.ru" target="_blank" class="image-wrap about__image-wrap"><img src="img/ok-hovered.svg" alt="ok"></a>
+          <a href="https://youtube.com" target="_blank" class="image-wrap about__image-wrap"><img src="img/youtube-hovered.svg" alt="youtube"></a>
+        </div>
+      </div>
+      <div class="social info__social">
+        <p class="social__title logo-container-title">Способы оплаты</p>
+        <div class="social-icon-container about__social-icon-container">
+          <a class="image-wrap about__image-wrap"><img src="img/visa-logo-hovered.png" alt="VK"></a>
+          <a class="image-wrap about__image-wrap"><img src="img/mastercard-logo-hovered.png" alt="facebook"></a>
+          <a class="image-wrap about__image-wrap"><img src="img/yandex-money-logo-hovered.png" alt="twitter"></a>
+          <a class="image-wrap about__image-wrap"><img src="img/rbk-money-logo-hovered.png" alt="ok"></a>
+          <a class="image-wrap about__image-wrap"><img src="img/qiwi-logo-hovered.png" alt="youtube"></a>
+        </div>
+      </div>      
+      <!-- /.info__description -->
+    </div>
+    <!-- /.info item-card-full__info -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /.section item-card-full -->
+<section class="section youmaylike">
+  <h2 class="section-title popular__section-title">Вам может понравиться</h2>
+  <!-- /.section-title popular__section-title -->
+  <p class="section-subtitle popular__section-subtitle">В этой рубрике мы подобрали самые известные и покупаемые товары.<br>Знакомьтесь, быть может и вам понравится</p>
+  <!-- /.section-subtitle popular__section-subtitle -->
+  <div class="swiper-container youmaylike__swiper swiper-no-swiping">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide popular__swiper-slide">
+        <div class="popular__slide-container">
+          <div class="popular__image-wrap">
+            <img class="popular-image" src="img/hero-popular/popular-item-1.png" alt="popular-item-1">
+          </div>
+          <p class="popular__title item-name">Жилет, A.Karina</p>
+          <p class="popular__description item-description">Цвет: серый</p>
+          <p class="popular__price item-price-tag"><sup class="price-tag__sup">₽</sup>6 490</p>
+        </div>
+      </div>
+      <div class="swiper-slide popular__swiper-slide">
+        <div class="popular__slide-container">
+          <div class="popular__image-wrap">
+            <img class="popular-image" src="img/hero-popular/popular-item-2.png" alt="popular-item-2">
+          </div>
+          <p class="popular__title item-name">Юбка, Oodji</p>
+          <p class="popular__description item-description">Цвет: синий</p>
+          <p class="popular__price item-price-tag"><sup class="price-tag__sup">₽</sup>799</p>
+        </div>
+      </div>
+      <div class="swiper-slide popular__swiper-slide">
+        <div class="popular__slide-container">
+          <div class="popular__image-wrap">
+            <img class="popular-image" src="img/hero-popular/popular-item-3.png" alt="popular-item-3">
+          </div>
+          <p class="popular__title item-name">Брюки, ТВОЕ</p>
+          <p class="popular__description item-description">Цвет: темно-синий</p>
+          <p class="popular__price item-price-tag"><sup class="price-tag__sup">₽</sup>599</p>
+        </div>
+      </div>
+      <div class="swiper-slide popular__swiper-slide">
+        <div class="popular__slide-container">
+          <div class="popular__image-wrap">
+            <img class="popular-image" src="img/hero-popular/popular-item-4.png" alt="popular-item-4">
+          </div>
+          <p class="popular__title item-name">Пижама FORLIFE</p>
+          <p class="popular__description item-description">Цвет: коралловый, белый</p>
+          <p class="popular__price item-price-tag"><sup class="price-tag__sup">₽</sup>1 290</p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next youmaylike__swiper-button-next"></div>
+    <div class="swiper-button-prev youmaylike__swiper-button-prev"></div>
+  </div>
+</section>
+<!-- /.section popular -->
   <section class="section about">
     <h2 class="section-title about__section-title">Магазин ASOS</h2>
     <p class="section-subtitle about__section-subtitle">Преимущества интернет магазина - доступные цены, широкий, регулярно обновляемый ассортимент.<br class="desktop-visible"> У нас можно купить одежду любой известной марки - представлена продукция ведущих зарубежных, отечественных брендов.</p>
@@ -179,6 +315,8 @@
     <a href="#hero" class="scroll-up"></a>
   </div>
   <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/main.js"></script>
 </body>

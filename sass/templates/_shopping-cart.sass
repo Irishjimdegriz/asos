@@ -3,7 +3,7 @@
     padding-top: 7.286rem
 .cart-row
   display: flex
-  flex-wrap: no-wrap
+  justify-content: space-between
   border-bottom: 1px solid $gray
   &--title
     color: $title-color !important
@@ -34,7 +34,7 @@
       margin-top: 2.5rem
       margin-bottom: 2.5rem
 .name-col
-  flex-basis: 29%
+  flex-basis: 35.4%
   color: $black
   font-size: 1.571rem
   font-weight: 700
@@ -60,7 +60,7 @@
   line-height: 2rem
   text-transform: uppercase
 .quantity-col
-  flex-basis: 16%
+  flex-basis: 22%
   margin-top: 6.543rem  
 // .total-col
 //   flex-basis: 10%
@@ -184,4 +184,6 @@ option
   cursor: pointer
 .continue-button
   text-decoration: none  
-.total
+.cart-desktop-container
+  display: flex
+  flex-basis: 84%

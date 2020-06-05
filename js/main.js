@@ -80,7 +80,7 @@ $(document).ready(function () {
     }
   })
 
-  var popularSwiper = new Swiper('.popular__swiper', {
+  let popularSwiper = new Swiper('.popular__swiper', {
     loop: true,
     slidesPerView: 4,
     loopedSlides: 4,
@@ -102,7 +102,6 @@ $(document).ready(function () {
         slidesPerView: 2,
         spaceBetweenSlides: 20
       },
-      // when window width is <= 640px
       1130: {
         slidesPerView: 3,
         spaceBetweenSlides: 20
@@ -113,7 +112,58 @@ $(document).ready(function () {
       }
     }
   });
-  //popularSwiper.updateSize();
+
+  let youmaylikeSwiper = new Swiper('.youmaylike__swiper', {
+    loop: true,
+    slidesPerView: 4,
+    loopedSlides: 4,
+    spaceBetween: 20,
+    setWrapperSize: true,
+    navigation: {
+      nextEl: '.youmaylike__swiper-button-next',
+      prevEl: '.youmaylike__swiper-button-prev',
+    },
+    swiping: {
+      noSwiping: true
+    },
+    breakpoints: {
+      200: {
+        slidesPerView: 1,
+        spaceBetweenSlides: 20
+      },      
+      760: {
+        slidesPerView: 2,
+        spaceBetweenSlides: 20
+      },
+      // when window width is >= 1130px
+      1130: {
+        slidesPerView: 3,
+        spaceBetweenSlides: 20
+      },
+      1500: {
+        slidesPerView: 4,
+        spaceBetweenSlides: 20
+      }
+    }
+  });
+
+
+  let photosSwiper = new Swiper ('.photos__swiper', {
+    loop: true,
+    navigation: {
+      nextEl: '.photos__swiper-button-next',
+      prevEl: '.photos__swiper-button-prev',
+    },
+    pagination: {
+      el: '.photos__swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+          return `<div class="${className} photos__swiper-custom-bullet"><div class="image-wrapper photos__image-wrapper"><img src="../img/item-card/photo-${index + 1}.png"></div></div>`;}
+    },
+    swiping: {
+      noSwiping: true
+    }
+  });
 
       if ($(window).scrollTop() > 20) {
         scrollUp.css('display', "block");
@@ -274,6 +324,42 @@ $(document).ready(function () {
     });
 
     $('[type=tel]').mask('+7(000) 000-00-00');
+
+    $('.discount-coupon-block__form').validate({
+      errorClass: 'invalid',
+      errorElement: "div",
+      errorPlacement: function(error, element) {
+        element.after(error);
+      },
+      rules: {
+        discount: {
+          required: true
+        }
+      },
+      messages: {
+        discount: {
+            required: "Заполните поле"
+        },
+      },
+      submitHandler: function(form) {
+        $(form)[0].reset();
+        // $.ajax({
+        //   type: "POST",
+        //   url: "send.php",
+        //   data: $(form).serialize(),
+        //   success: function (response) {
+        //     window.location = "./thanks.html";
+        //     console.log("Ajax сработал. Ответ сервера: " + response);
+        //     //alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+        //     $(form)[0].reset();
+        //     // modal.removeClass('modal--visible');
+        //     // modalAccept.addClass('modal--visible');
+        //     //ym(64345651,'reachGoal','request');
+        //     return true;
+        //   }
+        // });
+      }
+    })
 
     map.on('click', () => {
       map.removeClass('shade');

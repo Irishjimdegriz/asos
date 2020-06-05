@@ -1,0 +1,82 @@
+.item-card-full
+  &>.container
+    display: flex
+  &__photos
+    flex-basis: 55%
+    max-width: 37rem
+  &__info
+    flex-basis: 40%
+    margin-top: 4.8rem
+    margin-left: 2rem
+.photos    
+  &__swiper
+    //max-width: 115rem
+    &-slide
+      display: flex
+      align-items: center
+      justify-content: center
+      text-align: center  
+      height: 63.071rem
+    &-button
+      &-prev, &-next
+        width: 2.714rem
+        height: 2.714rem
+        outline: none
+        bottom: -0.1rem
+        &::after
+          display: none
+      &-prev
+        background: url('../img/item-card/swiper-arrow-left.png') no-repeat center  
+        left: 0
+      &-next
+        background: url('../img/item-card/swiper-arrow-right.png') no-repeat center
+        right: 0    
+  &__swiper-custom-bullet
+    outline: none
+    width: 11.714rem
+    height: 15.429rem
+    border-radius: 0
+    opacity: 1
+    background-color: rgb(243, 244, 248)
+    text-align: center  
+    border: 1px solid $black 
+  &__slide-image-wrapper
+    background-color: rgb(243, 244, 248)
+    height: 51.643rem
+    //object-fit: cover
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+  &__swiper-photo
+    width: 100%
+    height: 100%
+    object-fit: cover
+    overflow: hidden
+.swiper-pagination-bullet-active
+  border: 2px solid $secondary  
+.stats
+  color: #40494e
+  font-size: 0.929rem
+  border-top: 1px solid $gray
+  padding-top: 0.857rem
+  &:last-of-type()
+    border-bottom: 1px solid $gray
+.stat-type
+  font-family: "Gotham Pro Medium"
+  font-weight: 500
+.info
+  &__description
+    color: #40494e
+    font-size: 1rem
+    margin-top: 2.714rem
+  &__color-picker
+    margin-top: 3.143rem
+.color
+  &-picker-title
+    color: $black
+    font-size: 1.071rem
+    font-weight: 500
+    letter-spacing: -0.3px
+  &-variant  
+    display: inline-block

@@ -1,0 +1,20 @@
+.youmaylike
+  display: flex
+  flex-direction: column
+  align-items: center  
+  &__swiper
+    &-button
+      &-prev, &-next
+        width: 2.714rem
+        height: 2.714rem
+        outline: none
+        border: 1px solid black
+        top: 37%
+        &::after
+          display: none
+      &-prev
+        background: url('../img/arrow-left.svg') no-repeat center  
+        left: 0
+      &-next
+        background: url('../img/arrow-right.svg') no-repeat center
+        right: 0    

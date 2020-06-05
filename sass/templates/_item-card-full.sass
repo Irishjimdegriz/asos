@@ -2,12 +2,14 @@
   &>.container
     display: flex
   &__photos
-    flex-basis: 55%
-    max-width: 37rem
+    flex-basis: 59%
+    max-width: 59rem
+    margin-top: 1.8rem
   &__info
-    flex-basis: 40%
-    margin-top: 4.8rem
-    margin-left: 2rem
+    flex-basis: 39%
+    margin-top: 7.3rem
+    margin-left: -1rem
+    position: relative
 .photos    
   &__swiper
     //max-width: 115rem
@@ -17,31 +19,36 @@
       justify-content: center
       text-align: center  
       height: 63.071rem
+      width: 100% !important
     &-button
       &-prev, &-next
         width: 2.714rem
         height: 2.714rem
         outline: none
-        bottom: -0.1rem
+        top: auto
+        bottom: -0.6rem
         &::after
           display: none
       &-prev
         background: url('../img/item-card/swiper-arrow-left.png') no-repeat center  
-        left: 0
+        left: 39.3%
       &-next
         background: url('../img/item-card/swiper-arrow-right.png') no-repeat center
-        right: 0    
+        right: 41% 
+    &-pagination
+      bottom: 2.329rem !important  
   &__swiper-custom-bullet
     outline: none
-    width: 11.714rem
-    height: 15.429rem
+    width: 10.914rem
+    height: 14.729rem
     border-radius: 0
     opacity: 1
     background-color: rgb(243, 244, 248)
     text-align: center  
-    border: 1px solid $black 
+    //border: 1px solid $black 
+    margin: 0 15px !important
   &__slide-image-wrapper
-    background-color: rgb(243, 244, 248)
+    background-color: linear-gradient($gray, rgb(243, 244, 248))
     height: 51.643rem
     //object-fit: cover
     text-align: center
@@ -53,30 +60,117 @@
     height: 100%
     object-fit: cover
     overflow: hidden
-.swiper-pagination-bullet-active
-  border: 2px solid $secondary  
+  &__swiper-pagination>.swiper-pagination-bullet-active
+    border: 2px solid $secondary  
 .stats
   color: #40494e
   font-size: 0.929rem
   border-top: 1px solid $gray
-  padding-top: 0.857rem
-  &:last-of-type()
+  padding-top: 0.3rem
+  &--last
     border-bottom: 1px solid $gray
+    padding-bottom: 0.7rem  
 .stat-type
   font-family: "Gotham Pro Medium"
   font-weight: 500
+  font-size: 1.2rem
 .info
   &__description
     color: #40494e
     font-size: 1rem
-    margin-top: 2.714rem
+    margin-top: 2.414rem
+    letter-spacing: 0.2px
+    line-height: 1.7rem
   &__color-picker
-    margin-top: 3.143rem
+    margin-top: 2.843rem
+  &__size-table
+    margin-top: 2.714rem
+    color: $secondary
+    font-size: 1.1rem
+    font-weight: 500
+    letter-spacing: -0.3px
+    text-decoration: none
+    display: block
+  &__size-picker
+    margin-top: 0.171rem
+  &__button-container
+    margin-top: 2.114rem
+    display: flex
+    align-items: center
+  &__add-button
+    color: #ffffff
+    font-size: 1.286rem
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 0.72px
+    background-color: $black
+    padding: 1.42rem 2.543rem
+    margin-right: 2.929rem
+    border: none
+  &__like
+    width: 2rem
+    height: 1.714rem
+    background: white url('../img/item-card/like.png') center no-repeat
+    display: inline-block
+  &__social
+    margin-top: 3.286rem
+  &__price
+    margin-top: 0
+    margin-bottom: 2.243rem
+  &__title
+    font-size: 1.8rem
+    margin-top: 1.2rem
+    margin-bottom: 1.5rem
+  &__discount-block
+    top: 0.3rem    
+  &__image-wrap
+    margin-top: 0.5rem
+    margin-right: 2.214rem
+    display: flex
+    align-items: center
 .color
   &-picker-title
     color: $black
     font-size: 1.071rem
     font-weight: 500
     letter-spacing: -0.3px
+    margin-right: 1.786rem
   &-variant  
     display: inline-block
+    width: 12px
+    height: 12px
+    border-radius: 50%
+    margin-right: 0.715rem
+    position: relative
+    &--pink
+      background-color: #ed7b8c
+    &--yellow
+      background-color: #ccbe3c
+    &--red
+      background-color: #ff4a32
+    &--violet
+      background-color: #8183ad    
+    &--blue
+      background-color: #2d5dc5     
+    &--sand
+      background-color: #e2a040
+.size
+  &-variant
+    display: inline-block
+    color: #40494e
+    font-size: 1rem
+    text-transform: uppercase
+    background-color: #f7f7f7
+    border: 2px solid #a5b3c4
+    margin-right: 0.4rem
+    padding: 0.7rem 1rem
+    cursor: pointer
+    &--active
+      border-color: #ef50a2
+      background-color: #ffecf6
+    &--disabled
+      border-color: #e6e6e6
+      background-color: #f7f7f7
+      &:hover
+        border-color: #e6e6e6
+        background-color: #f7f7f7

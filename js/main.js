@@ -1,3 +1,5 @@
+const swiperLabels = ['Описание', 'Отзывы (03)', 'Оплата и доставка'];
+
 $(document).ready(function () {
   const modal = $('.modal'),
         closeBtn = $('.modal__close'),
@@ -158,7 +160,21 @@ $(document).ready(function () {
       el: '.photos__swiper-pagination',
       clickable: true,
       renderBullet: function (index, className) {
-          return `<div class="${className} photos__swiper-custom-bullet"><div class="image-wrapper photos__image-wrapper"><img src="../img/item-card/photo-${index + 1}.png"></div></div>`;}
+          return `<div class="${className} photos__swiper-custom-bullet"><div class="image-wrapper photos__image-wrapper"><img src="../img/item-card/photo-min-${index + 1}.png"></div></div>`;}
+    },
+    swiping: {
+      noSwiping: true
+    }
+  });
+
+  let reviewsSwiper = new Swiper ('.reviews__swiper', {
+    loop: true,
+    initialSlide: 1,
+    pagination: {
+      el: '.reviews__swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return `<div class="${className} reviews__swiper-custom-bullet"><div class="bullet-text">${(swiperLabels[index])}</div></div>`;}
     },
     swiping: {
       noSwiping: true

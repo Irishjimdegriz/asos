@@ -111,7 +111,8 @@
       <!-- Slider main container -->
       <div class="swiper-container photos__swiper swiper-no-swiping">
         <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">      <!-- Slides -->
+        <div class="swiper-wrapper">      
+          <!-- Slides -->
             <div class="swiper-slide photos__swiper-slide"><div class="photos__slide-image-wrapper slide-image-wrapper"><img src="img/item-card/photo-1.png" class="photos__swiper-photo" alt="swiper photo"></div></div>
             <div class="swiper-slide photos__swiper-slide"><div class="photos__slide-image-wrapper slide-image-wrapper"><img src="img/item-card/photo-2.png" class="photos__swiper-photo" alt="swiper photo"></div></div>
             <div class="swiper-slide photos__swiper-slide"><div class="photos__slide-image-wrapper slide-image-wrapper"><img src="img/item-card/photo-3.png" class="photos__swiper-photo" alt="swiper photo"></div></div>
@@ -127,14 +128,15 @@
     </div>
     <!-- /.photos item-card-full__photos -->
     <div class="info item-card-full__info">
-      <p class="info__title item-name">Пижама FORLIFE</p>
-      <p class="info__price item-price-tag"><sup class="price-tag__sup">₽</sup>1 290</p>
+      <div class="discount-block info__discount-block"><p class="discount-block__percent">10%</p><p class="discount-block__caption">скидка</p></div>
+      <p class="info__title item-name">Юбка, Oodji</p>
+      <p class="info__price item-price-tag"><sup class="price-tag__sup">₽</sup>799</p>
       <p class="stats info__stats"><span class="stat-type">Вид застежки:</span> Молния</p>
       <p class="stats info__stats"><span class="stat-type">Длина изделия:</span> по спинке: 75 см</p>
       <p class="stats info__stats"><span class="stat-type">Длина юбки:</span> Миди</p>
       <p class="stats info__stats"><span class="stat-type">Сезон:</span> круглогодичный</p>
       <p class="stats info__stats"><span class="stat-type">Страна бренда:</span> Россия</p>
-      <p class="stats info__stats"><span class="stat-type">Страна производитель:</span> Россия</p>
+      <p class="stats info__stats stats--last"><span class="stat-type">Страна производитель:</span> Россия</p>
       <p class="info__description">
         Ведущие дизайнеры мира рекомендуют дамам отказаться от брюк и выбрать юбки: этот невероятно женственный наряд поможет придать образу загадочность, нежность, сексуальность.
       </p>
@@ -150,15 +152,15 @@
       <a href="#" class="size-table info__size-table">Открыть таблицу размеров</a>
       <div class="size-picker info__size-picker">
         <p class="size-variant">xxs</p>
-        <p class="size-variant">xs</p>
+        <p class="size-variant size-variant--active">xs</p>
         <p class="size-variant">s</p>
         <p class="size-variant">m</p>
         <p class="size-variant">l</p>
         <p class="size-variant">xl</p>
-        <p class="size-variant size-variant--inactive">xxl</p>
+        <p class="size-variant size-variant--disabled">xxl</p>
       </div>
       <div class="info__button-container">
-        <button class="add-button info__add-button"></button>
+        <button class="add-button info__add-button">добавить в корзину</button>
         <div class="info__like"></div>
       </div>
       <div class="social info__social">
@@ -174,11 +176,11 @@
       <div class="social info__social">
         <p class="social__title logo-container-title">Способы оплаты</p>
         <div class="social-icon-container about__social-icon-container">
-          <a class="image-wrap about__image-wrap"><img src="img/visa-logo-hovered.png" alt="VK"></a>
-          <a class="image-wrap about__image-wrap"><img src="img/mastercard-logo-hovered.png" alt="facebook"></a>
-          <a class="image-wrap about__image-wrap"><img src="img/yandex-money-logo-hovered.png" alt="twitter"></a>
-          <a class="image-wrap about__image-wrap"><img src="img/rbk-money-logo-hovered.png" alt="ok"></a>
-          <a class="image-wrap about__image-wrap"><img src="img/qiwi-logo-hovered.png" alt="youtube"></a>
+          <a class="image-wrap info__image-wrap"><img src="img/visa-logo-hovered.png" alt="VK"></a>
+          <a class="image-wrap info__image-wrap"><img src="img/mastercard-logo-hovered.png" alt="facebook"></a>
+          <a class="image-wrap info__image-wrap"><img src="img/yandex-money-logo-hovered.png" alt="twitter"></a>
+          <a class="image-wrap info__image-wrap"><img src="img/rbk-money-logo-hovered.png" alt="ok"></a>
+          <a class="image-wrap info__image-wrap"><img src="img/qiwi-logo-hovered.png" alt="youtube"></a>
         </div>
       </div>      
       <!-- /.info__description -->
@@ -188,6 +190,132 @@
   <!-- /.container -->
 </section>
 <!-- /.section item-card-full -->
+<section class="section reviews">
+  <div class="container">
+    <div class="swiper-container reviews__swiper swiper-no-swiping">
+      <!-- If we need pagination -->
+      <div class="swiper-pagination reviews__swiper-pagination"></div>
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <p class="reviews__slide-title">Полные Параметры</p>
+            <p class="stats info__stats"><span class="stat-type">Фактура материала:</span> Текстильный</p>
+            <p class="stats info__stats"><span class="stat-type">Покрой:</span> прямой</p>
+            <p class="stats info__stats"><span class="stat-type">Тип посадки:</span> Средняя посадка</p>
+            <p class="stats info__stats"><span class="stat-type">Тип карманов:</span> без карманов</p>
+            <p class="stats info__stats"><span class="stat-type">Уход за вещами:</span> бережная стирка при 30 градусах</p>
+            <p class="stats info__stats"><span class="stat-type">Рисунок:</span> без рисунка</p>
+            <p class="stats info__stats"><span class="stat-type">Назначение:</span> повседневная</p>
+            <p class="stats info__stats"><span class="stat-type">Конструктивные элементы:</span> Без разреза</p>
+            <p class="stats info__stats"><span class="stat-type">Пол:</span> Женский</p>
+            <p class="stats info__stats stats--last"><span class="stat-type">Комплектация:</span> юбка</p>
+          </div>
+          <div class="swiper-slide">
+            <p class="reviews__slide-title">3 отзыва к товару</p>
+            <div class="reviews__review-container">
+              <div class="reviews__image-wrapper"><img src="img/item-card/person-1.jpg" alt=""></div>
+              <div class="reviews__text-container">
+                <p class="reviews__text">Очень хорошая юбка, стильно смотрится.взяла без раздумья!</p>
+                <div class="reviews__data-container">
+                  <p class="reviews__name">Олеся рогозина</p>
+                  <div class="reviews__likes-container">
+                    <p class="reviews__likes-caption">Отзыв полезен?</p>
+                    <div class="reviews__likes-image-wrapper"><img src="img/item-card/thumb-up.png" alt="thumb up"></div>
+                    <p class="reviews__likes-counter">3</p>
+                    <div class="reviews__likes-image-wrapper"><img src="img/item-card/thumb-down.png" alt="thumb down"></div>
+                    <p class="reviews__likes-counter">0</p>
+                  </div>
+                  <div class="reviews__rating-container">
+                    <p class="reviews__rating-caption">Оценка:</p>
+                    <div class="reviews__likes-image-wrapper"><img src="img/item-card/active-star.png" alt="active star"></div>
+                    <div class="reviews__likes-image-wrapper"><img src="img/item-card/active-star.png" alt="active star"></div>
+                    <div class="reviews__likes-image-wrapper"><img src="img/item-card/active-star.png" alt="active star"></div>
+                    <div class="reviews__likes-image-wrapper"><img src="img/item-card/active-star.png" alt="active star"></div>
+                    <div class="reviews__likes-image-wrapper"><img src="img/item-card/inactive-star.png" alt="inactive star"></div>
+                  </div>
+                  <p class="reviews__date-time">23 июня, 17:02</p>
+                </div>
+              </div>
+            </div>
+            <div class="reviews__review-container">
+              <div class="reviews__image-wrapper"><img src="img/item-card/person-2.jpg" alt=""></div>
+              <div class="reviews__text-container">
+                <p class="reviews__text">Для милого образа с грамотно подобранными аксессуарами и обувью выглядит супер!</p>
+                <div class="reviews__data-container">
+                  <p class="reviews__name">Марина хлебникова</p>
+                  <div class="reviews__likes-container">
+                    <p class="reviews__likes-caption">Отзыв полезен?</p>
+                    <div class="reviews__likes-image-wrapper"><img src="img/item-card/thumb-up.png" alt="thumb up"></div>
+                    <p class="reviews__likes-counter">0</p>
+                    <div class="reviews__likes-image-wrapper"><img src="img/item-card/thumb-down.png" alt="thumb down"></div>
+                    <p class="reviews__likes-counter">0</p>
+                  </div>
+                  <div class="reviews__rating-container">
+                    <p class="reviews__rating-caption">Оценка:</p>
+                    <div class="reviews__likes-image-wrapper"><img src="img/item-card/active-star.png" alt="active star"></div>
+                    <div class="reviews__likes-image-wrapper"><img src="img/item-card/active-star.png" alt="active star"></div>
+                    <div class="reviews__likes-image-wrapper"><img src="img/item-card/active-star.png" alt="active star"></div>
+                    <div class="reviews__likes-image-wrapper"><img src="img/item-card/active-star.png" alt="active star"></div>
+                    <div class="reviews__likes-image-wrapper"><img src="img/item-card/active-star.png" alt="active star"></div>
+                  </div>
+                  <p class="reviews__date-time">19 июня, 18:12</p>
+                </div>
+              </div>
+              <div class="reviews__administration-response">
+                <a href="./" class="logo-link reviews__logo-link"><img src="img/logo-white.png" alt="logo" class="logo footer__logo"></a>
+                  <div class="reviews__response-container">
+                    <p class="response-title">Ответ администрации</p>
+                    <p class="response-text">Марина, полностью с вами согласны, спасибо за ваш заказ!</p>
+                  </div>
+              </div>
+            </div>
+            <div class="reviews__review-container">
+              <div class="reviews__image-wrapper"><img src="img/item-card/person-1.jpg" alt=""></div>
+              <div class="reviews__text-container">
+                <p class="reviews__text">Потрясающая юбка! Ткань приятная, форму держит. Размер соответствует .Девочки , смотрите внимательнее прежде чем заказывать.</p>
+                <div class="reviews__data-container">
+                  <p class="reviews__name">Полина венская</p>
+                  <div class="reviews__likes-container">
+                    <p class="reviews__likes-caption">Отзыв полезен?</p>
+                    <div class="reviews__likes-image-wrapper"><img src="img/item-card/thumb-up.png" alt="thumb up"></div>
+                    <p class="reviews__likes-counter">0</p>
+                    <div class="reviews__likes-image-wrapper"><img src="img/item-card/thumb-down.png" alt="thumb down"></div>
+                    <p class="reviews__likes-counter">0</p>
+                  </div>
+                  <div class="reviews__rating-container">
+                    <p class="reviews__rating-caption">Оценка:</p>
+                    <div class="reviews__likes-image-wrapper"><img src="img/item-card/active-star.png" alt="active star"></div>
+                    <div class="reviews__likes-image-wrapper"><img src="img/item-card/active-star.png" alt="active star"></div>
+                    <div class="reviews__likes-image-wrapper"><img src="img/item-card/active-star.png" alt="active star"></div>
+                    <div class="reviews__likes-image-wrapper"><img src="img/item-card/active-star.png" alt="active star"></div>
+                    <div class="reviews__likes-image-wrapper"><img src="img/item-card/active-star.png" alt="active star"></div>
+                  </div>
+                  <p class="reviews__date-time">15 июня, 10:58</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <p class="reviews__slide-title">Как оплатить заказ</p>
+            <div class="payment-info-container"><p class="payment-step-counter">1</p><p class="payment-step-description">Оплатить заказ можно наличными или банковской картой при получении. Вы также можете оплатить покупки банковской картой при оформлении заказа.</p></div>
+            <div class="payment-info-container"><p class="payment-step-counter">2</p><p class="payment-step-description">Доступные способы оплаты заказов: наличные, банковские карты, PayPal.</p></div>
+            <div class="payment-info-container"><p class="payment-step-counter">3</p><p class="payment-step-description">Вы сможете проверить соответствие комплектации заказа и подлинность вещей в присутствии курьера.</p></div>
+            <div class="payment-info-container"><div class="payment__image-wrapper"><img src="img/item-card/verified-by-visa.png" alt="verified by visa"></div><p class="visa-description">Все операции с банковскими картами проводятся в соответствии с требованиями VISA International, MasterCard Worldwide. 
+              Безопасность платежей гарантируется использованием SSL протокола для передачи конфиденциальной информации.</p></div>
+            <div class="shipping-container">
+              <p class="shipping-title">Доставка</p>
+              <p class="stats info__stats"><span class="stat-type">Ваш населенный пункт:</span> Екатеринбург</p>
+              <p class="stats info__stats"><span class="stat-type">Способ доставки:</span> самовывоз, курьер</p>
+              <p class="stats info__stats"><span class="stat-type">Ближайшая дата доставки:</span> 11.08.2016</p>
+              <p class="stats info__stats stats--last"><span class="stat-type">Стоимость доставки:</span> <span class="stat-value">Бесплатно</span></p>
+            </div>
+          </div>
+      </div>
+  </div>
+  </div>
+</section>
+<!-- /.section reviews -->
 <section class="section youmaylike">
   <h2 class="section-title popular__section-title">Вам может понравиться</h2>
   <!-- /.section-title popular__section-title -->
@@ -305,7 +433,7 @@
   <div class="modal">
     <div class="modal__search">
       <button class="modal__close"></button>
-      <form class="search-form modal__search-form" action="#" style="">
+      <form class="search-form modal__search-form" action="#">
         <input type="text" class="search-input" placeholder="Поисковой запрос" name="search">
         <button class="search-button" type="submit"></button>
       </form>

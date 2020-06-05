@@ -41,6 +41,54 @@
   .discount-coupon-block__button:hover
     background-color: $black
     color: white
+  .info
+    &__add-button:hover
+      background-color: $secondary
+  .color
+    &-variant
+      &:hover
+        &::after
+          position: absolute
+          content: ''
+          width: 24px
+          height: 24px
+          border-radius: 50%
+          border: 2px solid
+          top: -50%
+          left: -50%
+      &--pink
+        &:hover
+          &::after
+            border-color: #ed7b8c
+      &--yellow
+        &:hover
+          &::after
+            border-color: #ccbe3c
+      &--red
+        &:hover
+          &::after
+            border-color: #ff4a32
+      &--violet
+        &:hover
+          &::after
+            border-color: #8183ad
+      &--blue
+        &:hover
+          &::after
+            border-color: #2d5dc5
+      &--sand
+        &:hover
+          &::after
+            border-color: #e2a040
+  .size
+    &-variant            
+      &:hover
+        border-color: #ef50a2
+      &--disabled
+        &:hover
+          cursor: pointer
+          text-decoration: none
+          border: 2px solid #e6e6e6
 
 
 @media screen and ( max-width: 1500px)

@@ -849,11 +849,6 @@ img {
     letter-spacing: 0.84px;
     padding: 0.743rem 1.4rem;
     outline: none; }
-    .item-offer__buy-button:hover {
-      background-color: #252525;
-      color: #fff; }
-    .item-offer__buy-button:first-of-type:hover, .item-offer__buy-button:last-of-type:hover {
-      color: #f3f7f9; }
   .item-offer__image-container {
     height: 22.5rem; }
 
@@ -2165,7 +2160,12 @@ textarea {
   .size-variant--disabled:hover {
     cursor: pointer;
     text-decoration: none;
-    border: 2px solid #e6e6e6; } }
+    border: 2px solid #e6e6e6; }
+  .item-offer__buy-button:hover {
+    background-color: #252525;
+    color: #fff; }
+  .item-offer__buy-button:first-of-type:hover, .item-offer__buy-button:last-of-type:hover {
+    color: #f3f7f9; } }
 
 @media screen and (max-width: 1500px) {
   .news-item__text {
@@ -2303,8 +2303,6 @@ textarea {
   .hero__swiper-button-prev, .hero__swiper-button-next {
     width: 6.5rem;
     height: 6.5rem; }
-    .hero__swiper-button-prev:hover, .hero__swiper-button-next:hover {
-      width: 13rem; }
   .subscribe-input {
     width: 30rem;
     padding: 1.2rem 0 1.2rem 1.929rem; }
@@ -2466,6 +2464,15 @@ textarea {
     width: 3.5rem;
     background-position-x: 23px; } }
 
+.footer__link-block:last-of-type {
+  margin-right: 2.4rem; }
+
+.thanks-hero__title {
+  font-size: 2.6rem; }
+
+.thanks-hero__text {
+  font-size: 1.7rem; }
+
 @media screen and (max-width: 941px) {
   .catalog__cards-container {
     max-height: 222.5rem; } }
@@ -2486,24 +2493,12 @@ textarea {
   .hero__swiper-button-prev, .hero__swiper-button-next {
     width: 5.5rem;
     height: 5.5rem; }
-    .hero__swiper-button-prev:hover, .hero__swiper-button-next:hover {
-      width: 11rem; }
   .subscribe-input {
     padding: 1rem 0 1rem 1.929rem;
     width: 27rem; }
   .subscribe-button {
     padding: 1.357rem 2.2rem;
     font-size: 1.1rem; }
-  .news-item {
-    max-width: 25rem; }
-    .news-item__title {
-      font-size: 1rem; }
-    .news-item__date {
-      font-size: 4rem; }
-    .news-item__month {
-      font-size: 0.8rem; }
-    .news-item__text {
-      font-size: 0.65rem; }
   .search-input {
     width: 30rem; }
   .modal__close {
@@ -2512,7 +2507,21 @@ textarea {
 @media screen and (max-width: 634px) {
   .catalog__cards-container {
     max-height: 457.5rem;
-    justify-content: center; } }
+    justify-content: center; }
+  .footer__link-blocks-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .footer__link-block:last-of-type {
+    margin-top: 4rem;
+    justify-content: center;
+    align-items: center; }
+  .footer__logo-link {
+    padding-left: 2.7rem; }
+  .thanks-hero__title {
+    font-size: 2rem; }
+  .thanks-hero__text {
+    font-size: 1.3rem; } }
 
 @media screen and (max-width: 630px) {
   .subtitle {
@@ -2532,20 +2541,12 @@ textarea {
   .hero__swiper-button-prev, .hero__swiper-button-next {
     width: 5rem;
     height: 5rem; }
-    .hero__swiper-button-prev:hover, .hero__swiper-button-next:hover {
-      width: 10rem; }
   .subscribe {
     padding: 0.8rem 0 0.8rem 1.929rem;
     width: 30rem; }
     .subscribe-button {
       padding: 1.357rem 1rem;
       font-size: 1rem; }
-  .news-item__title {
-    font-size: 0.9rem; }
-  .news-item__date {
-    font-size: 3.5rem; }
-  .news-item__month {
-    font-size: 0.7rem; }
   .footer__postscriptum {
     max-width: 25rem; } }
 
@@ -2559,13 +2560,11 @@ textarea {
   .price-from {
     font-size: 25px; }
   .scroll-down {
-    font-size: 10px;
+    font-size: 8px;
     padding: 12px 33px; }
   .hero__swiper-button-prev, .hero__swiper-button-next {
     width: 4.5rem;
     height: 4.5rem; }
-    .hero__swiper-button-prev:hover, .hero__swiper-button-next:hover {
-      width: 9rem; }
   .subscribe-input {
     padding: 0.6rem 0 0.6rem 1.929rem;
     width: 20rem; }
@@ -2573,6 +2572,8 @@ textarea {
     margin-top: 2.5rem;
     padding: 0.6rem 1rem;
     font-size: 0.9rem; }
+  #subscribe-error {
+    margin-left: -1.9rem; }
   .section-title {
     font-size: 16px; }
   .section-subtitle {
@@ -2643,21 +2644,20 @@ textarea {
   .name-col {
     text-align: center; } }
 
+@media screen and (max-width: 480px) {
+  .thanks-hero__title {
+    font-size: 1.5rem; }
+  .thanks-hero__text {
+    font-size: 1rem; } }
+
 @media screen and (max-width: 460px) {
   .subtitle {
     font-size: 15px; }
   .title {
     font-size: 40px; }
-  .price-from {
-    font-size: 20px; }
-  .scroll-down {
-    font-size: 9px;
-    padding: 9px 29px; }
   .hero__swiper-button-prev, .hero__swiper-button-next {
     width: 4rem;
     height: 4rem; }
-    .hero__swiper-button-prev:hover, .hero__swiper-button-next:hover {
-      width: 8rem; }
   .subscribe-input {
     width: 25rem;
     padding: 0.4rem 0 0.4rem 1.929rem;
@@ -2665,6 +2665,8 @@ textarea {
   .subscribe-button {
     padding: 0.6rem 1rem;
     font-size: 0.8rem; }
+  #subscribe-error {
+    margin-left: -3.9rem; }
   .search-input {
     width: 15rem; }
   .modal__close {
@@ -2685,17 +2687,16 @@ textarea {
     font-size: 0.88rem; } }
 
 @media screen and (max-width: 370px) {
-  .price-from {
-    font-size: 15px; }
-  .scroll-down {
-    font-size: 7px;
-    padding: 9px 21px; }
   .hero__swiper-button-prev, .hero__swiper-button-next {
     width: 3.5rem;
     height: 3.5rem; }
-    .hero__swiper-button-prev:hover, .hero__swiper-button-next:hover {
-      width: 7rem; }
   .subscribe-input {
     width: 20rem; }
   .subscribe-button {
-    font-size: 0.7rem; } }
+    font-size: 0.7rem; }
+  .footer__logo-link {
+    padding-left: 1.4rem; }
+  .thanks-hero__title {
+    font-size: 1.3rem; }
+  .thanks-hero__text {
+    font-size: 0.9rem; } }

@@ -89,7 +89,14 @@
           cursor: pointer
           text-decoration: none
           border: 2px solid #e6e6e6
-
+  .item-offer     
+    &__buy-button     
+      &:hover
+        background-color: #252525
+        color: $light
+      &:first-of-type, &:last-of-type
+        &:hover
+          color: #f3f7f9          
 
 @media screen and ( max-width: 1500px)
   .news-item__text
@@ -246,8 +253,6 @@
         &-prev, &-next
           width: 6.5rem
           height: 6.5rem
-          &:hover
-            width: 13rem
   .subscribe
     &-input
       width: 30rem
@@ -429,6 +434,15 @@
   select
     width: 3.5rem
     background-position-x: 23px
+.footer
+  &__link-block
+    &:last-of-type
+      margin-right: 2.4rem      
+.thanks-hero
+  &__title
+    font-size: 2.6rem
+  &__text
+    font-size: 1.7rem      
 
 @media screen and ( max-width: 941px)
   .catalog__cards-container
@@ -453,8 +467,6 @@
         &-prev, &-next
           width: 5.5rem
           height: 5.5rem
-          &:hover
-            width: 11rem
   .subscribe
     &-input
       padding: 1rem 0 1rem 1.929rem
@@ -462,17 +474,6 @@
     &-button
       padding: 1.357rem 2.2rem    
       font-size: 1.1rem  
-  .news
-    &-item
-      max-width: 25rem
-      &__title
-        font-size: 1rem
-      &__date
-        font-size: 4rem
-      &__month
-        font-size: 0.8rem
-      &__text
-        font-size: 0.65rem
   .search-input
     width: 30rem
   .modal__close
@@ -482,6 +483,22 @@
   .catalog__cards-container
     max-height: 457.5rem
     justify-content: center
+  .footer__link
+    &-blocks-container
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    &-block:last-of-type    
+      margin-top: 4rem
+      justify-content: center
+      align-items: center
+  .footer__logo-link
+    padding-left: 2.7rem   
+  .thanks-hero
+    &__title
+      font-size: 2rem
+    &__text
+      font-size: 1.3rem        
 
 @media screen and ( max-width: 630px)
   .subtitle
@@ -504,22 +521,12 @@
         &-prev, &-next
           width: 5rem
           height: 5rem
-          &:hover
-            width: 10rem
   .subscribe
     padding: 0.8rem 0 0.8rem 1.929rem
     width: 30rem
     &-button
       padding: 1.357rem 1rem     
-      font-size: 1rem 
-  .news
-    &-item
-      &__title
-        font-size: 0.9rem
-      &__date
-        font-size: 3.5rem
-      &__month
-        font-size: 0.7rem    
+      font-size: 1rem    
   .footer
     &__postscriptum
       max-width: 25rem
@@ -534,7 +541,7 @@
   .price-from
     font-size: 25px
   .scroll-down
-    font-size: 10px
+    font-size: 8px
     padding: 12px 33px
   .hero
     &__swiper
@@ -542,8 +549,6 @@
         &-prev, &-next
           width: 4.5rem
           height: 4.5rem    
-          &:hover
-            width: 9rem
   .subscribe
     &-input
       padding: 0.6rem 0 0.6rem 1.929rem
@@ -552,6 +557,8 @@
       margin-top: 2.5rem
       padding: 0.6rem 1rem        
       font-size: 0.9rem 
+  #subscribe-error
+    margin-left: -1.9rem      
   .section
     &-title
       font-size: 16px
@@ -636,24 +643,29 @@
   .name-col
     text-align: center
 
+@media screen and ( max-width: 480px)
+  .thanks-hero
+    &__title
+      font-size: 1.5rem
+    &__text
+      font-size: 1rem       
+
 @media screen and ( max-width: 460px)
   .subtitle
     font-size: 15px
   .title
     font-size: 40px
-  .price-from
-    font-size: 20px
-  .scroll-down
-    font-size: 9px
-    padding: 9px 29px
+  // .price-from
+  //   font-size: 20px
+  // .scroll-down
+  //   font-size: 9px
+  //   padding: 9px 29px
   .hero
     &__swiper
       &-button
         &-prev, &-next
           width: 4rem
           height: 4rem
-          &:hover
-            width: 8rem          
   .subscribe
     &-input
       width: 25rem
@@ -661,7 +673,9 @@
       margin: 0  
     &-button
       padding: 0.6rem 1rem     
-      font-size: 0.8rem     
+      font-size: 0.8rem   
+  #subscribe-error
+    margin-left: -3.9rem         
   .search-input
     width: 15rem   
   .modal__close
@@ -683,21 +697,26 @@
       font-size: 0.88rem
 
 @media screen and ( max-width: 370px)
-  .price-from
-    font-size: 15px
-  .scroll-down
-    font-size: 7px
-    padding: 9px 21px
+  // .price-from
+  //   font-size: 15px
+  // .scroll-down
+  //   font-size: 7px
+  //   padding: 9px 21px
   .hero
     &__swiper
       &-button
         &-prev, &-next
           width: 3.5rem
           height: 3.5rem
-          &:hover
-            width: 7rem          
   .subscribe
     &-input
       width: 20rem         
     &-button 
       font-size: 0.7rem       
+  .footer__logo-link
+    padding-left: 1.4rem   
+  .thanks-hero
+    &__title
+      font-size: 1.3rem
+    &__text
+      font-size: 0.9rem                

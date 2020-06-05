@@ -1,28 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Магазин одежды ASOS</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon.png">
+  <link rel="stylesheet" href="css/hamburgers.min.css" >  
   <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="header">
+  <header class="header header--primary">
     <div class="container">
-      <a href="./" class="logo-link header__logo-link"><img src="img/logo-white.png" alt="logo" class="logo header__logo"></a>
-      <!-- /.logo-link header__logo-link -->
-      <div class="burger-dropdown"></div>
+        <a href="./" class="logo-link header__logo-link"><img src="img/logo-white.png" alt="logo" class="logo header__logo"></a>
+        <!-- /.logo-link header__logo-link -->
       <div class="menu header__menu">
-        <a href="#hero" class="link-item menu__link-item">Домой</a>
+        <a href="./" class="link-item menu__link-item">Домой</a>
         <!-- /.link-item menu__link-item -->
-        <a href="#" class="link-item menu__link-item">каталог</a>
+        <a href="./catalog.html" class="link-item menu__link-item">каталог</a>
         <!-- /.link-item menu__link-item -->
-        <a href="#" class="link-item menu__link-item">О нас</a>
+        <a href="#about" class="link-item menu__link-item">О нас</a>
         <!-- /.link-item menu__link-item -->
-        <a href="#" class="link-item menu__link-item">Партнерам</a>
+        <a href="#promo" class="link-item menu__link-item">Партнерам</a>
         <!-- /.link-item menu__link-item -->
-        <a href="#" class="link-item menu__link-item">Контакты</a>
+        <a href="./contacts.html" class="link-item menu__link-item">Контакты</a>
         <!-- /.link-item menu__link-item -->
       </div>
       <!-- /.menu header__menu -->
@@ -56,12 +58,31 @@
               <p class="cart-summary">Итого: 7 489 ₽</p>
               <!-- /.cart-summary -->
               <div class="cart-button-container">
-                <a href="#" class="cart-button cart-button--button-primary">Корзина</a> <!-- /.cart-button cart-button--button-primary -->
-                <a href="#" class="cart-button cart-button--secondary">оформить</a> <!-- /.cart-button cart-button--button-primary -->
+                <a href="./cart.html" class="cart-button cart-button--button-primary">Корзина</a> <!-- /.cart-button cart-button--button-primary -->
+                <a href="./cart.html" class="cart-button cart-button--secondary">оформить</a> <!-- /.cart-button cart-button--button-primary -->
               </div>
           </div>
         </div> <!-- /.interface-button interface-buttons__interface-button -->
         <div class="interface-button interface-buttons__interface-button search-open-button"><img src="img/search.png" alt="search" class="interface-button-image"></div> <!-- /.interface-button interface-buttons__interface-button -->
+      </div>
+      <div class="burger-container">
+        <button class="hamburger hamburger--spin" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner hamburger-inner--white"></span>
+          </span>
+        </button>
+        <div class="hamburger__menu">
+          <a href="./" class="hamburger__link-item">Домой</a>
+          <!-- /.link-item menu__link-item -->
+          <a href="./catalog.html" class="hamburger__link-item">каталог</a>
+          <!-- /.link-item menu__link-item -->
+          <a href="#about" class="hamburger__link-item">О нас</a>
+          <!-- /.link-item menu__link-item -->
+          <a href="#promo" class="hamburger__link-item">Партнерам</a>
+          <!-- /.link-item menu__link-item -->
+          <a href="./contacts.html" class="hamburger__link-item">Контакты</a>
+          <!-- /.link-item menu__link-item -->
+        </div>
       </div>
     </div>
     <!-- /.container -->
@@ -74,5 +95,7 @@
     </div>
   </section>
   <!-- /.section hero -->
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

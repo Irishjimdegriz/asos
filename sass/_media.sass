@@ -53,6 +53,17 @@
       margin-right: 10rem
   .link-item
     margin-right: 1.5rem
+  .discount-coupon
+    &-block
+      &-input
+        width: 24rem 
+      &__button
+        padding: 1.214rem 2rem
+      &__form 
+        padding-left: 3rem
+        padding-right: 3rem
+  .coupon-button
+    width: 11rem        
 
 @media screen and ( max-width: 1300px)
   .contacts-block
@@ -74,6 +85,19 @@
     max-width: 25rem
   .catalog__cards-container
     max-height: 148.5rem
+  .discount-coupon
+    &-block
+      &-input
+        width: 22rem  
+        padding-left: 0.4rem
+      &__button
+        padding: 1.214rem 1.8rem
+      &__form 
+        padding-left: 3rem
+        padding-right: 3rem
+  .coupon-button
+    width: 10rem   
+    font-size: 0.9rem
 
 @media screen and ( max-width: 1140px)
   .header
@@ -84,7 +108,22 @@
       font-size: 1.25rem
   .contacts-block
     &__address, &__phone, &__email, &__skype, &__postscriptum
-      max-width: 12rem      
+      max-width: 12rem   
+
+@media screen and ( max-width: 1090px)
+  .discount-coupon
+    &-block
+      &-input
+        width: 22rem  
+        padding-left: 0.4rem
+      &__button
+        padding: 1.214rem 1.314rem
+      &__form 
+        padding-left: 1.1rem
+        padding-right: 1.1rem
+  .coupon-button
+    width: 10rem   
+    font-size: 0.9rem
 
 @media screen and ( max-width: 1040px)      
   .news-item__text
@@ -235,7 +274,58 @@
         display: none
   .modal
     &__close
-      display: none          
+      display: none         
+  .total
+    &>.container
+      flex-direction: column
+      align-items: center
+      justify-content: center
+    &__money-block
+      margin-top: 2rem
+      margin-left: 0    
+      flex-basis: 100%
+      width: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center   
+    &__title
+      align-self: flex-start   
+  .discount-coupon-block
+    flex-basis: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-left: 0
+    width: 100%
+    &-input
+      width: 70%
+      font-size: 0.871rem
+    &__form
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 100%
+    &__button-container
+      display: flex
+      //flex-direction: column
+      justify-content: space-between
+      align-items: center
+      width: 100%
+    &__button
+      width: 48%
+      padding: 1.214rem 0.9rem
+      text-align: center
+      margin-right: 0 !important
+      margin-bottom: 1rem
+  .coupon-button
+    width: 30%
+    //margin-top: 1rem
+    padding-top: 1rem
+    padding-bottom: 1rem    
+  .table-total
+    width: 100%  
 
 
 @media screen and ( max-width: 941px)
@@ -400,7 +490,33 @@
   .contacts-block
     &__address, &__phone, &__email, &__skype, &__postscriptum
       max-width: 12rem
-      font-size: 0.729rem      
+      font-size: 0.729rem   
+  .discount-coupon-block         
+    &-input
+      width: 100%
+      font-size: 0.871rem
+    &__form
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      width: 100%
+    &__button-container
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      width: 100%
+    &__button
+      width: 100%
+      text-align: center
+      margin-right: 0 !important
+      margin-bottom: 1rem
+  .coupon-button
+    width: 100%
+    margin-top: 1rem
+    padding-top: 1rem
+    padding-bottom: 1rem     
 
 @media screen and ( max-width: 460px)
   .subtitle

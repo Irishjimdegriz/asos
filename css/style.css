@@ -1041,9 +1041,6 @@ img {
       vertical-align: middle;
       -webkit-filter: grayscale(100%);
       filter: grayscale(100%); }
-      .about__image-wrap img:hover {
-        -webkit-filter: grayscale(0%);
-        filter: grayscale(0%); }
 
 .promo {
   background-color: #5a52a5;
@@ -1898,7 +1895,8 @@ textarea {
 .item-card-full__photos {
   flex-basis: 59%;
   max-width: 59rem;
-  margin-top: 1.8rem; }
+  margin-top: 1.8rem;
+  height: 72rem; }
 
 .item-card-full__info {
   flex-basis: 39%;
@@ -1965,16 +1963,24 @@ textarea {
 .stats {
   color: #40494e;
   font-size: 0.929rem;
-  border-top: 1px solid #999999;
+  border-top: 1px solid #f7f7f7;
   padding-top: 0.6rem; }
   .stats--last {
-    border-bottom: 1px solid #999999;
+    border-bottom: 1px solid #f7f7f7;
     padding-bottom: 0.7rem; }
+  .stats--shipping {
+    border: 0; }
+  .stats--description {
+    width: 32rem; }
 
 .stat-type {
   font-family: "Gotham Pro Medium";
   font-weight: 500;
   font-size: 0.95rem; }
+
+.stat-value {
+  color: #ef50a2;
+  font-weight: bold; }
 
 .info__description {
   color: #40494e;
@@ -1990,7 +1996,7 @@ textarea {
   margin-top: 2.714rem;
   color: #ef50a2;
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: bold;
   letter-spacing: -0.3px;
   text-decoration: none;
   display: block;
@@ -2033,7 +2039,12 @@ textarea {
 .info__title {
   font-size: 1.8rem;
   margin-top: 1.2rem;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  color: #2d3a4b;
+  font-size: 1.571rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2.64px; }
 
 .info__discount-block {
   top: 0.3rem; }
@@ -2042,7 +2053,9 @@ textarea {
   margin-top: 0.5rem;
   margin-right: 2.214rem;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); }
 
 .color-picker-title {
   color: #2d3a4b;
@@ -2301,21 +2314,50 @@ textarea {
   margin-right: 5.7rem; }
 
 .payment-info-container {
-  display: flex; }
+  display: flex;
+  margin-top: 1rem; }
 
 .payment-step-counter {
   color: white;
   font-size: 1.286rem;
   font-weight: 700;
   letter-spacing: -0.36px;
-  padding: 1.286rem 1.571rem;
+  padding-top: 1.286rem;
   background-color: #ef50a2;
-  margin-right: 2.571rem; }
+  margin-right: 2.571rem;
+  width: 3.571rem;
+  height: 3.571rem;
+  text-align: center;
+  vertical-align: middle; }
 
 .payment-step-description {
   color: #40494e;
   font-size: 1rem;
-  max-width: 55rem; }
+  max-width: 55rem;
+  display: flex;
+  align-items: center;
+  margin-top: 0; }
+
+.payment__image-wrapper {
+  margin-right: 2rem; }
+
+.visa-description {
+  max-width: 65rem;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  line-height: 1.6rem;
+  font-size: 1rem; }
+
+.shipping-container {
+  margin-top: 4.357rem;
+  margin-bottom: 3.429rem; }
+
+.shipping-title {
+  color: #141414;
+  font-size: 1.143rem;
+  font-weight: bold;
+  text-transform: uppercase; }
 
 @media screen and (min-width: 992px) {
   .hero__swiper-button-prev:hover {
@@ -2388,7 +2430,10 @@ textarea {
   .item-offer__buy-button:first-of-type:hover, .item-offer__buy-button:last-of-type:hover {
     color: #f3f7f9; }
   .sizes-row--regular:hover {
-    background-color: #ef50a2; } }
+    background-color: #ef50a2; }
+  .info__image-wrap:hover, .about__image-wrap:hover {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%); } }
 
 @media screen and (max-width: 1500px) {
   .news-item__text {
@@ -2407,7 +2452,9 @@ textarea {
     padding-left: 3rem;
     padding-right: 3rem; }
   .coupon-button {
-    width: 11rem; } }
+    width: 11rem; }
+  .info__image-wrap {
+    margin-right: 1rem; } }
 
 @media screen and (max-width: 1320px) {
   .contacts-block__address, .contacts-block__phone, .contacts-block__email, .contacts-block__skype, .contacts-block__postscriptum {
@@ -2420,6 +2467,10 @@ textarea {
   .delete-button-col {
     margin-top: 6.943rem;
     margin-left: 5.1rem; } }
+
+@media screen and (max-width: 1290px) {
+  .info__size-picker {
+    max-width: 17rem; } }
 
 @media screen and (max-width: 1260px) {
   .header__menu {
@@ -2445,12 +2496,37 @@ textarea {
     padding-right: 3rem; }
   .coupon-button {
     width: 10rem;
-    font-size: 0.9rem; } }
+    font-size: 0.9rem; }
+  .visa-description {
+    max-width: 45rem; }
+  .reviews__text {
+    max-width: 45rem; } }
+
+@media screen and (max-width: 1220px) {
+  .photos__swiper-custom-bullet {
+    width: 8rem; }
+  .info__description {
+    font-size: 0.9rem;
+    max-width: 22rem; } }
+
+@media screen and (max-width: 1170px) {
+  .info__add-button {
+    font-size: 0.986rem;
+    padding: 1.22rem 2.143rem; } }
 
 @media screen and (max-width: 1160px) {
   .photo-col__image-wrap {
     width: 10rem;
-    height: 10rem; } }
+    height: 10rem; }
+  .data {
+    width: 38.22rem; }
+  .reviews {
+    font-size: 0.757rem; }
+    .reviews__rating-container {
+      margin-right: 1.5rem; }
+    .reviews__likes-container {
+      margin-right: 0.5rem;
+      margin-left: 2.3rem; } }
 
 @media screen and (max-width: 1140px) {
   .header__logo-link {

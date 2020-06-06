@@ -5,6 +5,7 @@
     flex-basis: 59%
     max-width: 59rem
     margin-top: 1.8rem
+    height: 72rem
   &__info
     flex-basis: 39%
     margin-top: 7.3rem
@@ -65,15 +66,22 @@
 .stats
   color: #40494e
   font-size: 0.929rem
-  border-top: 1px solid $gray
+  border-top: 1px solid $light-gray
   padding-top: 0.6rem
   &--last
-    border-bottom: 1px solid $gray
+    border-bottom: 1px solid $light-gray
     padding-bottom: 0.7rem  
+  &--shipping
+    border: 0
+  &--description
+    width: 32rem
 .stat-type
   font-family: "Gotham Pro Medium"
   font-weight: 500
   font-size: 0.95rem
+.stat-value
+  color: $secondary
+  font-weight: bold
 .info
   &__description
     color: #40494e
@@ -87,7 +95,7 @@
     margin-top: 2.714rem
     color: $secondary
     font-size: 1.1rem
-    font-weight: 500
+    font-weight: bold
     letter-spacing: -0.3px
     text-decoration: none
     display: block
@@ -124,6 +132,11 @@
     font-size: 1.8rem
     margin-top: 1.2rem
     margin-bottom: 1.5rem
+    color: $black
+    font-size: 1.571rem
+    font-weight: bold
+    text-transform: uppercase
+    letter-spacing: 2.64px
   &__discount-block
     top: 0.3rem    
   &__image-wrap
@@ -131,6 +144,9 @@
     margin-right: 2.214rem
     display: flex
     align-items: center
+    filter: grayscale(100%)
+    // &:hover
+    //   filter: grayscale(0%)
 .color
   &-picker-title
     color: $black

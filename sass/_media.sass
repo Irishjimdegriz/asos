@@ -100,6 +100,10 @@
   .sizes-row--regular
     &:hover
       background-color: $secondary
+  .info, .about
+    &__image-wrap
+      &:hover
+        filter: grayscale(0%)
 
 @media screen and ( max-width: 1500px)
   .news-item__text
@@ -121,7 +125,16 @@
         padding-left: 3rem
         padding-right: 3rem
   .coupon-button
-    width: 11rem        
+    width: 11rem
+  .info
+    &__image-wrap
+      margin-right: 1rem 
+
+// @media screen and ( max-width: 1390px)
+//   .item-card-full__info
+//     flex-basis: 56%
+//   .item-card-full__photos
+//     flex-basis: 82%
 
 @media screen and ( max-width: 1320px)
   .contacts-block
@@ -135,6 +148,11 @@
   .delete-button-col
     margin-top: 6.943rem
     margin-left: 5.1rem    
+
+@media screen and ( max-width: 1290px)
+  .info
+    &__size-picker
+      max-width: 17rem
 
 @media screen and ( max-width: 1260px)
   .header
@@ -164,11 +182,41 @@
   .coupon-button
     width: 10rem   
     font-size: 0.9rem
+  .visa-description
+    max-width: 45rem  
+  .reviews
+    &__text
+      max-width: 45rem  
+
+@media screen and ( max-width: 1220px)
+  .photos
+    &__swiper-custom-bullet
+      width: 8rem
+  .info
+    &__description
+      font-size: 0.9rem
+      max-width: 22rem
+
+@media screen and ( max-width: 1170px)
+  .info
+    &__add-button
+      font-size: 0.986rem
+      padding: 1.22rem 2.143rem
 
 @media screen and ( max-width: 1160px)
   .photo-col__image-wrap
     width: 10rem
     height: 10rem
+  .data
+    width: 38.22rem
+  .reviews
+    &__name, &__likes-caption, &__rating-caption, &__date-time
+    font-size: 0.757rem  
+    &__rating-container
+      margin-right: 1.5rem
+    &__likes-container
+      margin-right: 0.5rem
+      margin-left: 2.3rem
 
 @media screen and ( max-width: 1140px)
   .header

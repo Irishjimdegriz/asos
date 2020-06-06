@@ -1219,6 +1219,42 @@ img {
 .modal__search {
   position: relative; }
 
+.size-table-modal {
+  visibility: visible;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 199;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(90, 82, 165, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .size-table-modal__close {
+    position: absolute;
+    right: -11rem;
+    top: -8rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent url("../img/close.png") no-repeat center;
+    border: none;
+    margin: 12px;
+    cursor: pointer;
+    outline: none; }
+  .size-table-modal__sizes {
+    position: relative;
+    color: white; }
+
+.col-sizes-title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.571rem;
+  text-transform: uppercase;
+  letter-spacing: 2.64px; }
+
 .secondary-hero {
   width: 100%;
   height: 28.57rem;

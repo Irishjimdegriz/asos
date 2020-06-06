@@ -857,7 +857,7 @@ img {
   flex-direction: column;
   align-items: center; }
   .popular > .container {
-    max-width: 1400px; }
+    max-width: 1600px; }
   .popular__image-wrap {
     position: relative;
     width: 18.714rem;
@@ -2097,6 +2097,15 @@ textarea {
 .reviews__administration-response {
   position: absolute;
   bottom: 0; }
+
+.review-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.643rem; }
+
+.user-review-title {
+  margin-top: 9.214rem;
+  margin-bottom: 3.786rem; }
 
 @media screen and (min-width: 992px) {
   .hero__swiper-button-prev:hover {

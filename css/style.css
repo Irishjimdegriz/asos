@@ -1788,6 +1788,8 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  .youmaylike > .container {
+    max-width: 1600px; }
   .youmaylike__swiper-button-prev, .youmaylike__swiper-button-next {
     width: 2.714rem;
     height: 2.714rem;
@@ -2040,7 +2042,15 @@ textarea {
   .reviews__review-container:first-of-type {
     padding-top: 1rem; }
   .reviews__review-container:nth-of-type(2) {
-    padding-bottom: 10rem; }
+    flex-direction: column; }
+
+.reviews__logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-filter: invert(51%) sepia(36%) saturate(3800%) hue-rotate(300deg) brightness(95%) contrast(96%);
+  filter: invert(51%) sepia(36%) saturate(3800%) hue-rotate(300deg) brightness(95%) contrast(96%);
+  padding: 3.357rem 2.643rem; }
 
 .reviews__image-wrapper {
   margin-right: 1.4rem; }
@@ -2055,7 +2065,9 @@ textarea {
     width: 100%; }
 
 .reviews__data-container {
-  display: flex; }
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
 
 .reviews__likes-container {
   display: flex;
@@ -2073,11 +2085,9 @@ textarea {
   font-weight: 500;
   text-transform: uppercase; }
 
-.reviews__name {
-  margin-right: 28.1rem; }
-
 .reviews__likes-caption {
-  margin-right: 1rem; }
+  margin-right: 1rem;
+  width: 11rem; }
 
 .reviews__likes-counter {
   margin-right: 1.4rem; }
@@ -2095,17 +2105,54 @@ textarea {
   margin-right: 4.5rem; }
 
 .reviews__administration-response {
-  position: absolute;
-  bottom: 0; }
-
-.review-buttons-container {
   display: flex;
-  justify-content: space-between;
-  margin-top: 1.643rem; }
+  background-color: #ffeff7;
+  position: relative;
+  margin-top: 0.5rem;
+  margin-bottom: 2.286rem; }
+  .reviews__administration-response::before {
+    content: '';
+    border-style: solid;
+    border-width: 25px 32px 0 0;
+    border-color: transparent #ffeff7 transparent transparent;
+    position: absolute;
+    top: -17px;
+    left: 47px;
+    transform: rotate(90deg); }
+
+.reviews__response-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; }
+
+.review {
+  display: flex; }
+  .review-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.643rem; }
+  .review-send-button {
+    margin-right: 0; }
 
 .user-review-title {
   margin-top: 9.214rem;
   margin-bottom: 3.786rem; }
+
+.response-title {
+  color: #141414;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.82px; }
+
+.response-text {
+  color: #666666;
+  font-size: 0.929rem; }
+
+.data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
 
 @media screen and (min-width: 992px) {
   .hero__swiper-button-prev:hover {

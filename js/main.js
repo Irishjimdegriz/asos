@@ -279,6 +279,43 @@ $(document).ready(function () {
       }
     });
 
+    // $('.promo__subscribe-form').validate({
+    //   errorClass: 'invalid',
+    //   errorElement: "div",
+    //   errorPlacement: function(error, element) {
+    //     element.after(error);
+    //   },
+    //   rules: {
+    //     subscribe: {
+    //       required: true,
+    //       email: true
+    //     }
+    //   },
+    //   messages: {
+    //     subscribe: {
+    //         required: "Заполните поле",
+    //         email: "Введите корректный email"
+    //     },
+    //   },
+    //   submitHandler: function(form) {
+    //     $.ajax({
+    //       type: "POST",
+    //       url: "send.php",
+    //       data: $(form).serialize(),
+    //       success: function (response) {
+    //         window.location = "./thanks.html";
+    //         console.log("Ajax сработал. Ответ сервера: " + response);
+    //         //alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+    //         $(form)[0].reset();
+    //         // modal.removeClass('modal--visible');
+    //         // modalAccept.addClass('modal--visible');
+    //         //ym(64345651,'reachGoal','request');
+    //         return true;
+    //       }
+    //     });
+    //   }
+    // });    
+
     $('.questions__form').validate({
       errorClass: 'invalid',
       errorElement: "div",
@@ -288,7 +325,7 @@ $(document).ready(function () {
       rules: {
         userName: {
           required: true,
-          minlength: 2,
+          minlength: 3,
           maxlength: 15
         },
         // simple rule, converted to {required:true}
@@ -358,31 +395,31 @@ $(document).ready(function () {
         element.after(error);
       },
       rules: {
-        userName: {
+        reviewUserName: {
           required: true,
-          minlength: 2,
+          minlength: 3,
           maxlength: 15
         },
         // compound rule
-        userEmail: {
+        reviewUserEmail: {
           required: true,
           email: true
         },
-        userReview: {
+        reviewUserReview: {
           required: true
         }
       },
       messages: {
-        userName: {
+        reviewUserName: {
           required: "Заполните поле",
           minlength: "Имя слишком короткое",
           maxlength: "Имя слишком длинное"
         },
-        userEmail: {
+        reviewUserEmail: {
             required: "Заполните поле",
             email: "Введите корректный email"
         },
-        userReview: {
+        reviewUserReview: {
           required: "Заполните поле"
         }
       },
@@ -404,6 +441,60 @@ $(document).ready(function () {
         });
       }
     });
+
+    $('.review__form--mobile').validate({
+      errorClass: 'invalid',
+      errorElement: "div",
+      errorPlacement: function(error, element) {
+        element.after(error);
+      },
+      rules: {
+        mobileReviewUserName: {
+          required: true,
+          minlength: 3,
+          maxlength: 15
+        },
+        // compound rule
+        mobileReviewUserEmail: {
+          required: true,
+          email: true
+        },
+        mobileReviewUserReview: {
+          required: true
+        }
+      },
+      messages: {
+        mobileReviewUserName: {
+          required: "Заполните поле",
+          minlength: "Имя слишком короткое",
+          maxlength: "Имя слишком длинное"
+        },
+        mobileReviewUserEmail: {
+            required: "Заполните поле",
+            email: "Введите корректный email"
+        },
+        mobileReviewUserReview: {
+          required: "Заполните поле"
+        }
+      },
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "sendReview.php",
+          data: $(form).serialize(),
+          success: function (response) {
+            window.location = "./thanks-review.html";
+            console.log("Ajax сработал. Ответ сервера: " + response);
+            //alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+            $(form)[0].reset();
+            // modal.removeClass('modal--visible');
+            // modalAccept.addClass('modal--visible');
+            //ym(64345651,'reachGoal','request');
+            return true;
+          }
+        });
+      }
+    });    
 
     $('[type=tel]').mask('+7(000) 000-00-00');
 

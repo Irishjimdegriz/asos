@@ -495,7 +495,9 @@
     font-size: 1.7rem    
 .item-card-full
   &>.container
-    flex-direction: column      
+    flex-direction: column    
+  &__info
+    margin-left: 0  
 .info
   &__description
     max-width: 32rem
@@ -526,6 +528,10 @@
     flex-direction: column
     align-items: flex-start
     width: 100%
+.color-picker-title    
+  margin-right: 1rem
+.stats--description    
+  width: 20rem
 
 @media screen and ( max-width: 941px)
   .catalog__cards-container
@@ -625,10 +631,11 @@
 @media screen and ( max-width: 575px)
   .reviews
     &__swiper
-      visibility: hidden
+      display: none
     &__mobile-container
-      visibility: visible
-      margin-top: -120rem
+      display: block
+      //visibility: visible
+      margin-top: 2rem
     &__input-group      
       flex-basis: 100%
     &__logo-link
@@ -761,10 +768,7 @@
     &.invalid        
       &#discount-error
         margin-top: -0.3rem
-        margin-left: -10.4rem
-  .reviews
-    &__mobile-container
-      margin-top: -126rem        
+        margin-left: -10.4rem       
 
 @media screen and ( max-width: 510px)
   .cart-row
@@ -839,11 +843,6 @@
     &__section-subtitle
       font-size: 0.88rem
 
-@media screen and ( max-width: 385px)
-   .reviews
-    &__mobile-container
-      margin-top: -130rem   
-
 @media screen and ( max-width: 370px)
   // .price-from
   //   font-size: 15px
@@ -870,7 +869,8 @@
       font-size: 0.9rem      
   .info
     &__add-button
-      font-size: 0.786rem          
+      font-size: 0.786rem    
+      padding: 1.22rem 1.843rem      
 
 @media screen and ( max-width: 340px)            
   .color-variant

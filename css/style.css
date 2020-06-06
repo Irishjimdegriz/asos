@@ -310,12 +310,22 @@ div.invalid {
   margin-left: 2rem;
   color: red; }
   div.invalid#questions-user-name-error, div.invalid#questions-user-email-error, div.invalid#questions-user-phone-error, div.invalid#questions-user-topic-error {
-    margin-top: 7.3rem; }
+    margin-top: 6rem;
+    margin-left: 1.4rem; }
   div.invalid#questions-user-question-error {
-    margin-top: 15rem; }
+    margin-top: 13rem;
+    margin-left: 1.4rem; }
   div.invalid#discount-error {
     margin-top: 3.2rem;
     margin-left: 1.5rem; }
+
+#reviews-user-name-error, #reviews-user-email-error {
+  margin-top: 5.7rem;
+  margin-left: 1.4rem; }
+
+#reviews-user-question-error {
+  margin-left: 1.4rem;
+  margin-top: 14.3rem; }
 
 .container {
   width: 85%;
@@ -586,7 +596,8 @@ img {
     position: absolute;
     top: 3.3rem;
     right: -0.2rem;
-    width: 18rem; }
+    width: 26rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
     .hamburger__menu--visible {
       display: block; }
     .hamburger__menu::before {
@@ -594,6 +605,8 @@ img {
       border-style: solid;
       border-width: 10px 16px 10px 0;
       border-color: transparent #fff transparent transparent;
+      -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
       position: absolute;
       top: -17px;
       right: 15px;
@@ -608,7 +621,8 @@ img {
     font-weight: 700;
     line-height: 2rem;
     letter-spacing: 2.1px;
-    text-align: center; }
+    text-align: center;
+    padding-top: 0.5rem; }
 
 .link-item {
   text-decoration: none;
@@ -1616,8 +1630,8 @@ option {
     margin-left: -2.3rem; }
 
 .short-cart-item {
-  font-size: 0.857rem;
-  font-weight: 500;
+  font-size: 0.957rem;
+  font-weight: bold;
   line-height: 2rem;
   text-transform: uppercase;
   letter-spacing: 0.72px;
@@ -1625,9 +1639,15 @@ option {
   padding-bottom: 0.6rem;
   display: flex;
   justify-content: space-between; }
+  .short-cart-item-name {
+    letter-spacing: 0; }
   .short-cart-item-name, .short-cart-item-price {
     color: #2d3a4b;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    margin-top: 0.8rem; }
+    .short-cart-item-name--total, .short-cart-item-price--total {
+      font-size: 1.3rem;
+      margin-top: 0.7rem; }
   .short-cart-item:last-of-type {
     border: none;
     padding-bottom: 1.4rem; }
@@ -1692,7 +1712,7 @@ option {
   flex-direction: column;
   justify-content: flex-start;
   margin: auto;
-  max-width: 100rem;
+  max-width: 92rem;
   margin-top: 6.171rem; }
 
 .questions__section-title {
@@ -2021,7 +2041,8 @@ textarea {
   background-color: #2d3a4b;
   padding: 1.42rem 2.543rem;
   margin-right: 2.929rem;
-  border: none; }
+  border: none;
+  outline: none; }
 
 .info__like {
   width: 2rem;
@@ -2287,7 +2308,7 @@ textarea {
     margin-top: 0.35rem;
     padding: 1.05rem 2.043rem;
     font-size: 0.95rem; }
-  .review__form {
+  .review__form, .review__form--mobile {
     width: 91%;
     margin-bottom: 7.1rem; }
 
@@ -2774,6 +2795,9 @@ textarea {
 .item-card-full > .container {
   flex-direction: column; }
 
+.item-card-full__info {
+  margin-left: 0; }
+
 .info__description {
   max-width: 32rem; }
 
@@ -2809,6 +2833,12 @@ textarea {
   flex-direction: column;
   align-items: flex-start;
   width: 100%; }
+
+.color-picker-title {
+  margin-right: 1rem; }
+
+.stats--description {
+  width: 20rem; }
 
 @media screen and (max-width: 941px) {
   .catalog__cards-container {
@@ -2896,10 +2926,10 @@ textarea {
 
 @media screen and (max-width: 575px) {
   .reviews__swiper {
-    visibility: hidden; }
+    display: none; }
   .reviews__mobile-container {
-    visibility: visible;
-    margin-top: -120rem; }
+    display: block;
+    margin-top: 2rem; }
   .reviews__input-group {
     flex-basis: 100%; }
   .reviews__logo-link {
@@ -3012,9 +3042,7 @@ textarea {
     padding-bottom: 1rem; }
   div.invalid#discount-error {
     margin-top: -0.3rem;
-    margin-left: -10.4rem; }
-  .reviews__mobile-container {
-    margin-top: -126rem; } }
+    margin-left: -10.4rem; } }
 
 @media screen and (max-width: 510px) {
   .cart-row {
@@ -3074,10 +3102,6 @@ textarea {
   .popular__section-subtitle {
     font-size: 0.88rem; } }
 
-@media screen and (max-width: 385px) {
-  .reviews__mobile-container {
-    margin-top: -130rem; } }
-
 @media screen and (max-width: 370px) {
   .hero__swiper-button-prev, .hero__swiper-button-next {
     width: 3.5rem;
@@ -3093,7 +3117,8 @@ textarea {
   .thanks-hero__text {
     font-size: 0.9rem; }
   .info__add-button {
-    font-size: 0.786rem; } }
+    font-size: 0.786rem;
+    padding: 1.22rem 1.843rem; } }
 
 @media screen and (max-width: 340px) {
   .color-variant {

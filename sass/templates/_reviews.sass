@@ -12,19 +12,30 @@
       display: flex
       justify-content: flex-start
       top: 5.8rem
+      height: 2rem
+      border-bottom: 1px solid $light-gray
+      &>.swiper-pagination-bullet-active      
+        color: #808080
+        border-bottom: 3px solid $secondary
+        border-radius: 0
     &-custom-bullet
-      width: 10rem
+      width: 7rem
       background-color: transparent
       opacity: 1
       display: inline-flex
       align-items: center
       height: 2rem
       outline: none
+      color: #141414
+      margin-right: 3.286rem !important
+      &:nth-of-type(2)
+        width: 8.6rem
       &:last-of-type
         width: 15rem
   &__slide
     &-title
-      margin-top: 5.3rem
+      margin-top: 4.9rem
+      margin-bottom: 1.4rem
       //margin-bottom: 1.9rem
       color: #141414
       font-size: 1.143rem
@@ -32,12 +43,12 @@
       text-transform: uppercase
   &__review-container
     display: flex
-    padding-top: 1.6rem
+    padding-top: 1.8rem
     padding-bottom: 1rem
     border-bottom: 1px solid $gray
     position: relative
     &:first-of-type
-      padding-top: 1rem
+      padding-top: 0.5rem
     &:nth-of-type(2)
       flex-direction: column
   &__logo-link
@@ -46,6 +57,9 @@
     align-items: center
     filter: invert(51%) sepia(36%) saturate(3800%) hue-rotate(300deg) brightness(95%) contrast(96%)
     padding: 3.357rem 2.643rem
+    width: 10.5rem
+    height: 2rem
+    margin-top: 0.7rem    
   &__image-wrapper
     margin-right: 1.4rem
   &__text
@@ -73,16 +87,15 @@
     font-size: 0.857rem
     font-weight: 500
     text-transform: uppercase
-  &__name    
-    //margin-right: 28.1rem
   &__likes
     &-caption
       margin-right: 1rem
-      width: 11rem
+      width: 8.5rem
     &-counter
       margin-right: 1.4rem
     &-container
-      margin-right: 4.1rem
+      margin-right: 3.6rem
+      margin-left: 2.6rem
   &__rating
     &-caption
       margin-right: 1rem
@@ -94,8 +107,10 @@
     display: flex
     background-color: #ffeff7
     position: relative
-    margin-top: 0.5rem
-    margin-bottom: 2.286rem
+    margin-top: 1rem
+    margin-bottom: 1.486rem
+    width: 93.8%
+    padding-bottom: 0.6rem
     &::before
       content: ''
       border-style: solid
@@ -109,6 +124,30 @@
     display: flex
     flex-direction: column
     justify-content: space-evenly
+  &__input-group    
+    display: flex
+    flex-direction: column
+    position: relative
+    flex-basis: 48.7%
+  &__label
+    color: $title-color
+    font-size: 0.857rem
+    font-weight: 500
+    line-height: 1.571rem
+    text-transform: uppercase
+    letter-spacing: 0.48px
+    margin-bottom: 0.857rem
+  &__input
+    color: $title-color
+    font-size: 1.071rem
+    line-height: 2rem
+    padding: 0.521rem 0 0.521rem 1.429rem
+    border: 1px solid $black
+    margin-bottom: 1.129rem
+    outline: none    
+  &__textarea
+    height: 11.8rem !important
+    margin-bottom: -0.5rem !important
 .review
   display: flex
   &-buttons-container
@@ -116,10 +155,16 @@
     justify-content: space-between  
     margin-top: 1.643rem
   &-send-button
-    margin-right: 0    
+    margin-right: 0.4rem
+    margin-top: 0.35rem
+    padding: 1.05rem 2.043rem
+    font-size: 0.95rem
+  &__form
+    width: 91%
+    margin-bottom: 7.1rem
 .user-review-title
   margin-top: 9.214rem
-  margin-bottom: 3.786rem
+  margin-bottom: 3.286rem
 .response
   &-title
     color: #141414
@@ -127,10 +172,31 @@
     font-weight: 500
     text-transform: uppercase
     letter-spacing: 1.82px
+    margin-top: 0.5rem
+    margin-bottom: -0.5rem
   &-text
     color: #666666
     font-size: 0.929rem
+    margin: 0
 .data
   display: flex
   align-items: center
   justify-content: space-between
+  width: 45.386rem  
+  margin-right: 5.7rem
+.payment
+  &-info-container
+    display: flex
+  &-step
+    &-counter
+      color: white
+      font-size: 1.286rem
+      font-weight: 700
+      letter-spacing: -0.36px
+      padding: 1.286rem 1.571rem
+      background-color: $secondary
+      margin-right: 2.571rem
+    &-description
+      color: #40494e
+      font-size: 1rem
+      max-width: 55rem

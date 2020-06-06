@@ -1,5 +1,5 @@
 .size-table-modal
-  visibility: visible
+  visibility: hidden
   position: fixed
   left: 0
   top: 0
@@ -13,9 +13,6 @@
   justify-content: center
   align-items: center
   &__close
-    position: absolute
-    right: -11rem
-    top: -8rem
     width: 2.5rem
     height: 2.5rem
     background: transparent url('../img/close.png') no-repeat center
@@ -26,6 +23,8 @@
   &__sizes
     position: relative
     color: white
+    width: 100%
+    max-width: 67.643rem
 .col-sizes
   &-title
     font-size: 22px
@@ -33,3 +32,43 @@
     line-height: 1.571rem
     text-transform: uppercase
     letter-spacing: 2.64px
+    text-align: center
+    flex-basis: 90%
+  &-rus-size
+    padding-top: 1.3rem
+    padding-bottom: 1.3rem
+    flex-basis: 30%
+    text-align: center
+  &-waist
+    padding-top: 1.3rem
+    padding-bottom: 1.3rem
+    flex-basis: 20%
+    text-align: center
+  &-hips
+    padding-top: 1.3rem
+    padding-bottom: 1.3rem
+    flex-basis: 20%
+    text-align: center
+  &-manifacturer
+    padding-top: 1.3rem
+    padding-bottom: 1.3rem
+    flex-basis: 30%
+    text-align: center
+.sizes-row    
+  display: flex
+  justify-content: center
+  align-items: center
+  color: white
+  font-size: 1rem 
+  cursor: default
+  &--legend
+    color: white
+    font-size: 1rem
+    font-weight: 500
+    text-transform: uppercase
+    letter-spacing: 1.82px
+    padding-bottom: 1.143rem
+    border-bottom: 1px solid white
+    margin-bottom: 1.5rem
+  &--title
+    margin-bottom: 3.3rem

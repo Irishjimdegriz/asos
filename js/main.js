@@ -2,7 +2,11 @@ const swiperLabels = ['Описание', 'Отзывы (03)', 'Оплата и 
 
 $(document).ready(function () {
   const modal = $('.modal'),
+        sizesModal = $('.size-table-modal'),
+        sizesModalButton = $('.info__size-table'),
         closeBtn = $('.modal__close'),
+        tableCloseBtn = $('.size-table-modal__close'),
+        sizesTable = $('.size-table-modal__sizes'),
         modalSearch = $('.modal__search'),
         zoomWrap = $('.zoom-wrap'),
         zoomModal = $('.zoom-modal'),
@@ -28,6 +32,10 @@ $(document).ready(function () {
   const switchZoomModal = () => {
     zoomModal.toggleClass('modal--visible');
   }
+  
+  const switchTableModal = () => {
+    sizesModal.toggleClass('modal--visible');
+  }
 
   const switchBurgerMenu = () => {
     hamburgerMenu.toggleClass('hamburger__menu--visible');
@@ -40,23 +48,27 @@ $(document).ready(function () {
 
   zoomCloseBtn.on('click', switchZoomModal);
   iconZoom.on('click', switchZoomModal);
+  sizesModalButton.on('click', switchTableModal);
 
   closeBtn.on('click', switchModal);
   openSearchBtn.on('click', switchModal);
+  tableCloseBtn.on('click', switchTableModal);
 
   $(document).on('keydown', function(e) {
     if (e.code === "Escape") {
       modal.removeClass('modal--visible');
       zoomModal.removeClass('modal--visible');
+      sizesModal.removeClass('modal--visible');
     }
   }); 
 
   $(document).on('click', function(event) {
     let target = $(event.target);
 
-    if (!target.is(interfaceButtonImage) && !target.is(iconZoom) && (modal.hasClass('modal--visible') || zoomModal.hasClass('modal--visible')) && !target.closest(modalSearch).length && !target.closest(zoomWrap).length){
+    if (!target.is(interfaceButtonImage) && !target.is(iconZoom) && !target.is(sizesModalButton) && (modal.hasClass('modal--visible') || zoomModal.hasClass('modal--visible') || sizesModal.hasClass('modal--visible')) && !target.closest(modalSearch).length && !target.closest(zoomWrap).length && !target.closest(sizesTable).length){
       modal.removeClass('modal--visible');
       zoomModal.removeClass('modal--visible');
+      sizesModal.removeClass('modal--visible');
     }
   });  
 
@@ -327,6 +339,60 @@ $(document).ready(function () {
           data: $(form).serialize(),
           success: function (response) {
             window.location = "./thanks.html";
+            console.log("Ajax сработал. Ответ сервера: " + response);
+            //alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+            $(form)[0].reset();
+            // modal.removeClass('modal--visible');
+            // modalAccept.addClass('modal--visible');
+            //ym(64345651,'reachGoal','request');
+            return true;
+          }
+        });
+      }
+    });
+
+    $('.review__form').validate({
+      errorClass: 'invalid',
+      errorElement: "div",
+      errorPlacement: function(error, element) {
+        element.after(error);
+      },
+      rules: {
+        userName: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        },
+        // compound rule
+        userEmail: {
+          required: true,
+          email: true
+        },
+        userReview: {
+          required: true
+        }
+      },
+      messages: {
+        userName: {
+          required: "Заполните поле",
+          minlength: "Имя слишком короткое",
+          maxlength: "Имя слишком длинное"
+        },
+        userEmail: {
+            required: "Заполните поле",
+            email: "Введите корректный email"
+        },
+        userReview: {
+          required: "Заполните поле"
+        }
+      },
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "sendReview.php",
+          data: $(form).serialize(),
+          success: function (response) {
+            window.location = "./thanks-review.html";
             console.log("Ajax сработал. Ответ сервера: " + response);
             //alert('Форма отправлена, мы свяжемся с вами через 10 минут');
             $(form)[0].reset();

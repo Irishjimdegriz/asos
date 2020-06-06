@@ -58,8 +58,8 @@
             <p class="cart-summary">Итого: 7 489 ₽</p>
             <!-- /.cart-summary -->
             <div class="cart-button-container">
-              <a href="./cart.html" class="cart-button cart-button--button-primary">Корзина</a> <!-- /.cart-button cart-button--button-primary -->
-              <a href="./cart.html" class="cart-button cart-button--secondary">оформить</a> <!-- /.cart-button cart-button--button-primary -->
+              <a href="./cart.html" class="cart-button cart-button--button-primary">Корзина</a> <!-- /.cart-button cart-button__button-primary -->
+              <a href="./cart.html" class="cart-button cart-button--secondary">оформить</a> <!-- /.cart-button cart-button__button-primary -->
             </div>
         </div>
       </div> <!-- /.interface-button interface-buttons__interface-button -->
@@ -149,7 +149,7 @@
         <div class="color-variant color-variant--blue"></div>
         <div class="color-variant color-variant--sand"></div>
       </div>
-      <a href="#" class="size-table info__size-table">Открыть таблицу размеров</a>
+      <button class="size-table info__size-table">Открыть таблицу размеров</button>
       <div class="size-picker info__size-picker">
         <p class="size-variant">xxs</p>
         <p class="size-variant size-variant--active">xs</p>
@@ -303,21 +303,21 @@
                 </div>
               </div>
             </div>
-            <p class="reviews__slide-title user-review-title">оставьте ваш отзыв</p>
+            <p class="reviews__slide-title user-review-title">добавить ваш отзыв</p>
             <form action="#" class="review__form">
               <div class="user-data-container">
-                <div class="questions__input-group">
-                  <label for="questions-user-name" class="label questions__label">Ваше имя *</label>
-                  <input type="text" class="questions__input" id="questions-user-name" name="userName">
+                <div class="reviews__input-group">
+                  <label for="reviews-user-name" class="label reviews__label">Ваше имя *</label>
+                  <input type="text" class="reviews__input" id="reviews-user-name" name="reviewUserName">
                 </div>
-                <div class="questions__input-group">
-                  <label for="questions-user-email" class="label questions__label">Контактный e-mail *</label>
-                  <input type="email" class="questions__input" id="questions-user-email" name="userEmail"> 
+                <div class="reviews__input-group">
+                  <label for="reviews-user-email" class="label reviews__label">e-mail *</label>
+                  <input type="email" class="reviews__input" id="reviews-user-email" name="reviewUserEmail"> 
                 </div>    
               </div>
-              <div class="questions__input-group">
-                <label for="questions-user-question" class="label questions__label">Ваш отзыв</label>
-                <textarea class="questions__input" id="questions-user-question" name="userReview"></textarea>
+              <div class="reviews__input-group">
+                <label for="reviews-user-question" class="label reviews__label">Ваш отзыв</label>
+                <textarea class="reviews__input reviews__textarea" id="reviews-user-question" name="reviewUserReview"></textarea>
               </div>  
               <div class="review-buttons-container">
                 <div class="reviews__rating-container">
@@ -328,7 +328,7 @@
                   <div class="reviews__rating-image-wrapper"><img src="img/item-card/inactive-star.png" alt="active star"></div>
                   <div class="reviews__rating-image-wrapper"><img src="img/item-card/inactive-star.png" alt="active star"></div>
                 </div>
-                <button class="info__add-button review-send-button" type="submit">Отправить сообщение</button>
+                <button class="info__add-button review-send-button" type="submit">Разместить отзыв</button>
               </div>
             </form>
           </div>
@@ -362,7 +362,7 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide popular__swiper-slide">
           <div class="popular__slide-container">
-            <div class="popular__image-wrap">
+            <div class="youmaylike__image-wrap">
               <img class="popular-image" src="img/hero-popular/popular-item-1.png" alt="popular-item-1">
             </div>
             <p class="popular__title item-name">Жилет, A.Karina</p>
@@ -372,7 +372,7 @@
         </div>
         <div class="swiper-slide popular__swiper-slide">
           <div class="popular__slide-container">
-            <div class="popular__image-wrap">
+            <div class="youmaylike__image-wrap">
               <img class="popular-image" src="img/hero-popular/popular-item-2.png" alt="popular-item-2">
             </div>
             <p class="popular__title item-name">Юбка, Oodji</p>
@@ -382,7 +382,7 @@
         </div>
         <div class="swiper-slide popular__swiper-slide">
           <div class="popular__slide-container">
-            <div class="popular__image-wrap">
+            <div class="youmaylike__image-wrap">
               <img class="popular-image" src="img/hero-popular/popular-item-3.png" alt="popular-item-3">
             </div>
             <p class="popular__title item-name">Брюки, ТВОЕ</p>
@@ -392,7 +392,7 @@
         </div>
         <div class="swiper-slide popular__swiper-slide">
           <div class="popular__slide-container">
-            <div class="popular__image-wrap">
+            <div class="youmaylike__image-wrap">
               <img class="popular-image" src="img/hero-popular/popular-item-4.png" alt="popular-item-4">
             </div>
             <p class="popular__title item-name">Пижама FORLIFE</p>
@@ -479,7 +479,7 @@
   </div>
   <div class="size-table-modal">
     <div class="size-table-modal__sizes">
-      <div class="sizes-row">
+      <div class="sizes-row sizes-row--title">
         <div class="col-sizes-title">таблица размеров</div>
         <div class="col-sizes-close-button">
           <button class="size-table-modal__close"></button>
@@ -491,37 +491,37 @@
         <div class="col-sizes-hips">обхват бедер</div>
         <div class="col-sizes-manifacturer">размер производителя</div>
       </div>
-      <div class="sizes-row">
+      <div class="sizes-row sizes-row--regular">
         <div class="col-sizes-rus-size">40</div>
         <div class="col-sizes-waist">58-62</div>
         <div class="col-sizes-hips">86-90</div>
         <div class="col-sizes-manifacturer">XXS</div>
       </div>
-      <div class="sizes-row">
+      <div class="sizes-row sizes-row--regular">
         <div class="col-sizes-rus-size">42</div>
         <div class="col-sizes-waist">62-66</div>
         <div class="col-sizes-hips">90-94</div>
         <div class="col-sizes-manifacturer">XS</div>
       </div>
-      <div class="sizes-row">
+      <div class="sizes-row sizes-row--regular">
         <div class="col-sizes-rus-size">44</div>
         <div class="col-sizes-waist">66-70</div>
         <div class="col-sizes-hips">94-98</div>
         <div class="col-sizes-manifacturer">S</div>
       </div>
-      <div class="sizes-row">
+      <div class="sizes-row sizes-row--regular">
         <div class="col-sizes-rus-size">46</div>
         <div class="col-sizes-waist">70-74</div>
         <div class="col-sizes-hips">98-102</div>
         <div class="col-sizes-manifacturer">M</div>
       </div>
-      <div class="sizes-row">
+      <div class="sizes-row sizes-row--regular">
         <div class="col-sizes-rus-size">48</div>
         <div class="col-sizes-waist">74-78</div>
         <div class="col-sizes-hips">102-104</div>
         <div class="col-sizes-manifacturer">L</div>
       </div>
-      <div class="sizes-row">
+      <div class="sizes-row sizes-row--regular">
         <div class="col-sizes-rus-size">50</div>
         <div class="col-sizes-waist">78-82</div>
         <div class="col-sizes-hips">104-108</div>

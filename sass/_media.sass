@@ -492,7 +492,40 @@
   &__title
     font-size: 2.6rem
   &__text
-    font-size: 1.7rem      
+    font-size: 1.7rem    
+.item-card-full
+  &>.container
+    flex-direction: column      
+.info
+  &__description
+    max-width: 32rem
+  &__size-picker
+    max-width: 100%    
+.photos
+  &__swiper-button
+    &-prev
+      left: 28.3%
+    &-next
+      right: 24%
+.reviews
+  &__swiper
+    margin-left: 0
+  &__swiper-custom-bullet 
+    margin-right: 0.986rem !important
+    &:last-of-type
+      margin-right: 0 !important
+      width: 14.2rem
+  &__image-wrapper
+    display: none
+  &__data-container
+    flex-direction: column
+    align-items: flex-start
+  &__likes-container
+    margin-left: 0
+  .data
+    flex-direction: column
+    align-items: flex-start
+    width: 100%
 
 @media screen and ( max-width: 941px)
   .catalog__cards-container
@@ -588,6 +621,34 @@
 @media screen and ( max-width: 580px)
   .search-input
     width: 25rem
+
+@media screen and ( max-width: 575px)
+  .reviews
+    &__swiper
+      visibility: hidden
+    &__mobile-container
+      visibility: visible
+      margin-top: -120rem
+    &__input-group      
+      flex-basis: 100%
+    &__logo-link
+      padding: 2.157rem 0.65rem
+    &__administration-response
+      width: 100%
+      &::before
+        left: 6px
+    &__text
+      max-width: 21rem
+      font-size: 0.84rem
+  .review
+    &-buttons-container
+      flex-direction: column
+  .response
+    &-title
+      margin-bottom: 0.5rem
+      font-size: 0.7rem
+    &-text
+      font-size: 0.75rem
 
 @media screen and ( max-width: 550px)
   .title
@@ -701,6 +762,9 @@
       &#discount-error
         margin-top: -0.3rem
         margin-left: -10.4rem
+  .reviews
+    &__mobile-container
+      margin-top: -126rem        
 
 @media screen and ( max-width: 510px)
   .cart-row
@@ -712,6 +776,15 @@
       margin-bottom: 0
   .name-col
     text-align: center
+  .photos    
+    &__swiper
+      &-pagination
+        display: none
+  .info
+    &__description
+      max-width: 22rem
+    &__size-picker
+      max-width: 17rem           
 
 @media screen and ( max-width: 480px)
   .thanks-hero
@@ -766,6 +839,11 @@
     &__section-subtitle
       font-size: 0.88rem
 
+@media screen and ( max-width: 385px)
+   .reviews
+    &__mobile-container
+      margin-top: -130rem   
+
 @media screen and ( max-width: 370px)
   // .price-from
   //   font-size: 15px
@@ -789,4 +867,11 @@
     &__title
       font-size: 1.3rem
     &__text
-      font-size: 0.9rem                
+      font-size: 0.9rem      
+  .info
+    &__add-button
+      font-size: 0.786rem          
+
+@media screen and ( max-width: 340px)            
+  .color-variant
+    margin-right: 0.515rem

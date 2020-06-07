@@ -130,12 +130,6 @@
     &__image-wrap
       margin-right: 1rem 
 
-// @media screen and ( max-width: 1390px)
-//   .item-card-full__info
-//     flex-basis: 56%
-//   .item-card-full__photos
-//     flex-basis: 82%
-
 @media screen and ( max-width: 1320px)
   .contacts-block
     &__address, &__phone, &__email, &__skype, &__postscriptum
@@ -147,7 +141,9 @@
     font-size: 1.371rem     
   .delete-button-col
     margin-top: 6.943rem
-    margin-left: 5.1rem    
+    margin-left: 5.1rem   
+  .select-items
+    bottom: 0.4rem 
 
 @media screen and ( max-width: 1290px)
   .info
@@ -207,6 +203,12 @@
   .photo-col__image-wrap
     width: 10rem
     height: 10rem
+  .select-items
+    left: 44%
+    bottom: 0.4rem 
+    padding: 4px 10px !important
+  .option
+    padding: 4px 16px !important
   .data
     width: 38.22rem
   .reviews
@@ -255,6 +257,13 @@
   .photo-col__image-wrap
     width: 9rem
     height: 9rem     
+  .select-items
+    left: 44%
+    bottom: 0.5rem
+  .select-selected 
+    padding: 4px 10px !important
+  .option
+    padding: 2px 16px !important    
 
 @media screen and ( max-width: 992px)
   .header
@@ -481,57 +490,64 @@
     flex-basis: 10%
     text-align: right
     margin-bottom: 1.5rem
-  select
+  .select
     width: 3.5rem
     background-position-x: 23px
-.footer
-  &__link-block
-    &:last-of-type
-      margin-right: 2.4rem      
-.thanks-hero
-  &__title
-    font-size: 2.6rem
-  &__text
-    font-size: 1.7rem    
-.item-card-full
-  &>.container
-    flex-direction: column    
-  &__info
-    margin-left: 0  
-.info
-  &__description
-    max-width: 32rem
-  &__size-picker
-    max-width: 100%    
-.photos
-  &__swiper-button
-    &-prev
-      left: 28.3%
-    &-next
-      right: 24%
-.reviews
-  &__swiper
-    margin-left: 0
-  &__swiper-custom-bullet 
-    margin-right: 0.986rem !important
-    &:last-of-type
-      margin-right: 0 !important
-      width: 14.2rem
-  &__image-wrapper
-    display: none
-  &__data-container
-    flex-direction: column
-    align-items: flex-start
-  &__likes-container
-    margin-left: 0
-  .data
-    flex-direction: column
-    align-items: flex-start
-    width: 100%
-.color-picker-title    
-  margin-right: 1rem
-.stats--description    
-  width: 20rem
+  .footer
+    &__link-block
+      &:last-of-type
+        margin-right: 2.4rem      
+  .thanks-hero
+    &__title
+      font-size: 2.6rem
+    &__text
+      font-size: 1.7rem    
+  .item-card-full
+    &>.container
+      flex-direction: column    
+    &__info
+      margin-left: 0  
+  .info
+    &__description
+      max-width: 32rem
+    &__size-picker
+      max-width: 100%    
+  .photos
+    &__swiper-button
+      &-prev
+        left: 28.3%
+      &-next
+        right: 24%
+  .reviews
+    &__swiper
+      margin-left: 0
+    &__swiper-custom-bullet 
+      margin-right: 0.986rem !important
+      &:last-of-type
+        margin-right: 0 !important
+        width: 14.2rem
+    &__image-wrapper
+      display: none
+    &__data-container
+      flex-direction: column
+      align-items: flex-start
+    &__likes-container
+      margin-left: 0
+    .data
+      flex-direction: column
+      align-items: flex-start
+      width: 100%
+  .color-picker-title    
+    margin-right: 1rem
+  .stats--description    
+    width: 20rem
+  .select-items
+    left: 40%
+    bottom: -3.2rem
+  .select-selected 
+    padding: 4px 10px !important
+  .option
+    padding: 2px 16px !important        
 
 @media screen and ( max-width: 941px)
   .catalog__cards-container
@@ -623,6 +639,13 @@
     &-description
       font-size: 0.75rem      
       max-width: 19.5rem
+  .select-items
+    left: 34%
+    bottom: -4.6rem
+  .select-selected 
+    padding: 4px 10px !important
+  .option
+    padding: 2px 16px !important      
 
 @media screen and ( max-width: 580px)
   .search-input
@@ -656,6 +679,8 @@
       font-size: 0.7rem
     &-text
       font-size: 0.75rem
+  .sizes-row--legend      
+    font-size: 0.8rem
 
 @media screen and ( max-width: 550px)
   .title
@@ -826,7 +851,9 @@
   .search-input
     width: 15rem   
   .modal__close
-    right: -4rem                   
+    right: -4rem         
+  .sizes-row--legend      
+    font-size: 0.6rem              
 
 @media screen and ( max-width: 400px)
   .section-subtitle

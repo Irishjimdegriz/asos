@@ -747,7 +747,7 @@ img {
   top: 2.8rem;
   right: -1rem;
   padding: 43px 29px 20px 34px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
   .cart-popup::before {
     content: '';
     border-style: solid;
@@ -756,7 +756,9 @@ img {
     position: absolute;
     top: -17px;
     right: 15px;
-    transform: rotate(90deg); }
+    transform: rotate(90deg);
+    -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5)); }
 
 .cart-item {
   display: flex;
@@ -1707,6 +1709,77 @@ option {
   display: flex;
   flex-basis: 84%; }
 
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative; }
+
+.custom-select select {
+  display: none; }
+
+.select-selected {
+  background-color: white;
+  margin: auto;
+  font-weight: bold;
+  font-size: 0.929rem;
+  text-align: left;
+  background: url("../img/drop-down-arrow.png") no-repeat right #fff;
+  -webkit-appearance: none;
+  background-position-x: 42px; }
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0; }
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px; }
+
+/* style the items (options), including the selected item: */
+.select-items div, .select-selected {
+  color: #2d3a4b;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-color: black;
+  cursor: pointer;
+  width: 5rem; }
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: white;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 99;
+  width: 5rem;
+  bottom: 1.2rem; }
+
+.option {
+  padding: 8px 16px !important;
+  -moz-text-align-last: left;
+  text-align-last: left;
+  font-weight: bold;
+  font-size: 0.929rem; }
+  .option:first-of-type {
+    border-bottom: 0; }
+  .option:nth-of-type(2) {
+    border-top: 0;
+    border-bottom: 0; }
+  .option:last-of-type {
+    border-top: 0; }
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none; }
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1); }
+
 .questions > .container {
   display: flex;
   flex-direction: column;
@@ -2490,7 +2563,9 @@ textarea {
     font-size: 1.371rem; }
   .delete-button-col {
     margin-top: 6.943rem;
-    margin-left: 5.1rem; } }
+    margin-left: 5.1rem; }
+  .select-items {
+    bottom: 0.4rem; } }
 
 @media screen and (max-width: 1290px) {
   .info__size-picker {
@@ -2542,6 +2617,12 @@ textarea {
   .photo-col__image-wrap {
     width: 10rem;
     height: 10rem; }
+  .select-items {
+    left: 44%;
+    bottom: 0.4rem;
+    padding: 4px 10px !important; }
+  .option {
+    padding: 4px 16px !important; }
   .data {
     width: 38.22rem; }
   .reviews {
@@ -2583,7 +2664,14 @@ textarea {
     height: 295px !important; }
   .photo-col__image-wrap {
     width: 9rem;
-    height: 9rem; } }
+    height: 9rem; }
+  .select-items {
+    left: 44%;
+    bottom: 0.5rem; }
+  .select-selected {
+    padding: 4px 10px !important; }
+  .option {
+    padding: 2px 16px !important; } }
 
 @media screen and (max-width: 992px) {
   .header > .container {
@@ -2779,66 +2867,56 @@ textarea {
     flex-basis: 10%;
     text-align: right;
     margin-bottom: 1.5rem; }
-  select {
+  .select {
     width: 3.5rem;
-    background-position-x: 23px; } }
-
-.footer__link-block:last-of-type {
-  margin-right: 2.4rem; }
-
-.thanks-hero__title {
-  font-size: 2.6rem; }
-
-.thanks-hero__text {
-  font-size: 1.7rem; }
-
-.item-card-full > .container {
-  flex-direction: column; }
-
-.item-card-full__info {
-  margin-left: 0; }
-
-.info__description {
-  max-width: 32rem; }
-
-.info__size-picker {
-  max-width: 100%; }
-
-.photos__swiper-button-prev {
-  left: 28.3%; }
-
-.photos__swiper-button-next {
-  right: 24%; }
-
-.reviews__swiper {
-  margin-left: 0; }
-
-.reviews__swiper-custom-bullet {
-  margin-right: 0.986rem !important; }
-  .reviews__swiper-custom-bullet:last-of-type {
-    margin-right: 0 !important;
-    width: 14.2rem; }
-
-.reviews__image-wrapper {
-  display: none; }
-
-.reviews__data-container {
-  flex-direction: column;
-  align-items: flex-start; }
-
-.reviews__likes-container {
-  margin-left: 0; }
-
-.reviews .data {
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%; }
-
-.color-picker-title {
-  margin-right: 1rem; }
-
-.stats--description {
-  width: 20rem; }
+    background-position-x: 23px; }
+  .footer__link-block:last-of-type {
+    margin-right: 2.4rem; }
+  .thanks-hero__title {
+    font-size: 2.6rem; }
+  .thanks-hero__text {
+    font-size: 1.7rem; }
+  .item-card-full > .container {
+    flex-direction: column; }
+  .item-card-full__info {
+    margin-left: 0; }
+  .info__description {
+    max-width: 32rem; }
+  .info__size-picker {
+    max-width: 100%; }
+  .photos__swiper-button-prev {
+    left: 28.3%; }
+  .photos__swiper-button-next {
+    right: 24%; }
+  .reviews__swiper {
+    margin-left: 0; }
+  .reviews__swiper-custom-bullet {
+    margin-right: 0.986rem !important; }
+    .reviews__swiper-custom-bullet:last-of-type {
+      margin-right: 0 !important;
+      width: 14.2rem; }
+  .reviews__image-wrapper {
+    display: none; }
+  .reviews__data-container {
+    flex-direction: column;
+    align-items: flex-start; }
+  .reviews__likes-container {
+    margin-left: 0; }
+  .reviews .data {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%; }
+  .color-picker-title {
+    margin-right: 1rem; }
+  .stats--description {
+    width: 20rem; }
+  .select-items {
+    left: 40%;
+    bottom: -3.2rem; }
+  .select-selected {
+    padding: 4px 10px !important; }
+  .option {
+    padding: 2px 16px !important; } }
 
 @media screen and (max-width: 941px) {
   .catalog__cards-container {
@@ -2918,7 +2996,14 @@ textarea {
     max-width: 25rem; }
   .secondary-description {
     font-size: 0.75rem;
-    max-width: 19.5rem; } }
+    max-width: 19.5rem; }
+  .select-items {
+    left: 34%;
+    bottom: -4.6rem; }
+  .select-selected {
+    padding: 4px 10px !important; }
+  .option {
+    padding: 2px 16px !important; } }
 
 @media screen and (max-width: 580px) {
   .search-input {
@@ -2947,7 +3032,9 @@ textarea {
     margin-bottom: 0.5rem;
     font-size: 0.7rem; }
   .response-text {
-    font-size: 0.75rem; } }
+    font-size: 0.75rem; }
+  .sizes-row--legend {
+    font-size: 0.8rem; } }
 
 @media screen and (max-width: 550px) {
   .title {
@@ -3086,7 +3173,9 @@ textarea {
   .search-input {
     width: 15rem; }
   .modal__close {
-    right: -4rem; } }
+    right: -4rem; }
+  .sizes-row--legend {
+    font-size: 0.6rem; } }
 
 @media screen and (max-width: 400px) {
   .section-subtitle {

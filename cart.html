@@ -12,7 +12,7 @@
 </head>
 <body>
   <!-- Yandex.Metrika counter -->
-  <script type="text/javascript" >
+  <script>
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
     m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
@@ -72,8 +72,8 @@
             <p class="cart-summary">Итого: 7 489 ₽</p>
             <!-- /.cart-summary -->
             <div class="cart-button-container">
-              <a href="./cart.html" class="cart-button cart-button--button-primary">Корзина</a> <!-- /.cart-button cart-button--button-primary -->
-              <a href="./cart.html" class="cart-button cart-button--secondary">оформить</a> <!-- /.cart-button cart-button--button-primary -->
+              <a href="./cart.html" class="cart-button cart-button--button-primary">Корзина</a> <!-- /.cart-button cart-button__button-primary -->
+              <a href="./cart.html" class="cart-button cart-button--secondary">оформить</a> <!-- /.cart-button cart-button__button-primary -->
             </div>
         </div>
       </div> <!-- /.interface-button interface-buttons__interface-button -->
@@ -121,6 +121,7 @@
 <!-- /.section secondary-hero -->
 <section class="section shopping-cart">
   <div class="container">
+    <h2 class="featured" style="display: none">Корзина</h2>
     <div class="cart-row shopping-cart__cart-row cart-row--legend">
       <div class="photo-col cart-row--title">Фото товара</div>
       <div class="cart-desktop-container">
@@ -136,9 +137,10 @@
       <div class="cart-desktop-container">
         <div class="name-col">Жилет, A.Karina<span class="name-col__description">Цвет: серый</span></div>
         <div class="price-col col--center"><sup class="price-tag__sup">₽</sup> 6 490</div>
-        <div class="quantity-col col--center">   
+        <div class="quantity-col col--center custom-select">   
           <select>
-            <option selected="selected">1</option>
+            <option>1</option>
+            <option>1</option>
             <option>2</option>
             <option>3</option>
           </select>
@@ -183,12 +185,12 @@
   <div class="container">
     <div class="discount-coupon-block total__discount-coupon-block">
       <h2 class="total__title">Купон на скидку</h2>
-      <form action="" class="discount-coupon-block__form">
+      <form action="#" class="discount-coupon-block__form">
         <input type="text" class="discount-coupon-block-input" placeholder="Введите номер купона на скидку" name="discount">
         <button class="coupon-button" type="submit">применить код</button>
       </form>
       <div class="discount-coupon-block__button-container">
-        <a href="catalog.html" class="discount-coupon-block__button continue-button" type="submit">продолжить покупки</a>
+        <a href="catalog.html" class="discount-coupon-block__button continue-button">продолжить покупки</a>
         <button class="discount-coupon-block__button recalculate-button" type="submit">обновить корзину</button>
       </div>
     </div>

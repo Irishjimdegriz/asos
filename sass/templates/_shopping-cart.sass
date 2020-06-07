@@ -193,3 +193,63 @@ option
 .cart-desktop-container
   display: flex
   flex-basis: 84%
+/* The container must be positioned relative: */
+.custom-select 
+  position: relative
+.custom-select select 
+  display: none /*hide original SELECT element: */
+.select-selected 
+  background-color: white
+  margin: auto
+  font-weight: bold
+  font-size: 0.929rem
+  text-align: left
+  background: url('../img/drop-down-arrow.png') no-repeat right #fff
+  -webkit-appearance: none
+  background-position-x: 42px
+/* Style the arrow inside the select element: */
+.select-selected:after 
+  position: absolute
+  content: ""
+  top: 14px
+  right: 10px
+  width: 0
+  height: 0
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after 
+  border-color: transparent transparent #fff transparent
+  top: 7px
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected
+  color: $black
+  padding: 8px 10px
+  border: 1px solid transparent
+  border-color: rgb(0, 0, 0)
+  cursor: pointer
+  width: 5rem
+/* Style items (options): */
+.select-items
+  position: absolute
+  background-color: white
+  left: 50%
+  transform: translate(-50%, 0)
+  z-index: 99
+  width: 5rem
+  bottom: 1.2rem
+.option
+  padding: 8px 16px !important
+  text-align-last: left
+  font-weight: bold
+  font-size: 0.929rem
+  &:first-of-type
+    border-bottom: 0
+  &:nth-of-type(2)
+    border-top: 0
+    border-bottom: 0
+  &:last-of-type
+    border-top: 0
+/* Hide the items when the select box is closed: */
+.select-hide 
+  display: none
+.select-items div:hover, .same-as-selected
+  background-color: rgba(0, 0, 0, 0.1)

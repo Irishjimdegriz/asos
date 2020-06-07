@@ -12,7 +12,7 @@
 </head>
 <body>
   <!-- Yandex.Metrika counter -->
-  <script type="text/javascript" >
+  <script>
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
     m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
@@ -72,8 +72,8 @@
               <p class="cart-summary">Итого: 7 489 ₽</p>
               <!-- /.cart-summary -->
               <div class="cart-button-container">
-                <a href="./cart.html" class="cart-button cart-button--button-primary">Корзина</a> <!-- /.cart-button cart-button--button-primary -->
-                <a href="./cart.html" class="cart-button cart-button--secondary">оформить</a> <!-- /.cart-button cart-button--button-primary -->
+                <a href="./cart.html" class="cart-button cart-button--button-primary">Корзина</a> <!-- /.cart-button cart-button__button-primary -->
+                <a href="./cart.html" class="cart-button cart-button--secondary">оформить</a> <!-- /.cart-button cart-button__button-primary -->
               </div>
           </div>
         </div> <!-- /.interface-button interface-buttons__interface-button -->
@@ -121,17 +121,18 @@
 <!-- /.section secondary-hero -->
 <section class="section catalog">
   <div class="container">
+    <h2 class="featured" style="display: none">Каталог</h2>
     <div class="display-settings catalog__display-settings">
       <p class="catalog__items-shown"><span class="desktop-visible">Показано </span>1 - 12 из 30<span class="desktop-visible"> товаров</span></p>
       <div class="display-settings__container">
-        <button class="visible-quantity-container">
+        <div class="visible-quantity-container">
           <p class="visible-quantity-caption"><span class="desktop-visible">Показывать по</span> 12</p>
           <div class="display-settings__image-wrap"><img src="img/arrow-bottom.svg" alt=""></div>
-        </button>
-        <button class="filter-container">
+        </div>
+        <div class="filter-container">
           <p class="filter-caption">Фильтр<span class="desktop-visible"> по</span></p>
           <div class="display-settings__image-wrap"><img src="img/arrow-bottom.svg" alt=""></div>
-        </button>
+        </div>
         <div class="display-settings__icon-container">
           <button class="display-settings__image-wrap"><img src="img/catalog_type.png" alt=""></button>
           <button class="display-settings__image-wrap"><img src="img/catalog_type-2.png" alt=""></button>

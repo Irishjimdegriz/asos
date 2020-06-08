@@ -2,8 +2,15 @@
   display: flex
   flex-direction: column
   align-items: center
+  position: relative
+  &-swiper-container
+    position: relative
+    margin: auto
+    max-width: 1332px
+    width: 100%
   &>.container
-    max-width: 1600px
+    width: 100%
+    max-width: 100%
   &__image-wrap
     position: relative
     width: 18.714rem
@@ -16,6 +23,8 @@
     margin-right: 4rem
   &__swiper
     //max-width: 115rem
+    margin: auto
+    max-width: 1260px
     &-slide
       display: flex
       justify-content: center

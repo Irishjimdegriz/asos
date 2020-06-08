@@ -163,6 +163,7 @@
     border-radius: 50%
     margin-right: 0.715rem
     position: relative
+    cursor: pointer
     &--pink
       background-color: #ed7b8c
     &--yellow
@@ -175,6 +176,73 @@
       background-color: #2d5dc5     
     &--sand
       background-color: #e2a040
+    &--chosen
+      &--pink
+        &::after
+          position: absolute
+          content: ''
+          width: 24px
+          height: 24px
+          border-radius: 50%
+          border: 2px solid
+          top: -50%
+          left: -50%
+          border-color: #ed7b8c
+      &--yellow
+        &::after
+          position: absolute
+          content: ''
+          width: 24px
+          height: 24px
+          border-radius: 50%
+          border: 2px solid
+          top: -50%
+          left: -50%
+          border-color: #ccbe3c
+      &--red
+        &::after
+          position: absolute
+          content: ''
+          width: 24px
+          height: 24px
+          border-radius: 50%
+          border: 2px solid
+          top: -50%
+          left: -50%
+          border-color: #ff4a32
+      &--violet
+        &::after
+          position: absolute
+          content: ''
+          width: 24px
+          height: 24px
+          border-radius: 50%
+          border: 2px solid
+          top: -50%
+          left: -50%
+          border-color: #8183ad
+      &--blue
+        &::after
+          position: absolute
+          content: ''
+          width: 24px
+          height: 24px
+          border-radius: 50%
+          border: 2px solid
+          top: -50%
+          left: -50%
+          border-color: #2d5dc5
+      &--sand
+        &::after
+          position: absolute
+          content: ''
+          width: 24px
+          height: 24px
+          border-radius: 50%
+          border: 2px solid
+          top: -50%
+          left: -50%
+          border-color: #e2a040
 .size
   &-variant
     display: inline-block
@@ -197,3 +265,6 @@
         border-color: #e6e6e6
         background-color: #f7f7f7   
         color: #c4c3c3
+  &--chosen            
+    border-color: #ef50a2
+    background-color: #ffecf6        

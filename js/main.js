@@ -1,4 +1,6 @@
 const swiperLabels = ['Описание', 'Отзывы (03)', 'Оплата и доставка'];
+let currentSize = 1;
+let currentColor = 0;
 
 $(document).ready(function () {
   const modal = $('.modal'),
@@ -23,7 +25,58 @@ $(document).ready(function () {
         hamburgerMenu = $('.hamburger__menu'),
         scrollUp = $('.scroll-up-container'),
         interfaceButtonImage = $('.interface-button-image'),
+        mainPhotoSwiper = $('.photos__swiper'),
+        colors = $('.color-variant'),
+        sizes = $('.size-variant'),
         map = $('#map');
+
+        colors.on('click', (event) => {
+          colors.each(function() {
+            $(this).removeClass('color-variant--chosen--pink');
+            $(this).removeClass('color-variant--chosen--yellow');
+            $(this).removeClass('color-variant--chosen--red');
+            $(this).removeClass('color-variant--chosen--violet');
+            $(this).removeClass('color-variant--chosen--blue');
+            $(this).removeClass('color-variant--chosen--sand');
+          })
+          let target = $(event.target);
+          //let className = '';
+
+          if (colors.index(target)==0)
+            target.addClass('color-variant--chosen--pink');
+          else if (colors.index(target)==1)
+            target.addClass('color-variant--chosen--yellow');
+          else if (colors.index(target)==2)
+            target.addClass('color-variant--chosen--red');
+          else if (colors.index(target)==3)
+            target.addClass('color-variant--chosen--violet');
+          else if (colors.index(target)==4)
+            target.addClass('color-variant--chosen--blue');
+          else if (colors.index(target)==5)
+            target.addClass('color-variant--chosen--sand');
+        });
+
+        sizes.on('click', (event) => {
+          let target = $(event.target);
+          
+          if (target.hasClass('size-variant--disabled'))
+            return;
+
+          sizes.each(function() {
+            $(this).removeClass('size--chosen');
+          })
+
+          target.addClass('size--chosen');
+        });
+
+  window.onresize = doALoadOfStuff;
+
+  function doALoadOfStuff() {
+    if ($(window).width() < 500)  
+      mainPhotoSwiper.removeClass('swiper-no-swiping');
+    else 
+      mainPhotoSwiper.addClass('swiper-no-swiping');
+  }
 
   const switchModal = () => {
     modal.toggleClass('modal--visible');
@@ -509,11 +562,11 @@ function init () {
     // Скрываем индикатор загрузки после полной загрузки карты
     spinner.removeClass('is-active');
           if (window.innerWidth > 1080) {
-            myMapTemp.container.getElement().style.height = '465px';
+            myMapTemp.container.getElement().style.height = '531px';
             myMapTemp.container.getElement().style.width= '100%';
           }
           else {
-            myMapTemp.container.getElement().style.height = '255px';
+            myMapTemp.container.getElement().style.height = '330px';
           }
 
           // Инициируем пересчет размеров.
@@ -521,11 +574,11 @@ function init () {
 
           myMapTemp.container.events.add('sizechange', () => {
             if (window.innerWidth > 1080) {
-              myMapTemp.container.getElement().style.height = '465px';
+              myMapTemp.container.getElement().style.height = '531px';
               myMapTemp.container.getElement().style.width= '100%';
             }
             else
-              myMapTemp.container.getElement().style.height = '255px';
+              myMapTemp.container.getElement().style.height = '330px';
           });
 
 

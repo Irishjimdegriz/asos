@@ -498,27 +498,6 @@ $(document).ready(function () {
 
     $('[type=tel]').mask('+7(000) 000-00-00');
 
-    $('.discount-coupon-block__form').validate({
-      errorClass: 'invalid',
-      errorElement: "div",
-      errorPlacement: function(error, element) {
-        element.after(error);
-      },
-      rules: {
-        discount: {
-          required: true
-        }
-      },
-      messages: {
-        discount: {
-            required: "Заполните поле"
-        },
-      },
-      submitHandler: function(form) {
-        $(form)[0].reset();
-      }
-    })
-
     map.on('click', () => {
       map.removeClass('shade');
     });

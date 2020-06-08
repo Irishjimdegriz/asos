@@ -878,7 +878,8 @@ img {
     position: relative;
     margin: auto;
     max-width: 1332px;
-    width: 100%; }
+    width: 100%;
+    padding: 0 10px; }
   .popular > .container {
     width: 100%;
     max-width: 100%; }
@@ -892,7 +893,8 @@ img {
     width: 18.714rem !important;
     margin-left: 4rem;
     margin-right: 4rem;
-    padding: 0 10px; }
+    padding: 0 10px;
+    text-decoration: none; }
   .popular__swiper {
     margin: auto;
     max-width: 1260px; }
@@ -909,17 +911,20 @@ img {
         display: none; }
     .popular__swiper-button-prev {
       background: url("../img/arrow-left.svg") no-repeat center;
-      left: 0; }
+      left: 10px; }
     .popular__swiper-button-next {
       background: url("../img/arrow-right.svg") no-repeat center;
-      right: 0; }
+      right: 10px; }
   .popular__title {
-    text-align: center; }
+    text-align: center;
+    width: 20rem; }
   .popular__description {
-    text-align: center; }
+    text-align: center;
+    width: 20rem; }
   .popular__price {
     text-align: center;
-    margin-top: 2rem; }
+    margin-top: 2rem;
+    width: 20rem; }
 
 .icon-container {
   display: none;
@@ -2020,10 +2025,10 @@ textarea {
         display: none; }
     .youmaylike__swiper-button-prev {
       background: url("../img/arrow-left.svg") no-repeat center;
-      left: 0; }
+      left: 10px; }
     .youmaylike__swiper-button-next {
       background: url("../img/arrow-right.svg") no-repeat center;
-      right: 0; }
+      right: 10px; }
   .youmaylike__image-wrap {
     position: relative;
     width: 18.714rem;
@@ -3024,17 +3029,20 @@ textarea {
     text-align: left; }
   .quantity-col {
     flex-basis: 20%;
-    text-align: center; }
+    text-align: center;
+    position: absolute;
+    top: 7rem;
+    right: 4.3rem; }
   .price-col {
     flex-basis: 35%;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: flex-end;
+    padding-right: 1rem; }
   .total-col {
     text-align: right !important;
-    flex-basis: 56.5%; }
-    .total-col--first {
-      flex-basis: 58%; }
+    flex-basis: 100%;
+    margin-right: 4.5rem; }
   .delete-button-col {
     margin-top: 1.3rem;
     margin-left: 0;
@@ -3131,7 +3139,11 @@ textarea {
   .search-input {
     width: 30rem; }
   .modal__close {
-    right: -6rem; } }
+    right: -6rem; }
+  .quantity-col {
+    right: 3.8rem; }
+  .total-col {
+    margin-right: 3.5rem; } }
 
 @media screen and (max-width: 634px) {
   .catalog__cards-container {
@@ -3147,7 +3159,9 @@ textarea {
   .thanks-hero__title {
     font-size: 2rem; }
   .thanks-hero__text {
-    font-size: 1.3rem; } }
+    font-size: 1.3rem; }
+  .quantity-col {
+    right: 3.4rem; } }
 
 @media screen and (max-width: 630px) {
   .subtitle {
@@ -3247,7 +3261,9 @@ textarea {
   .section-title {
     font-size: 16px; }
   .section-subtitle {
-    max-width: 24rem; }
+    max-width: 24rem;
+    margin: auto;
+    margin-bottom: 6rem; }
   .promo__section-subtitle {
     margin-bottom: 3rem; }
   .promo__subscribe-form {
@@ -3339,9 +3355,9 @@ textarea {
   .total-col {
     flex-basis: 18%; }
   .price-col {
-    flex-basis: 100%; }
-  .quantity-col {
-    flex-basis: 59%; }
+    flex-basis: 100%;
+    justify-content: center;
+    padding-right: 1rem; }
   .photos__swiper-pagination {
     display: none; }
   .info__description {
@@ -3349,9 +3365,15 @@ textarea {
   .info__size-picker {
     max-width: 17rem; }
   .delete-button-col {
-    margin-top: -8.4rem; }
-  .select-selected {
-    margin: auto; } }
+    margin-top: -16.4rem; }
+  .quantity-col {
+    flex-basis: 45%;
+    position: static;
+    top: auto;
+    right: auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem; } }
 
 @media screen and (max-width: 480px) {
   .thanks-hero__title {
@@ -3381,21 +3403,13 @@ textarea {
   .modal__close {
     right: -4rem; }
   .sizes-row--legend {
-    font-size: 0.6rem; }
-  .total-col {
-    flex-basis: 26%; } }
+    font-size: 0.6rem; } }
 
 @media screen and (max-width: 400px) {
   .section-subtitle {
     font-size: 0.88rem; }
   .catalog__items-shown {
-    margin-top: 0.4rem; }
-  .popular__image-wrap {
-    width: 12rem; }
-  .popular__slide-container {
-    width: 12rem !important; }
-  .popular__section-subtitle {
-    font-size: 0.88rem; } }
+    margin-top: 0.4rem; } }
 
 @media screen and (max-width: 370px) {
   .hero__swiper-button-prev, .hero__swiper-button-next {

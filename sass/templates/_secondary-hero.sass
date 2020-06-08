@@ -1,12 +1,18 @@
 .secondary-hero
   width: 100%
-  height: 28.57rem
+  height: 28.57rem  
   margin-top: 9rem
-  background: $primary url('../img/secondary-bg.png') center no-repeat
-  background-size: auto 100%
+  background: $primary
+  //background-position-x: -5.4rem
   color: white
   font-family: "Gotham Pro"
   position: relative
+  &>.container
+    background: $primary url('../img/secondary-bg.png') center no-repeat
+    background-size: auto 100%
+    width: 100%
+    max-width: 100%
+    margin-left: -3rem
   &::before
     content: ''
     position: absolute
@@ -22,6 +28,7 @@
     flex-direction: column
     justify-content: center
     align-items: center
+    //margin-left: -5.4rem
 .secondary
   &-title
     padding-top: 6.41rem
@@ -46,12 +53,15 @@
   &-nav
     background-color: $secondary
     padding: 0.171rem 0.9rem
-    margin: auto
+    //margin: auto
+    margin-left: 2rem
     display: flex
     align-items: center
     justify-content: center
-    margin-bottom: 7.71rem
     border-radius: 21px
+    &-container
+      margin: auto
+      margin-bottom: 7.71rem
     &__link
       text-decoration: none
       outline: none

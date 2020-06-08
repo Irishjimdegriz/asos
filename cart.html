@@ -103,19 +103,23 @@
   </header>
   <!-- /.header hero__header -->
 <section class="section secondary-hero" id="hero">
-  <div class="secondary-hero__content">
-    <h1 class="secondary-title">Корзина</h1>
-    <!-- /.secondary-title -->
-    <p class="secondary-description secondary-description--cart">Здесь собраны все товары, которые вы добавили в корзину покупок. 
-      При необходимости вы можете отредактировать ваш заказ</p>
-    <div class="secondary-nav">
-      <a href="./" class="secondary-nav__link">Главная</a>
-      <div class="secondary-nav__image-wrap"><img src="img/navigation-arrow.png" alt=""></div>
-      <a href="./catalog.html" class="secondary-nav__link">Каталог</a>
-      <div class="secondary-nav__image-wrap"><img src="img/navigation-arrow.png" alt=""></div>
-      <a href="./cart.html" class="secondary-nav__link">Корзина</a>
+  <div class="container">
+    <div class="secondary-hero__content">
+      <h1 class="secondary-title">Корзина</h1>
+      <!-- /.secondary-title -->
+      <p class="secondary-description secondary-description--cart">Здесь собраны все товары, которые вы добавили в корзину покупок. 
+        При необходимости вы можете отредактировать ваш заказ</p>
+        <div class="secondary-nav-container">
+          <div class="secondary-nav">
+            <a href="./" class="secondary-nav__link">Главная</a>
+            <div class="secondary-nav__image-wrap"><img src="img/navigation-arrow.png" alt=""></div>
+            <a href="./catalog.html" class="secondary-nav__link">Каталог</a>
+            <div class="secondary-nav__image-wrap"><img src="img/navigation-arrow.png" alt=""></div>
+            <a href="./cart.html" class="secondary-nav__link">Корзина</a>
+          </div>
+        </div>
+      <!-- /.secondary-navigation -->  
     </div>
-    <!-- /.secondary-navigation -->  
   </div>
 </section>
 <!-- /.section secondary-hero -->
@@ -154,7 +158,8 @@
       <div class="cart-desktop-container">
         <div class="name-col">Юбка, Oodji<span class="name-col__description">Цвет: синий</span></div>
         <div class="price-col col--center"><sup class="price-tag__sup">₽</sup> 799</div>
-        <div class="quantity-col col--center"><select>
+        <div class="quantity-col col--center custom-select"><select>
+          <option>2</option>
           <option>1</option>
           <option selected="selected">2</option>
           <option>3</option>
@@ -168,7 +173,8 @@
       <div class="cart-desktop-container">
         <div class="name-col">Брюки, ТВОЕ<span class="name-col__description">Цвет: темно-синий</span></div>
         <div class="price-col col--center"><sup class="price-tag__sup">₽</sup> 599</div>
-        <div class="quantity-col col--center"><select>
+        <div class="quantity-col col--center custom-select"><select>
+          <option>1</option>
           <option selected="selected">1</option>
           <option>2</option>
           <option>3</option>

@@ -1,6 +1,8 @@
 .catalog
   padding-top: 6.514rem
   border-bottom: 1px solid $gray
+  &>.container
+    width: 71%
   &__cards-container
     display: flex
     flex-wrap: wrap
@@ -8,13 +10,14 @@
     align-items: center
     max-height: 112.5rem
     overflow: hidden
-    margin-bottom: 5rem
+    margin-bottom: 3.8rem
+    //width: 94%
   &__item-card
     flex-basis: 20%
-    margin-bottom: 4.289rem
+    margin-bottom: 3.489rem
   &__more-items-button
     background-color: #eeeeee
-    padding: 1.214rem 2.214rem
+    padding: 0.614rem 2.214rem
     color: $black
     font-family: "Gotham Pro"
     font-size: 1rem
@@ -24,7 +27,7 @@
     display: block
     letter-spacing: 0.84px
     margin: auto
-    margin-bottom: 8.214rem
+    margin-bottom: 8.014rem
     border: none
     outline: none
     cursor: pointer
@@ -47,12 +50,14 @@
     margin-top: 2.5rem   
     letter-spacing: 1.74px
     font-size: 1.7rem
+    margin-bottom: 1.2rem
   &__item-price-tag
     margin-top: 1.2rem
 .display-settings
   display: flex
   justify-content: space-between
   margin-bottom: 3.014rem
+  //width: 95%
   &__container
     display: flex
     justify-content: space-between

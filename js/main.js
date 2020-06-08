@@ -74,14 +74,14 @@ $(document).ready(function () {
 
   //  && !target.closest(modalSearch).length && !target.closest(zoomWrap).length
 
-  readMoreFirst.on('click', () => {
-     newsItemFirst.css({overflow: 'visible'});
-     readMoreFirst.css('visibility', 'hidden');
-});
-  readMoreSecond.on('click', () => { 
-    newsItemSecond.css({overflow: 'visible'});
-    readMoreSecond.css('visibility', 'hidden');
-});
+//   readMoreFirst.on('click', () => {
+//      newsItemFirst.css({overflow: 'visible'});
+//      readMoreFirst.css('visibility', 'hidden');
+// });
+//   readMoreSecond.on('click', () => { 
+//     newsItemSecond.css({overflow: 'visible'});
+//     readMoreSecond.css('visibility', 'hidden');
+// });
 
   let heroSwiper = new Swiper ('.hero__swiper', {
     loop: true,
@@ -172,7 +172,7 @@ $(document).ready(function () {
       el: '.photos__swiper-pagination',
       clickable: true,
       renderBullet: function (index, className) {
-          return `<div class="${className} photos__swiper-custom-bullet"><div class="image-wrapper photos__image-wrapper"><img src="../img/item-card/photo-min-${index + 1}.png"></div></div>`;}
+          return `<div class="${className} photos__swiper-custom-bullet"><div class="image-wrapper photos__image-wrapper"><img src="img/item-card/photo-min-${index + 1}.png"></div></div>`;}
     },
     swiping: {
       noSwiping: true

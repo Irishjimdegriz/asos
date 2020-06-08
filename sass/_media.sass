@@ -116,6 +116,14 @@
     &:hover::before
       border: 1px $black solid
       background: white url('../img/scroll-up-arrow-hovered.png') center no-repeat
+  .catalog__item-card
+    position: relative
+    &:hover::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: rgba(0, 0, 0, 0.1)
 
 @media screen and ( max-width: 1500px)
   .news-item__text
@@ -421,8 +429,11 @@
     margin-right: 0.65rem
   .visible-quantity-caption, .filter-caption    
     margin-right: 0.5rem
-  .display-settings__image-wrap
-    margin-right: 0.5rem
+  .display-settings
+    width: 88%
+    margin: auto
+    &__image-wrap
+      margin-right: 0.5rem
   .questions
     &__container     
       flex-direction: column

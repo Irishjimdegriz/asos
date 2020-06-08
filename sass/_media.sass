@@ -194,7 +194,16 @@
     max-width: 45rem  
   .reviews
     &__text
-      max-width: 45rem  
+      max-width: 45rem 
+  .catalog
+    &__item-card
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      flex-basis: 50%
+    &__cards-container
+      justify-content: space-around       
 
 @media screen and ( max-width: 1220px)
   .photos
@@ -242,7 +251,6 @@
   .contacts-block
     &__address, &__phone, &__email, &__skype, &__postscriptum
       max-width: 12rem   
-  
 
 @media screen and ( max-width: 1090px)
   .discount-coupon
@@ -486,6 +494,7 @@
   .name-col
     flex-basis: 100%
     margin-top: 2.543rem    
+    margin-left: -0.6rem
   .price-col, .quantity-col, .total-col, .delete-button-col
     margin-top: 1rem
   .col--center

@@ -1332,6 +1332,7 @@ img {
     background-size: auto 100%;
     width: 100%;
     max-width: 100%;
+    height: 100%;
     margin-left: -3rem; }
   .secondary-hero::before {
     content: '';
@@ -1409,7 +1410,8 @@ img {
     margin-bottom: 3.8rem; }
   .catalog__item-card {
     flex-basis: 20%;
-    margin-bottom: 3.489rem; }
+    margin-bottom: 3.489rem;
+    text-decoration: none; }
   .catalog__more-items-button {
     background-color: #eeeeee;
     padding: 0.614rem 2.214rem;
@@ -1527,11 +1529,12 @@ img {
 .cart-row {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #999999; }
+  border-bottom: 1px solid #999999;
+  text-decoration: none; }
   .cart-row--title {
     color: #252525 !important;
     font-size: 0.857rem !important;
-    font-weight: 500 !important;
+    font-weight: bold !important;
     line-height: 1.571rem !important;
     text-transform: uppercase;
     letter-spacing: 0.48px !important;
@@ -1784,7 +1787,7 @@ img {
   flex-direction: column;
   justify-content: flex-start;
   margin: auto;
-  max-width: 92rem;
+  max-width: 100rem;
   margin-top: 6.171rem; }
 
 .questions__section-title {
@@ -1795,7 +1798,8 @@ img {
   line-height: 1.571rem;
   text-transform: uppercase;
   letter-spacing: 2.64px;
-  margin-left: 4.5rem; }
+  margin-left: 8.4rem;
+  font-family: "Gotham Pro Medium"; }
 
 .questions__container {
   display: flex;
@@ -1804,20 +1808,23 @@ img {
   margin-left: 4.5rem; }
 
 .questions__form {
-  flex-basis: 60%;
+  flex-basis: 60.2%;
+  padding-left: 3.9rem;
   position: relative; }
 
 .questions__contacts-block {
-  flex-basis: 36.6%;
+  flex-basis: 33.5%;
   border: 3px solid #ef50a2;
   padding-top: 3.143rem;
   padding-left: 3.143rem;
-  margin-top: 0.4rem; }
+  margin-top: 0.4rem;
+  margin-right: 3rem; }
 
 .questions__input-group {
   display: flex;
   flex-direction: column;
-  position: relative; }
+  position: relative;
+  flex-basis: 48.1%; }
 
 .questions__label {
   color: #252525;
@@ -2611,7 +2618,15 @@ textarea {
   .visa-description {
     max-width: 45rem; }
   .reviews__text {
-    max-width: 45rem; } }
+    max-width: 45rem; }
+  .catalog__item-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%; }
+  .catalog__cards-container {
+    justify-content: space-around; } }
 
 @media screen and (max-width: 1220px) {
   .photos__swiper-custom-bullet {
@@ -2864,7 +2879,8 @@ textarea {
     flex-basis: 40%; }
   .name-col {
     flex-basis: 100%;
-    margin-top: 2.543rem; }
+    margin-top: 2.543rem;
+    margin-left: -0.6rem; }
   .price-col, .quantity-col, .total-col, .delete-button-col {
     margin-top: 1rem; }
   .col--center {

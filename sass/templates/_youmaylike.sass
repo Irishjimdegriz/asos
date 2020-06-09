@@ -6,27 +6,35 @@
   &>.container
     width: 100%
     max-width: 100%
+    &>.section-title
+      font-weight: bold
+      font-family: "Gotham Pro Medium"
   &__swiper
     margin-bottom: 11rem
-    max-width: 1260px
+    max-width: 1220px
     &-button
       &-prev, &-next
         width: 2.714rem
         height: 2.714rem
         outline: none
         border: 1px solid black
-        top: 37%
+        top: 35.2%
         &::after
           display: none
       &-prev
         background: url('../img/arrow-left.svg') no-repeat center  
-        left: 10px
+        left: 0
       &-next
         background: url('../img/arrow-right.svg') no-repeat center
-        right: 10px
+        right: 0
   &__image-wrap
     position: relative
     width: 18.714rem
     height: 24.429rem
     background-color: white
     text-align: center
+  &__item-name
+    margin-bottom: 1.1rem;
+    margin-top: 2.3rem;
+  &__price
+    margin-top: 1.3rem

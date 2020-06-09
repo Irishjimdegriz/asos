@@ -1,23 +1,30 @@
 @media screen and ( min-width: 992px)
-  .hero__swiper-button
-    &-prev:hover
-      background: rgba(0, 0, 0, 0.3) url('../img/hero-arrow-right-hovered.jpg') no-repeat center 
-      background-size: contain 
-      transform: scaleX(-1)
-      width: 14.286rem
-    &-next:hover
-      background: rgba(0, 0, 0, 0.3) url('../img/hero-arrow-right-hovered.jpg') no-repeat center  
-      background-size: contain
-      width: 14.286rem  
+  .hero
+    &__scroll-down:hover
+      background-color: $secondary
+    &__swiper-button
+      &-prev:hover
+        background: rgba(0, 0, 0, 0.3) url('../img/hero-arrow-left-hovered.jpg') no-repeat center 
+        background-size: contain 
+        transform: scaleX(-1)
+        width: 14.286rem
+      &-next:hover
+        background: rgba(0, 0, 0, 0.3) url('../img/hero-arrow-right-hovered.jpg') no-repeat center  
+        background-size: contain
+        width: 14.286rem  
   .link-item 
     &:hover
       cursor: pointer
       text-decoration: none
-      border-bottom: 2px solid $light    
+      border-bottom: 2px solid $light  
+    &--active 
+      border-bottom: 2px solid $light   
     &--black      
       &:hover
         cursor: pointer
         text-decoration: none
+        border-bottom: 2px solid $black
+      &--active
         border-bottom: 2px solid $black
   .news-item__read-more
     &:hover
@@ -92,11 +99,11 @@
   .item-offer     
     &__buy-button     
       &:hover
-        background-color: #252525
-        color: $light
+        background-color: $black
+        color: white
       &:first-of-type, &:last-of-type
         &:hover
-          color: #f3f7f9       
+          color: white      
   .sizes-row--regular
     &:hover
       background-color: $secondary
@@ -104,8 +111,19 @@
     &__image-wrap
       &:hover
         filter: grayscale(0%)
-  .about__image-wrap img:hover
-    filter: grayscale(0%)
+  .about__image-wrap 
+    &--vk:hover
+      background: url('../img/vk-hovered.png') no-repeat center
+    &--facebook:hover
+      background: url('../img/facebook-hovered.svg') no-repeat center
+    &--twitter:hover
+      background: url('../img/twitter-hovered.svg') no-repeat center
+    &--ok:hover
+      background: url('../img/ok-hovered.svg') no-repeat center
+    &--youtube:hover
+      background: url('../img/youtube-hovered.svg') no-repeat center
+    // img:hover
+    // filter: grayscale(0%)
   .select-items div:hover    
     background-color: rgba(0, 0, 0, 0.1)
   .footer    
@@ -211,7 +229,7 @@
       flex-direction: column
       justify-content: center
       align-items: center
-      flex-basis: 50%
+      //flex-basis: 50%
     &__cards-container
       justify-content: space-around       
 
@@ -284,6 +302,8 @@
   .coupon-button
     width: 10rem   
     font-size: 0.9rem
+  .visible-quantity-caption, .filter-caption
+    font-size: 0.82rem       
 
 @media screen and ( max-width: 1040px)      
   .news-item__text
@@ -312,8 +332,6 @@
   .catalog-filter
     &>.select-items
       bottom: -3.3rem
-  .visible-quantity-caption, .filter-caption
-    font-size: 0.82rem   
 
 @media screen and ( max-width: 992px)
   .header
@@ -434,6 +452,7 @@
   .display-settings
     width: 88%
     margin: auto
+    margin-bottom: 3.014rem
     &__image-wrap
       margin-right: 0.5rem
   .questions
@@ -950,6 +969,7 @@
         &-prev, &-next
           width: 4rem
           height: 4rem
+          top: 42%
   .subscribe
     &-input
       width: 25rem
@@ -968,6 +988,15 @@
     font-size: 0.6rem    
     // .total-col
     //   flex-basis: 26%
+
+@media screen and ( max-width: 420px)
+  .display-settings
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  .catalog__items-shown
+    margin-bottom: 1rem
 
 @media screen and ( max-width: 400px)
   .section-subtitle
